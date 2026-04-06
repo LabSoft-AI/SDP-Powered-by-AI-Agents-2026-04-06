@@ -183,14 +183,16 @@ Clone the repo and run the setup script:
 git clone https://github.com/LabSoft-AI/SDP-Powered-by-AI-Agents-2026-04-06.git
 cd SDP-Powered-by-AI-Agents-2026-04-06
 ./setup.sh
+source .venv/bin/activate
 ```
 
-This installs:
+This creates a Python virtual environment and installs:
 
 - PlantUML (for diagram generation)
+- `pre-commit` and `detect-secrets`
 - Pre-commit hooks:
-  - Filesystem checks (trailing whitespace, JSON, merge conflicts)
-  - Secret detection
+  - Filesystem checks (trailing whitespace, YAML, JSON, merge conflicts)
+  - Secret detection (with `.secrets.baseline`)
   - PlantUML SVG auto-generation from `.puml` files
   - Commit message format validation (`#<issue> <type>(<scope>): <description>`)
   - Direct commits to `main` blocked (must use PRs)
