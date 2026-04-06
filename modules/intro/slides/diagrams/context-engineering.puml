@@ -1,5 +1,4 @@
 @startuml context-engineering
-!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
 
 skinparam backgroundColor #1a1a2e
 skinparam defaultFontColor #e0e0e0

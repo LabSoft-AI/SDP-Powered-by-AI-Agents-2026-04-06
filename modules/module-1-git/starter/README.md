@@ -8,13 +8,13 @@ Copy to your course repository:
 
 ```bash
 mkdir -p .kiro/agents
-cp git-agent.json .kiro/agents/
+cp modules/module-1-git/starter/git-agent.json .kiro/agents/
 ```
 
 Start the agent:
 
 ```bash
-q chat --agent git-agent
+kiro chat --agent git-agent
 ```
 
 ## What You Need to Complete

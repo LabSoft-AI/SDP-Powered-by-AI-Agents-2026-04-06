@@ -423,7 +423,7 @@ Replace `name-surname` with your actual name (e.g.
 **Invite the instructor as a collaborator:**
 
 ```bash
-gh api repos/{owner}/{repo}/collaborators/momokrunic -f permission=push
+gh api repos/{owner}/{repo}/collaborators/momokrunic --method PUT -f permission=push
 ```
 
 Replace `{owner}` with your GitHub username and `{repo}` with your
@@ -517,7 +517,48 @@ repos:
     rev: v1.5.0
     hooks:
       - id: detect-secrets
+
+  # Commit message format
+  - repo: local
+    hooks:
+      - id: commit-msg-format
+        name: Commit message format
+        entry: scripts/check-commit-msg.sh
+        language: system
+        stages: [commit-msg]
+        always_run: true
 EOF
+```
+
+Create the commit message validation script:
+
+```bash
+mkdir -p scripts
+cat > scripts/check-commit-msg.sh << 'SCRIPT'
+#!/usr/bin/env bash
+# Validates conventional commit format: #<issue> <type>(<scope>): <description>
+# or: <type>(<scope>): <description> (for initial setup commits)
+
+MSG_FILE="$1"
+MSG=$(head -1 "$MSG_FILE")
+
+# Allow merge and revert commits
+if echo "$MSG" | grep -qE "^(Merge|Revert) "; then
+    exit 0
+fi
+
+# Match: #N type(scope): description
+if echo "$MSG" | grep -qE "^#[0-9]+ (feat|fix|docs|test|refactor|chore|ci|perf|style)\([a-z0-9-]+\): .+$"; then
+    exit 0
+fi
+
+echo "❌ Invalid commit message format."
+echo "   Expected: #<issue> <type>(<scope>): <description>"
+echo "   Example:  #1 feat(auth): add login endpoint"
+echo "   Types: feat, fix, docs, test, refactor, chore, ci, perf, style"
+exit 1
+SCRIPT
+chmod +x scripts/check-commit-msg.sh
 ```
 
 Install hooks and make the initial commit:
@@ -527,10 +568,14 @@ pre-commit install
 pre-commit install --hook-type commit-msg
 pre-commit run --all-files
 
-git add pyproject.toml .pre-commit-config.yaml
-git commit -m "chore(setup): add pre-commit hooks and Python linter config"
+git add pyproject.toml .pre-commit-config.yaml scripts/
+git commit -m "#1 chore(setup): add pre-commit hooks and Python linter config"
 git push
 ```
+
+Note: You'll create issue `#1` in Step 4 below, but GitHub lets you
+reference issue numbers in commits before the issue exists. The link
+resolves once the issue is created.
 
 ### Step 4: Create a GitHub Issue for the Git Agent (Manually)
 
@@ -600,7 +645,7 @@ The agent must be able to:
 Test it:
 
 ```bash
-q chat --agent git-agent
+kiro chat --agent git-agent
 
 # Verify it can create a properly formatted issue
 > Create a test issue for adding a hello world script
@@ -614,7 +659,7 @@ checkboxes.
 Use your agent to create one GitHub Issue per module exercise:
 
 ```bash
-q chat --agent git-agent
+kiro chat --agent git-agent
 
 > Create issues for the following course module exercises:
 >

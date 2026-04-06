@@ -170,9 +170,30 @@ Blocked services: EC2, RDS, EKS, ECS, Bedrock, SageMaker, Redshift
 - [Kiro CLI](https://kiro.dev) installed
 - Python 3.12+
 - Node 20+
+- Java (for PlantUML diagram generation)
 - AWS SAM CLI
-- GitHub account
+- GitHub account + [GitHub CLI](https://cli.github.com/) (`gh`)
 - Basic knowledge of Python, REST APIs, and React
+
+## Setup
+
+Clone the repo and run the setup script:
+
+```bash
+git clone https://github.com/LabSoft-AI/SDP-Powered-by-AI-Agents-2026-04-06.git
+cd SDP-Powered-by-AI-Agents-2026-04-06
+./setup.sh
+```
+
+This installs:
+
+- PlantUML (for diagram generation)
+- Pre-commit hooks:
+  - Filesystem checks (trailing whitespace, JSON, merge conflicts)
+  - Secret detection
+  - PlantUML SVG auto-generation from `.puml` files
+  - Commit message format validation (`#<issue> <type>(<scope>): <description>`)
+  - Direct commits to `main` blocked (must use PRs)
 
 ## References
 
