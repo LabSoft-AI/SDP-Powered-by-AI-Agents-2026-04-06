@@ -28,7 +28,7 @@ fi
 # Python tools
 echo "📦 Installing Python development tools..."
 if command -v pip >/dev/null 2>&1; then
-    pip install pre-commit --quiet
+    pip install pre-commit detect-secrets --quiet
 else
     echo "⚠️  pip not found. Install Python 3.12+ first."
     exit 1

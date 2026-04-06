@@ -365,7 +365,7 @@ repos:
     hooks:
       - id: commit-msg-format
         name: Commit message format
-        entry: scripts/check-commit-msg.sh
+        entry: scripts/hooks/check-commit-msg.sh
         language: system
         stages: [commit-msg]
 ```
@@ -523,7 +523,7 @@ repos:
     hooks:
       - id: commit-msg-format
         name: Commit message format
-        entry: scripts/check-commit-msg.sh
+        entry: scripts/hooks/check-commit-msg.sh
         language: system
         stages: [commit-msg]
         always_run: true
@@ -534,10 +534,10 @@ Create the commit message validation script:
 
 ```bash
 mkdir -p scripts
-cat > scripts/check-commit-msg.sh << 'SCRIPT'
+mkdir -p scripts/hooks
+cat > scripts/hooks/check-commit-msg.sh << 'SCRIPT'
 #!/usr/bin/env bash
 # Validates conventional commit format: #<issue> <type>(<scope>): <description>
-# or: <type>(<scope>): <description> (for initial setup commits)
 
 MSG_FILE="$1"
 MSG=$(head -1 "$MSG_FILE")
@@ -558,7 +558,7 @@ echo "   Example:  #1 feat(auth): add login endpoint"
 echo "   Types: feat, fix, docs, test, refactor, chore, ci, perf, style"
 exit 1
 SCRIPT
-chmod +x scripts/check-commit-msg.sh
+chmod +x scripts/hooks/check-commit-msg.sh
 ```
 
 Install hooks and make the initial commit:

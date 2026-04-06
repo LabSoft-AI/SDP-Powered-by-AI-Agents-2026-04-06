@@ -2,7 +2,7 @@
 # Validate commit message format: #<issue-number> <type>(<scope>): <description>
 
 COMMIT_MSG_FILE=$1
-COMMIT_MSG=$(cat "$COMMIT_MSG_FILE")
+COMMIT_MSG=$(head -n 1 "$COMMIT_MSG_FILE")
 
 # Skip merge commits
 if echo "$COMMIT_MSG" | grep -qE "^Merge (branch|pull request)"; then
