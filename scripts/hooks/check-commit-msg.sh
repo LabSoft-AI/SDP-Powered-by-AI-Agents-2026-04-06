@@ -2,6 +2,12 @@
 # Validate commit message format: #<issue-number> <type>(<scope>): <description>
 
 COMMIT_MSG_FILE=$1
+
+if [ -z "$COMMIT_MSG_FILE" ] || [ ! -r "$COMMIT_MSG_FILE" ]; then
+    echo "❌ Error: expected a readable commit message file as the first argument." >&2
+    exit 1
+fi
+
 COMMIT_MSG=$(head -n 1 "$COMMIT_MSG_FILE")
 
 # Skip merge commits

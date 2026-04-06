@@ -32,9 +32,9 @@ for puml in $STAGED; do
 
     if [ -n "$current" ] && [ "$current" != "$expected" ]; then
         if [[ "$OSTYPE" == "darwin"* ]]; then
-            sed -i '' "1s/^@startuml.*/$expected/" "$puml"
+            sed -i '' '/^@startuml/s/.*/'$expected'/' "$puml"
         else
-            sed -i "1s/^@startuml.*/$expected/" "$puml"
+            sed -i '/^@startuml/s/.*/'$expected'/' "$puml"
         fi
         git add "$puml"
     fi

@@ -23,14 +23,15 @@ fi
 # Java check (required for PlantUML)
 if ! command -v java >/dev/null 2>&1; then
     echo "⚠️  Java not found. PlantUML requires Java. Install: sudo apt install default-jre"
+    exit 1
 fi
 
 # Python tools
 echo "📦 Installing Python development tools..."
-if command -v pip >/dev/null 2>&1; then
-    pip install pre-commit detect-secrets --quiet
+if command -v python3 >/dev/null 2>&1; then
+    python3 -m pip install "pre-commit>=4.0.0" "detect-secrets==1.5.0" --quiet
 else
-    echo "⚠️  pip not found. Install Python 3.12+ first."
+    echo "⚠️  python3 not found. Install Python 3.12+ first."
     exit 1
 fi
 
