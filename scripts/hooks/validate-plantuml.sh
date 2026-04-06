@@ -5,8 +5,8 @@ set -e
 
 PLANTUML_JAR="$HOME/.local/share/plantuml/plantuml.jar"
 
-# Get staged .puml files
-STAGED=$(git diff --cached --name-only --diff-filter=AM | grep '\.puml$' || true)
+# Get staged .puml files (NUL-delimited for safe path handling)
+STAGED=$(git diff --cached --name-only --diff-filter=AM -z | tr '\0' '\n' | grep '\.puml$' || true)
 
 if [ -z "$STAGED" ]; then
     exit 0
@@ -20,8 +20,8 @@ fi
 
 echo "🎨 Generating SVGs for staged .puml files..."
 
-for puml in $STAGED; do
-    if [ ! -f "$puml" ]; then
+while IFS= read -r puml; do
+    if [ -z "$puml" ] || [ ! -f "$puml" ]; then
         continue
     fi
 
@@ -51,4 +51,4 @@ for puml in $STAGED; do
         echo "    ❌ Failed to generate: $svg"
         exit 1
     fi
-done
+done <<< "$STAGED"
