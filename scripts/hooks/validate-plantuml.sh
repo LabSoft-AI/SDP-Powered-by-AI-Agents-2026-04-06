@@ -5,8 +5,8 @@ set -e
 
 PLANTUML_JAR="$HOME/.local/share/plantuml/plantuml.jar"
 
-# Get staged .puml files (NUL-delimited for safe path handling)
-STAGED=$(git diff --cached --name-only --diff-filter=AM -z | tr '\0' '\n' | grep '\.puml$' || true)
+# Get staged .puml files
+STAGED=$(git diff --cached --name-only --diff-filter=AM | grep '\.puml$' || true)
 
 if [ -z "$STAGED" ]; then
     exit 0
@@ -31,10 +31,11 @@ while IFS= read -r puml; do
     current=$(grep -m1 "^@startuml" "$puml" || echo "")
 
     if [ -n "$current" ] && [ "$current" != "$expected" ]; then
+        escaped=$(printf '%s\n' "$expected" | sed 's/[&/\]/\\&/g')
         if [[ "$OSTYPE" == "darwin"* ]]; then
-            sed -i '' '/^@startuml/s/.*/'$expected'/' "$puml"
+            sed -i '' '/^@startuml/s/.*/'"$escaped"'/' "$puml"
         else
-            sed -i '/^@startuml/s/.*/'$expected'/' "$puml"
+            sed -i '/^@startuml/s/.*/'"$escaped"'/' "$puml"
         fi
         git add "$puml"
     fi
