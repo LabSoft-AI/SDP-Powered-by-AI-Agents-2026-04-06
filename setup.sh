@@ -49,8 +49,7 @@ fi
 # Pre-commit hooks
 echo "🪝 Installing pre-commit hooks..."
 pre-commit install
-pre-commit install --hook-type commit-msg
-echo "✅ Pre-commit hooks installed (pre-commit + commit-msg)"
+echo "✅ Pre-commit hooks installed"
 
 echo ""
 echo "✅ Setup complete!"

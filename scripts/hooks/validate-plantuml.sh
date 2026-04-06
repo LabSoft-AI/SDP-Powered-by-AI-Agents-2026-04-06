@@ -31,11 +31,10 @@ while IFS= read -r puml; do
     current=$(grep -m1 "^@startuml" "$puml" || echo "")
 
     if [ -n "$current" ] && [ "$current" != "$expected" ]; then
-        escaped=$(printf '%s\n' "$expected" | sed 's/[&/\]/\\&/g')
         if [[ "$OSTYPE" == "darwin"* ]]; then
-            sed -i '' '/^@startuml/s/.*/'"$escaped"'/' "$puml"
+            sed -i '' "s|^@startuml.*|$expected|" "$puml"
         else
-            sed -i '/^@startuml/s/.*/'"$escaped"'/' "$puml"
+            sed -i "s|^@startuml.*|$expected|" "$puml"
         fi
         git add "$puml"
     fi
