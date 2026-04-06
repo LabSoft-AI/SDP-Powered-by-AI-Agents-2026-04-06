@@ -124,7 +124,7 @@ We use merge instead of rebase in this course because merge is safer for beginne
 **Content:**
 - Commit Convention
 - Format: `#<issue> <type>(<scope>): <description>`
-- Types: `feat`, `fix`, `docs`, `test`, `refactor`, `chore`, `ci`
+- Types: `feat`, `fix`, `docs`, `test`, `refactor`, `style`, `perf`, `chore`, `ci`
 - Scope is mandatory and lowercase
 - Subject line in imperative mood: "add", not "added"
 - Reference the GitHub issue number at the start

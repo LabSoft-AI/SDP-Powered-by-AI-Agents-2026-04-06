@@ -161,6 +161,8 @@ We use **Conventional Commits** with GitHub Issue references:
 | `docs` | Documentation | `#80 docs(readme): update setup guide` |
 | `test` | Adding tests | `#44 test(auth): add login tests` |
 | `refactor` | Code restructuring | `#33 refactor(db): simplify queries` |
+| `style` | Formatting, no logic change | `#18 style(ui): format component` |
+| `perf` | Performance improvement | `#61 perf(api): reduce query latency` |
 | `chore` | Maintenance | `#12 chore(deps): update dependencies` |
 | `ci` | CI/CD changes | `#56 ci(deploy): add staging workflow` |
 
