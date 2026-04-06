@@ -645,7 +645,7 @@ The agent must be able to:
 Test it:
 
 ```bash
-kiro chat --agent git-agent
+kiro-cli chat --agent git-agent
 
 # Verify it can create a properly formatted issue
 > Create a test issue for adding a hello world script
@@ -659,7 +659,7 @@ checkboxes.
 Use your agent to create one GitHub Issue per module exercise:
 
 ```bash
-kiro chat --agent git-agent
+kiro-cli chat --agent git-agent
 
 > Create issues for the following course module exercises:
 >

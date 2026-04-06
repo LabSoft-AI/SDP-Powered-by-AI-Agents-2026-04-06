@@ -14,7 +14,7 @@ cp modules/module-1-git/starter/git-agent.json .kiro/agents/
 Start the agent:
 
 ```bash
-kiro chat --agent git-agent
+kiro-cli chat --agent git-agent
 ```
 
 ## What You Need to Complete
