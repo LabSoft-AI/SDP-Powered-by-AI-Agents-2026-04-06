@@ -1,0 +1,42 @@
+@startuml context-engineering
+
+skinparam backgroundColor #1a1a2e
+skinparam defaultFontColor #e0e0e0
+skinparam rectangleBorderColor #7b68ee
+skinparam rectangleBackgroundColor #2a2a4a
+skinparam arrowColor #00bfff
+skinparam noteBorderColor #7b68ee
+skinparam noteBackgroundColor #2a2a4a
+skinparam noteFontColor #e0e0e0
+
+title Context Engineering — What the Agent Sees
+
+rectangle "**LLM**" as llm #3a3a5a {
+}
+
+rectangle "**Agent**" as agent #3a3a5a {
+}
+
+rectangle "**Context Window**" as ctx #2a2a4a {
+    rectangle "System\nPrompt" as sp #3a3a5a
+    rectangle "Resources" as res #3a3a5a
+    rectangle "Assistant\nMessages" as am #3a3a5a
+    rectangle "Tools" as tools #3a3a5a
+    rectangle "User\nMessage" as um #3a3a5a
+    rectangle "Tool Call\n/ Response" as tcr #3a3a5a
+}
+
+sp -[hidden]r-> res
+res -[hidden]r-> am
+tools -[hidden]r-> um
+um -[hidden]r-> tcr
+
+note left of llm : Tokens →
+note right of llm : → Likely Tokens
+
+agent -u-> llm : invokes
+agent -r-> tools : uses
+um -u-> agent : Input
+sp -r-> res
+@enduml
+

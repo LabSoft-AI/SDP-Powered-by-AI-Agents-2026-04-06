@@ -1,0 +1,44 @@
+fail_fast: true
+default_install_hook_types:
+    - pre-commit
+    - commit-msg
+
+repos:
+    # ---------------------------- 📁 Filesystem & Git --------------------------- #
+    - repo: https://github.com/pre-commit/pre-commit-hooks
+      rev: v6.0.0
+      hooks:
+          - id: trailing-whitespace
+          - id: check-yaml
+          - id: check-json
+          - id: check-toml
+          - id: check-added-large-files
+            args: ["--maxkb=5000"]
+          - id: check-merge-conflict
+          - id: mixed-line-ending
+            args: ["--fix=lf"]
+          - id: no-commit-to-branch
+            args: ["--branch", "main"]
+
+    # ------------------------------ 🔒 Security --------------------------------- #
+    - repo: https://github.com/Yelp/detect-secrets
+      rev: v1.5.0
+      hooks:
+          - id: detect-secrets
+            args: ["--baseline", ".secrets.baseline"]
+
+    # ----------------------------- 📝 Local Hooks ------------------------------- #
+    - repo: local
+      hooks:
+          - id: plantuml-validation
+            name: PlantUML Validation
+            entry: bash scripts/hooks/validate-plantuml.sh
+            language: system
+            files: '\.puml$'
+            pass_filenames: false
+
+          - id: commit-msg-format
+            name: Commit message format
+            entry: bash scripts/hooks/check-commit-msg.sh
+            language: system
+            stages: [commit-msg]

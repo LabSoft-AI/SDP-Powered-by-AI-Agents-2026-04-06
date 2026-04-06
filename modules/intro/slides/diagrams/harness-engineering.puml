@@ -1,0 +1,47 @@
+@startuml harness-engineering
+skinparam backgroundColor #ffffff
+skinparam defaultFontColor #333333
+skinparam rectangleBorderColor #4a90d9
+skinparam rectangleBackgroundColor #f0f4fa
+skinparam arrowColor #4a90d9
+skinparam arrowThickness 2
+
+title Harness Engineering for Coding Agents
+
+rectangle "**Human**\n(steers)" as human #e8f0fe
+
+rectangle "**Guides (Feedforward)**" as guides #dbeafe {
+    rectangle "//Inferential//" as gi #f0f4fa {
+        card "Principles" as p
+        card "Rules (AGENTS.md)" as r
+        card "Reference Docs" as rd
+        card "Skills / How-tos" as sk
+    }
+    rectangle "//Computational//" as gc #f0f4fa {
+        card "Language Servers" as ls
+        card "CLIs / Scripts" as cli
+        card "Codemods" as cm
+    }
+}
+
+rectangle "**Coding Agent**" as agent #4a90d9;text:white
+
+rectangle "**Sensors (Feedback)**" as sensors #fef3c7 {
+    rectangle "//Computational//" as sc #fffbeb {
+        card "Static Analysis" as sa
+        card "Tests / Linters" as tl
+        card "Logs / Browser" as lb
+    }
+    rectangle "//Inferential//" as si #fffbeb {
+        card "Review Agents" as ra
+        card "LLM-as-Judge" as lj
+    }
+}
+
+human -d-> guides : configures
+human -d-> sensors : configures
+guides -d-> agent : steer before action
+sensors -u-> agent : self-correct after action
+agent -d-> sensors : outputs observed by
+@enduml
+
