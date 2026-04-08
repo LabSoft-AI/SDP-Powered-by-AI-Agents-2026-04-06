@@ -323,11 +323,12 @@ Rel(progress_fn, db, "Reads")
 **Generating SVG from PlantUML:**
 
 ```bash
-# Install PlantUML (one-time)
-# Download from https://plantuml.com/download or use setup script
+# PlantUML is installed by ./setup.sh to:
+# $HOME/.local/share/plantuml/plantuml.jar
 
-# Generate SVG
-java -Dplantuml.allowincludeurl=true -jar plantuml.jar -tsvg diagram.puml
+# Generate SVG manually (if needed)
+java -Dplantuml.allowincludeurl=true \
+    -jar "$HOME/.local/share/plantuml/plantuml.jar" -tsvg diagram.puml
 
 # Or use the online server for quick previews
 # https://www.plantuml.com/plantuml/uml/
@@ -338,69 +339,35 @@ alongside them.
 
 **Pre-commit hook for automatic SVG generation:**
 
-Just like we use pre-commit hooks for code linting (Module 1), we can
-automate diagram generation. Add a hook that detects staged `.puml` files
-and generates the corresponding `.svg` files before each commit.
+Since you're working in your own repository for Modules 1–5, you need to
+set up the PlantUML hook there. Copy the hook script and config from the
+course repository:
+
+```bash
+# From your kata repo root, copy the hook from the course repo
+mkdir -p scripts/hooks
+cp <course-repo>/scripts/hooks/validate-plantuml.sh scripts/hooks/
+chmod +x scripts/hooks/validate-plantuml.sh
+```
 
 Add this to your `.pre-commit-config.yaml`:
 
 ```yaml
   - repo: local
     hooks:
-      - id: plantuml-svg
-        name: Generate PlantUML SVGs
-        entry: bash scripts/generate-plantuml.sh
+      - id: plantuml-validation
+        name: PlantUML Validation
+        entry: bash scripts/hooks/validate-plantuml.sh
         language: system
         files: '\.puml$'
         pass_filenames: false
 ```
 
-Create `scripts/generate-plantuml.sh`:
-
-```bash
-#!/usr/bin/env bash
-set -e
-
-# Detect PlantUML jar
-PLANTUML_JAR="$HOME/.local/share/plantuml/plantuml.jar"
-if [ ! -f "$PLANTUML_JAR" ]; then
-    echo "PlantUML not found at $PLANTUML_JAR"
-    echo "Download from https://plantuml.com/download"
-    exit 1
-fi
-
-# Find staged .puml files
-STAGED=$(git diff --cached --name-only --diff-filter=AM | grep '\.puml$' || true)
-
-if [ -z "$STAGED" ]; then
-    exit 0
-fi
-
-echo "🎨 Generating SVGs for staged .puml files..."
-
-for puml in $STAGED; do
-    echo "  → $puml"
-    java -Dplantuml.allowincludeurl=true -jar "$PLANTUML_JAR" -tsvg "$puml"
-
-    svg="${puml%.puml}.svg"
-    if [ -f "$svg" ]; then
-        git add "$svg"
-        echo "    ✅ Generated and staged: $svg"
-    else
-        echo "    ❌ Failed to generate: $svg"
-        exit 1
-    fi
-done
-```
-
-Make it executable:
-
-```bash
-chmod +x scripts/generate-plantuml.sh
-```
+Run `./setup.sh` from the course repo once to install PlantUML (it goes
+to `$HOME/.local/share/plantuml/` and is shared across all repos).
 
 Now every time you commit a `.puml` file, the SVG is automatically
-generated and staged alongside it. No manual generation needed.
+generated and staged alongside it.
 
 ### 1.9 Architecture Decision Records (ADRs)
 
@@ -501,16 +468,16 @@ pre-commit run --all-files
 
 #### Step 4: Write a PlantUML Diagram
 
-Create a file `diagrams/c4-context.puml` with a C4 System Context
+Create a file `architecture/diagrams/c4-context.puml` with a C4 System Context
 diagram for your chosen kata.
 
 Commit the `.puml` file — the pre-commit hook should automatically
 generate and stage the `.svg`:
 
 ```bash
-git add diagrams/c4-context.puml
-git commit -m "#2 docs(architecture): add C4 context diagram"
-# Hook generates diagrams/c4-context.svg and stages it
+git add architecture/diagrams/c4-context.puml
+git commit -m "#<issue> docs(architecture): add C4 context diagram"
+# Hook generates architecture/diagrams/c4-context.svg and stages it
 ```
 
 #### Step 5: Write an ADR
@@ -585,9 +552,9 @@ Use your Git agent from Module 1:
 ```bash
 kiro-cli chat --agent git-agent
 
-> Create a branch for issue #2 (architecture)
+> Create a branch for the architecture issue
 > Commit the architecture documents
-> Create a PR closing issue #2
+> Create a PR closing the architecture issue
 ```
 
 ### Step 5: Add Instructor as Reviewer and Merge
@@ -620,6 +587,5 @@ gh pr merge --squash
 
 - [arc42 Template](https://arc42.org/overview)
 - [C4 Model](https://c4model.com/)
-- [PlantUML C4 Library](https://github.com/plantuml-stdlib/C4-PlantUML)
 - [PlantUML](https://plantuml.com/)
 - [PlantUML C4 Library](https://github.com/plantuml-stdlib/C4-PlantUML)
