@@ -340,13 +340,14 @@ alongside them.
 **Pre-commit hook for automatic SVG generation:**
 
 Since you're working in your own repository for Modules 1–5, you need to
-set up the PlantUML hook there. Copy the hook script and config from the
-course repository:
+set up the PlantUML hook there. Copy the hook script from the course repo
+(adjust the path to where you cloned it):
 
 ```bash
-# From your kata repo root, copy the hook from the course repo
+# From your kata repo root
+COURSE_REPO="$HOME/SDP-Powered-by-AI-Agents-2026-04-06"
 mkdir -p scripts/hooks
-cp <course-repo>/scripts/hooks/validate-plantuml.sh scripts/hooks/
+cp "$COURSE_REPO/scripts/hooks/validate-plantuml.sh" scripts/hooks/
 chmod +x scripts/hooks/validate-plantuml.sh
 ```
 
@@ -460,11 +461,8 @@ Add the PlantUML SVG generation hook to your `.pre-commit-config.yaml`
 and create the `scripts/generate-plantuml.sh` script as described in
 section 1.8.
 
-Test it:
-
-```bash
-pre-commit run --all-files
-```
+Test it by staging a `.puml` file and committing — the hook will
+generate the SVG automatically.
 
 #### Step 4: Write a PlantUML Diagram
 
@@ -482,8 +480,8 @@ git commit -m "#<issue> docs(architecture): add C4 context diagram"
 
 #### Step 5: Write an ADR
 
-Create `architecture/adr-001-technology-stack.md` documenting the
-technology decisions for your kata (language, framework, data storage,
+Create `architecture/09-architecture-decisions.md` with ADR-001 documenting
+the technology decisions for your kata (language, framework, data storage,
 etc.). Follow the ADR format from section 1.9.
 
 ---

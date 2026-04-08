@@ -41,7 +41,7 @@ while IFS= read -r puml; do
 
     # Generate SVG
     echo "  → $puml"
-    java -jar "$PLANTUML_JAR" -tsvg "$puml"
+    java -Dplantuml.allowincludeurl=true -jar "$PLANTUML_JAR" -tsvg "$puml"
 
     svg="${puml%.puml}.svg"
     if [ -f "$svg" ] && [ -s "$svg" ]; then
