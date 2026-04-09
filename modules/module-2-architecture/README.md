@@ -153,25 +153,7 @@ scales automatically. This is why serverless is ideal for:
 In traditional architectures, services call each other directly (synchronous).
 In EDA, services communicate by publishing and consuming events (asynchronous).
 
-**Synchronous (request-response):**
-
-```text
-Client → API Gateway → Lambda A → Lambda B → Lambda C → Response
-         (waits)       (waits)     (waits)     (processes)
-```
-
-If Lambda C is slow or down, the entire chain fails.
-
-**Asynchronous (event-driven):**
-
-```text
-Client → API Gateway → Lambda A → publishes "Workout Logged" event
-                                        ↓
-                        EventBridge routes to:
-                          → Lambda B (update streak)
-                          → Lambda C (check PR)
-                          → Lambda D (calculate volume)
-```
+![Sync vs Async](./diagrams/sync-vs-async.svg)
 
 Lambda A responds immediately. B, C, D process independently. If one
 fails, the others still succeed.
@@ -233,33 +215,14 @@ Level 4: Code             → Zoom into a component: class diagrams (rarely need
 Shows the big picture. Who uses the system? What external systems does it
 integrate with?
 
-```text
-┌─────────┐       ┌──────────────┐       ┌──────────┐
-│  User   │──────→│  FitTrack    │──────→│ Cognito  │
-│ (person)│       │  (system)    │       │ (ext)    │
-└─────────┘       └──────────────┘       └──────────┘
-```
+![System Context](./diagrams/system-context.svg)
 
 **Level 2 — Container:**
 
 Shows the major technical building blocks. Each container is a separately
 deployable unit.
 
-```text
-┌──────────────────────────────────────────┐
-│              FitTrack System             │
-│                                          │
-│  ┌─────────┐  ┌──────────┐  ┌────────┐ │
-│  │ React   │  │ API      │  │DynamoDB│ │
-│  │ SPA     │→ │ Gateway  │→ │ Table  │ │
-│  └─────────┘  └──────────┘  └────────┘ │
-│                    ↓                     │
-│              ┌──────────┐               │
-│              │ Lambda   │               │
-│              │Functions │               │
-│              └──────────┘               │
-└──────────────────────────────────────────┘
-```
+![Container Diagram](./diagrams/container-diagram.svg)
 
 **Level 3 — Component:**
 
@@ -271,54 +234,13 @@ individual Lambda functions and their responsibilities.
 PlantUML lets you write diagrams in a text format that compiles to images.
 This means diagrams are versioned in Git alongside your code.
 
-**C4 Context diagram in PlantUML:**
+**C4 Context diagram in PlantUML** (see [`diagrams/system-context.puml`](./diagrams/system-context.puml)):
 
-```plantuml
-@startuml c4-context
-!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
+![System Context](./diagrams/system-context.svg)
 
-title FitTrack - System Context
+**C4 Container diagram in PlantUML** (see [`diagrams/container-diagram.puml`](./diagrams/container-diagram.puml)):
 
-Person(user, "Fitness User", "Logs workouts and tracks progress")
-System(fittrack, "FitTrack", "Serverless fitness tracker")
-System_Ext(cognito, "AWS Cognito", "Authentication")
-
-Rel(user, fittrack, "Uses", "HTTPS")
-Rel(fittrack, cognito, "Authenticates via", "OAuth2/JWT")
-@enduml
-```
-
-**C4 Container diagram in PlantUML:**
-
-```plantuml
-@startuml c4-container
-!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
-
-title FitTrack - Container Diagram
-
-Person(user, "Fitness User")
-
-System_Boundary(fittrack, "FitTrack") {
-    Container(spa, "React SPA", "React 18", "User interface")
-    Container(api, "API Gateway", "AWS", "REST API endpoints")
-    Container(auth_fn, "Auth Lambda", "Python 3.12", "Registration, login")
-    Container(workout_fn, "Workout Lambda", "Python 3.12", "Session management")
-    Container(progress_fn, "Progress Lambda", "Python 3.12", "Streaks, PRs, volume")
-    ContainerDb(db, "DynamoDB", "Single-table", "All application data")
-}
-
-System_Ext(cognito, "AWS Cognito", "User pools")
-
-Rel(user, spa, "Uses", "HTTPS")
-Rel(spa, api, "Calls", "REST/JSON")
-Rel(api, auth_fn, "Routes to")
-Rel(api, workout_fn, "Routes to")
-Rel(api, progress_fn, "Routes to")
-Rel(auth_fn, cognito, "Authenticates")
-Rel(workout_fn, db, "Reads/Writes")
-Rel(progress_fn, db, "Reads")
-@enduml
-```
+![Container Diagram](./diagrams/container-diagram.svg)
 
 **Generating SVG from PlantUML:**
 
@@ -383,7 +305,7 @@ consequences. They live in the architecture document (arc42 Chapter 9).
 **Status:** Accepted
 
 **Context:**
-FitTrack needs a database for users, sessions, exercises, and records.
+The Subscription Platform needs a database for merchants, products, orders, and subscriptions.
 We need fast reads, low cost, and serverless scaling.
 
 **Decision:**

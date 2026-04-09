@@ -1,0 +1,31 @@
+@startuml container-diagram
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+
+title Subscription Platform - Container Diagram
+
+Person(merchant, "Merchant")
+
+System_Boundary(subplatform, "Subscription Platform") {
+    Container(spa, "React SPA", "React 18", "Merchant dashboard")
+    Container(api, "API Gateway", "AWS", "REST API endpoints")
+    Container(catalog_fn, "Catalog Lambda", "Python 3.12", "Products, variants, prices")
+    Container(identity_fn, "Identity Lambda", "Python 3.12", "Auth, customers, API keys")
+    Container(order_fn, "Order Lambda", "Python 3.12", "Checkouts, orders, discounts")
+    Container(billing_fn, "Billing Lambda", "Python 3.12", "Subscriptions, invoices, usage")
+    ContainerDb(db, "DynamoDB", "Single-table", "All application data")
+}
+
+System_Ext(cognito, "AWS Cognito", "User pools")
+
+Rel(merchant, spa, "Uses", "HTTPS")
+Rel(spa, api, "Calls", "REST/JSON")
+Rel(api, catalog_fn, "Routes to")
+Rel(api, identity_fn, "Routes to")
+Rel(api, order_fn, "Routes to")
+Rel(api, billing_fn, "Routes to")
+Rel(identity_fn, cognito, "Authenticates")
+Rel(catalog_fn, db, "Reads/Writes")
+Rel(order_fn, db, "Reads/Writes")
+Rel(billing_fn, db, "Reads/Writes")
+
+@enduml

@@ -29,7 +29,7 @@ The course has two parts:
    per module, learning the underlying software development process along
    the way.
 2. **Module 6 (Team)** — Students form teams and use all five agents
-   together to build **FitTrack**, a serverless fitness tracker on AWS.
+   together to build **SubscriptionPlatform**, a serverless subscription and payments service on AWS (Lemon Squeezy-style).
 
 ## Modules
 
@@ -41,14 +41,15 @@ The course has two parts:
 | 3 | Software Requirements | User stories, DDD, Pareto prioritization | Story derivation agent |
 | 4 | CI/CD | GitHub Actions, SAM, AWS deployment | Deployment pipeline agent |
 | 5 | TDD/BDD | RED-GREEN-REFACTOR, backend-first | Multi-agent TDD system |
-| 6 | FitTrack App | Full lifecycle (team project) | All agents from M1–M5 |
+| 6 | Subscription Platform | Full lifecycle (team project) | All agents from M1–M5 |
 
-## Course Project: FitTrack
+## Course Project: SubscriptionPlatform
 
-A serverless fitness tracker that lets users log workouts, track personal
-records, and visualize weekly progress. Built entirely by AI agents.
+A serverless subscription and payments service (Lemon Squeezy-style) that lets
+merchants create products, manage customers, process checkouts, and handle
+recurring billing. Built entirely by AI agents.
 
-**Bounded contexts:** AUTH, WORKOUT, PROGRESS.
+**Bounded contexts:** CATALOG, IDENTITY, ORDER, BILLING.
 
 ## 3-Week Timeline
 
@@ -59,7 +60,7 @@ records, and visualize weekly progress. Built entirely by AI agents.
 | 5–6 | Module 3: Requirements | Story agent + kata backlog |
 | 7–8 | Module 4: CI/CD | Deploy agent + pipeline exercise |
 | 9–12 | Module 5: TDD/BDD | Multi-agent TDD system + practice |
-| 13–18 | Module 6: FitTrack (teams) | Working app deployed on AWS |
+| 13–18 | Module 6: Subscription Platform (teams) | Working app deployed on AWS |
 | 19–21 | Buffer / presentations | Demo + retrospective |
 
 ## Assessment
@@ -114,7 +115,7 @@ jobs:
       - uses: aws-actions/setup-sam@v2
 
       - run: sam build
-      - run: sam deploy --no-confirm-changeset --no-fail-on-empty-changeset --stack-name fittrack --resolve-s3 --capabilities CAPABILITY_IAM
+      - run: sam deploy --no-confirm-changeset --no-fail-on-empty-changeset --stack-name subscription-platform --resolve-s3 --capabilities CAPABILITY_IAM
 ```
 
 ### Permissions Boundary

@@ -1,0 +1,17 @@
+@startuml bounded-contexts
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+
+title Subscription Platform - Bounded Contexts
+
+System_Boundary(platform, "Subscription Platform") {
+    Container(catalog, "CATALOG", "", "products\nvariants\nprices")
+    Container(identity, "IDENTITY", "", "merchants\ncustomers\nAPI keys")
+    Container(order, "ORDER", "", "checkouts\norders\ndiscounts")
+    Container(billing, "BILLING", "", "subscriptions\ninvoices\nusage records")
+}
+
+Rel(order, catalog, "gets price info")
+Rel(order, identity, "resolves customer")
+Rel(order, billing, "creates subscription")
+
+@enduml
