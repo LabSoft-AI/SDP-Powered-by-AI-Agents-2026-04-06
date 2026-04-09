@@ -234,10 +234,10 @@ Shows the big picture. Who uses the system? What external systems does it
 integrate with?
 
 ```text
-┌─────────┐       ┌──────────────┐       ┌──────────┐
-│  User   │──────→│  FitTrack    │──────→│ Cognito  │
-│ (person)│       │  (system)    │       │ (ext)    │
-└─────────┘       └──────────────┘       └──────────┘
+┌─────────┐       ┌──────────────────┐       ┌──────────┐
+│Merchant │──────→│ Subscription     │──────→│ Cognito  │
+│ (person)│       │ Platform (system)│       │ (ext)    │
+└─────────┘       └──────────────────┘       └──────────┘
 ```
 
 **Level 2 — Container:**
@@ -247,7 +247,7 @@ deployable unit.
 
 ```text
 ┌──────────────────────────────────────────┐
-│              FitTrack System             │
+│          Subscription Platform System    │
 │                                          │
 │  ┌─────────┐  ┌──────────┐  ┌────────┐ │
 │  │ React   │  │ API      │  │DynamoDB│ │
@@ -277,14 +277,14 @@ This means diagrams are versioned in Git alongside your code.
 @startuml c4-context
 !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
 
-title FitTrack - System Context
+title Subscription Platform - System Context
 
-Person(user, "Fitness User", "Logs workouts and tracks progress")
-System(fittrack, "FitTrack", "Serverless fitness tracker")
+Person(user, "Merchant", "Creates products and manages subscriptions")
+System(subplatform, "Subscription Platform", "Serverless subscription and payments service")
 System_Ext(cognito, "AWS Cognito", "Authentication")
 
-Rel(user, fittrack, "Uses", "HTTPS")
-Rel(fittrack, cognito, "Authenticates via", "OAuth2/JWT")
+Rel(user, subplatform, "Uses", "HTTPS")
+Rel(subplatform, cognito, "Authenticates via", "OAuth2/JWT")
 @enduml
 ```
 
@@ -294,16 +294,17 @@ Rel(fittrack, cognito, "Authenticates via", "OAuth2/JWT")
 @startuml c4-container
 !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
 
-title FitTrack - Container Diagram
+title Subscription Platform - Container Diagram
 
-Person(user, "Fitness User")
+Person(user, "Merchant")
 
-System_Boundary(fittrack, "FitTrack") {
-    Container(spa, "React SPA", "React 18", "User interface")
+System_Boundary(subplatform, "Subscription Platform") {
+    Container(spa, "React SPA", "React 18", "Merchant dashboard")
     Container(api, "API Gateway", "AWS", "REST API endpoints")
-    Container(auth_fn, "Auth Lambda", "Python 3.12", "Registration, login")
-    Container(workout_fn, "Workout Lambda", "Python 3.12", "Session management")
-    Container(progress_fn, "Progress Lambda", "Python 3.12", "Streaks, PRs, volume")
+    Container(catalog_fn, "Catalog Lambda", "Python 3.12", "Products, variants, prices")
+    Container(identity_fn, "Identity Lambda", "Python 3.12", "Auth, customers, API keys")
+    Container(order_fn, "Order Lambda", "Python 3.12", "Checkouts, orders, discounts")
+    Container(billing_fn, "Billing Lambda", "Python 3.12", "Subscriptions, invoices, usage")
     ContainerDb(db, "DynamoDB", "Single-table", "All application data")
 }
 
@@ -311,12 +312,14 @@ System_Ext(cognito, "AWS Cognito", "User pools")
 
 Rel(user, spa, "Uses", "HTTPS")
 Rel(spa, api, "Calls", "REST/JSON")
-Rel(api, auth_fn, "Routes to")
-Rel(api, workout_fn, "Routes to")
-Rel(api, progress_fn, "Routes to")
-Rel(auth_fn, cognito, "Authenticates")
-Rel(workout_fn, db, "Reads/Writes")
-Rel(progress_fn, db, "Reads")
+Rel(api, catalog_fn, "Routes to")
+Rel(api, identity_fn, "Routes to")
+Rel(api, order_fn, "Routes to")
+Rel(api, billing_fn, "Routes to")
+Rel(identity_fn, cognito, "Authenticates")
+Rel(catalog_fn, db, "Reads/Writes")
+Rel(order_fn, db, "Reads/Writes")
+Rel(billing_fn, db, "Reads/Writes")
 @enduml
 ```
 
@@ -383,7 +386,7 @@ consequences. They live in the architecture document (arc42 Chapter 9).
 **Status:** Accepted
 
 **Context:**
-FitTrack needs a database for users, sessions, exercises, and records.
+The Subscription Platform needs a database for merchants, products, orders, and subscriptions.
 We need fast reads, low cost, and serverless scaling.
 
 **Decision:**

@@ -121,22 +121,30 @@ Each domain has its own language. In AUTH, a User is credentials and tokens. In 
 **Type:** code
 **Content:**
 ```text
-┌─────────────────────────────────────────────────────┐
-│                     FitTrack                        │
-│                                                     │
-│  ┌──────────┐   ┌──────────────┐   ┌────────────┐  │
-│  │   AUTH   │   │   WORKOUT    │   │  PROGRESS  │  │
-│  │          │   │              │   │            │  │
-│  │ register │   │ log session  │   │  streaks   │  │
-│  │ login    │   │ add exercise │   │  PRs       │  │
-│  │ profile  │   │ view history │   │  volume    │  │
-│  └──────────┘   └──────────────┘   └────────────┘  │
-└─────────────────────────────────────────────────────┘
+┌──────────────────────────────────────────────────────────┐
+│               Subscription Platform                      │
+│                                                          │
+│  ┌──────────┐   ┌──────────────┐   ┌────────────────┐   │
+│  │ CATALOG  │   │   IDENTITY   │   │    ORDER       │   │
+│  │          │   │              │   │                │   │
+│  │ products │   │ merchants    │   │  checkouts     │   │
+│  │ variants │   │ customers    │   │  orders        │   │
+│  │ prices   │   │ API keys     │   │  discounts     │   │
+│  └──────────┘   └──────────────┘   └────────────────┘   │
+│                                                          │
+│                 ┌────────────────┐                        │
+│                 │    BILLING     │                        │
+│                 │                │                        │
+│                 │ subscriptions  │                        │
+│                 │ invoices       │                        │
+│                 │ usage records  │                        │
+│                 └────────────────┘                        │
+└──────────────────────────────────────────────────────────┘
 ```
 
 **Notes:**
-Here's FitTrack decomposed into three bounded contexts. AUTH handles identity only — it delegates token issuance to Cognito. WORKOUT is the core domain — sessions and exercises. PROGRESS is the most interesting for testing — streaks, personal records, weekly volume.
-Each context has its own model, its own Lambda functions, and its own section of the DynamoDB table. They communicate through events, not direct calls.
+Here's the Subscription Platform decomposed into four bounded contexts. CATALOG handles products and pricing. IDENTITY handles merchant auth and customer management. ORDER handles checkouts, payments, and discounts. BILLING handles subscription lifecycle, invoicing, and usage tracking.
+Each context has its own model, its own Lambda functions, and its own section of the DynamoDB table. They communicate through REST calls between modules.
 
 ---
 
@@ -195,7 +203,7 @@ For a student project on AWS free tier, this means you can deploy a real applica
 - **SAM** — Infrastructure as Code for serverless
 
 **Notes:**
-This is the stack we'll use for FitTrack. Every component scales to zero and is fully managed. No servers, no patching, no capacity planning.
+This is the stack we'll use for the Subscription Platform. Every component scales to zero and is fully managed. No servers, no patching, no capacity planning.
 SAM — Serverless Application Model — is how we define all of this as code. One YAML file describes your Lambda functions, API Gateway, DynamoDB tables, and all the wiring between them.
 
 ---
@@ -206,13 +214,13 @@ SAM — Serverless Application Model — is how we define all of this as code. O
 - Event-Driven Architecture (EDA)
 - Services communicate through **events**, not direct calls
 - Events are **asynchronous** — producer doesn't wait for consumer
-- Events are **past tense**: "WorkoutLogged", "PRDetected"
+- Events are **past tense**: "CheckoutCompleted", "SubscriptionCreated"
 - **Loose coupling** — services don't know about each other
 - **Resilience** — one service failure doesn't cascade
 
 **Notes:**
 In traditional architecture, services call each other directly. If the downstream service is slow or down, the caller fails too. In EDA, services publish events and move on. Consumers process events independently.
-This is a fundamental shift. Instead of "call the streak service to update the streak", you publish a "WorkoutLogged" event. The streak service, the PR detector, and the volume calculator all react independently. If one fails, the others still succeed.
+This is a fundamental shift. Instead of "call the billing service to create a subscription", you publish a "CheckoutCompleted" event. The subscription creator, the invoice generator, and the email notifier all react independently. If one fails, the others still succeed.
 
 ---
 
@@ -226,18 +234,18 @@ Synchronous (request-response):
   If C is slow, entire chain is slow.
 
 Asynchronous (event-driven):
-  Client → API → Lambda A → publishes "WorkoutLogged"
+  Client → API → Lambda A → publishes "CheckoutCompleted"
            done!                  ↓
                     EventBridge routes to:
-                      → Lambda B (update streak)
-                      → Lambda C (check PR)
-                      → Lambda D (calc volume)
+                      → Lambda B (create subscription)
+                      → Lambda C (generate invoice)
+                      → Lambda D (send confirmation email)
   A responds immediately. B, C, D process independently.
 ```
 
 **Notes:**
 Look at the difference. In the synchronous model, the user waits for the entire chain. If Lambda C takes 5 seconds, the user waits 5 seconds.
-In the event-driven model, Lambda A saves the workout and publishes an event. The user gets a response immediately. The streak update, PR detection, and volume calculation happen in the background. If the PR detector fails, the streak still updates.
+In the event-driven model, Lambda A completes the checkout and publishes an event. The user gets a response immediately. The subscription creation, invoice generation, and email notification happen in the background. If the email sender fails, the subscription is still created.
 
 ---
 
@@ -245,7 +253,7 @@ In the event-driven model, Lambda A saves the workout and publishes an event. Th
 **Type:** content
 **Content:**
 - EDA Principles
-- **Event naming** — past tense: "WorkoutLogged", not "LogWorkout"
+- **Event naming** — past tense: "CheckoutCompleted", not "CompleteCheckout"
 - **Idempotency** — processing same event twice = same result
 - **Error handling** — Dead Letter Queues for failed events
 - **Schema validation** — events have defined, versioned schemas
@@ -309,17 +317,17 @@ Level 4 is rarely needed. If your code is well-structured, the code itself is th
 ```text
 Level 1: System Context
 
-┌─────────┐       ┌──────────────┐       ┌──────────┐
-│  User   │──────→│  FitTrack    │──────→│ Cognito  │
-│ (person)│       │  (system)    │       │ (ext)    │
-└─────────┘       └──────────────┘       └──────────┘
+┌──────────┐       ┌──────────────────┐       ┌──────────┐
+│ Merchant │──────→│  Subscription    │──────→│ Cognito  │
+│ (person) │       │  Platform (sys)  │       │ (ext)    │
+└──────────┘       └──────────────────┘       └──────────┘
 
 Who uses it? What does it connect to?
 ```
 
 **Notes:**
 This is the simplest diagram. One box for your system, surrounded by the people who use it and the external systems it talks to.
-For FitTrack: a fitness user interacts with the FitTrack system, which authenticates via AWS Cognito. That's it at Level 1. Simple, clear, fits on a napkin.
+For the Subscription Platform: a merchant interacts with the platform to create products and manage subscriptions, which authenticates via AWS Cognito. That's it at Level 1. Simple, clear, fits on a napkin.
 
 ---
 
@@ -327,25 +335,25 @@ For FitTrack: a fitness user interacts with the FitTrack system, which authentic
 **Type:** code
 **Content:**
 ```text
-Level 2: Container (zoom into FitTrack)
+Level 2: Container (zoom into Subscription Platform)
 
-┌──────────────────────────────────────────┐
-│              FitTrack System             │
-│                                          │
-│  ┌─────────┐  ┌──────────┐  ┌────────┐ │
-│  │ React   │  │ API      │  │DynamoDB│ │
-│  │ SPA     │→ │ Gateway  │→ │ Table  │ │
-│  └─────────┘  └──────────┘  └────────┘ │
-│                    ↓                     │
-│              ┌──────────┐               │
-│              │ Lambda   │               │
-│              │Functions │               │
-│              └──────────┘               │
-└──────────────────────────────────────────┘
+┌──────────────────────────────────────────────┐
+│        Subscription Platform System          │
+│                                              │
+│  ┌─────────┐  ┌──────────┐  ┌────────┐     │
+│  │ React   │  │ API      │  │DynamoDB│     │
+│  │ SPA     │→ │ Gateway  │→ │ Table  │     │
+│  └─────────┘  └──────────┘  └────────┘     │
+│                    ↓                         │
+│              ┌──────────┐                   │
+│              │ Lambda   │                   │
+│              │Functions │                   │
+│              └──────────┘                   │
+└──────────────────────────────────────────────┘
 ```
 
 **Notes:**
-Now we zoom in. The FitTrack system contains a React SPA, an API Gateway, Lambda functions, and a DynamoDB table. Each of these is a container — a separately deployable unit.
+Now we zoom in. The Subscription Platform contains a React SPA, an API Gateway, Lambda functions, and a DynamoDB table. Each of these is a container — a separately deployable unit.
 This is the diagram that developers look at most. It shows the major technical building blocks and how they connect.
 
 ---
@@ -373,14 +381,14 @@ No more Visio files that nobody can edit. No more screenshots that go stale. The
 @startuml c4-context
 !include C4_Context.puml
 
-title FitTrack - System Context
+title Subscription Platform - System Context
 
-Person(user, "Fitness User", "Logs workouts")
-System(fittrack, "FitTrack", "Fitness tracker")
+Person(user, "Merchant", "Manages products and subscriptions")
+System(subplatform, "Subscription Platform", "Payments service")
 System_Ext(cognito, "AWS Cognito", "Auth")
 
-Rel(user, fittrack, "Uses", "HTTPS")
-Rel(fittrack, cognito, "Auth via", "JWT")
+Rel(user, subplatform, "Uses", "HTTPS")
+Rel(subplatform, cognito, "Auth via", "JWT")
 @enduml
 ```
 
@@ -415,7 +423,7 @@ Without ADRs, someone joins the team six months later and asks "why did we use D
 **Status:** Accepted
 
 **Context:**
-FitTrack needs a database. We need fast reads,
+The Subscription Platform needs a database. We need fast reads,
 low cost, and serverless scaling.
 
 **Decision:**

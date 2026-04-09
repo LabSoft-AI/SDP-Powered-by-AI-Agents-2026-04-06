@@ -32,7 +32,7 @@ Your job is to learn each process, then encode it into an agent that follows it 
 - **Module 3: Requirements Agent** — user stories, DDD, Pareto prioritization
 - **Module 4: CI/CD Agent** — GitHub Actions, SAM deploy, test gates
 - **Module 5: TDD/BDD Agent** — multi-agent test system (RED-GREEN-REFACTOR)
-- **Module 6: FitTrack** — team project using all 5 agents end-to-end
+- **Module 6: Subscription Platform** — team project using all 5 agents end-to-end
 
 **Notes:**
 Five individual modules, each producing one specialized agent. Then a team capstone where you combine all five agents to build a real serverless application.
@@ -206,12 +206,12 @@ Let's look at the practical structure — timeline, tools, and how the modules c
 - **Days 5–6:** Module 3 — Requirements (agent + kata stories)
 - **Days 7–8:** Module 4 — CI/CD (agent + pipeline exercise)
 - **Days 9–12:** Module 5 — TDD/BDD (multi-agent system + kata implementation)
-- **Days 13–18:** Module 6 — FitTrack (team project, all agents)
+- **Days 13–18:** Module 6 — Subscription Platform (team project, all agents)
 - **Days 19–21:** Buffer, presentations, retrospective
 
 **Notes:**
 Modules 1 through 5 are individual work. You build your own agents, choose your own kata, and submit PRs for review.
-Module 6 is team work. You form teams and use all five agents together to build FitTrack, a serverless fitness tracker. This is where everything comes together.
+Module 6 is team work. You form teams and use all five agents together to build a serverless subscription and payments service (Lemon Squeezy-style). This is where everything comes together.
 
 ---
 
