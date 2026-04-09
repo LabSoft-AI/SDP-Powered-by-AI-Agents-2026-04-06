@@ -10,6 +10,7 @@ Location: 507 НТП | Time: 17:00
 | Jovan Glintic | ✅ | ✅ | | |
 | Jana Petrovic | ❌ | ✅ | | |
 | Vuk Antovic | ✅ | ✅ | | |
+| Ana Zec | ❌ | ❌ | ✅ | |
 
 Friday 10.4. — no class (Good Friday)
 
@@ -21,6 +22,7 @@ Friday 10.4. — no class (Good Friday)
 | Jovan Glintic | | | | |
 | Jana Petrovic | | | | |
 | Vuk Antovic | | | | |
+| Ana Zec | | | | |
 
 Monday 14.4. — no class
 
@@ -34,3 +36,4 @@ Project work (schedule TBD)
 | Jovan Glintic | | | |
 | Jana Petrovic | | | |
 | Vuk Antovic | | | |
+| Ana Zec | | | |
