@@ -118,7 +118,7 @@ Each domain has its own language. In AUTH, a User is credentials and tokens. In 
 ---
 
 ## Slide 9: Bounded Contexts
-**Type:** code
+**Type:** image
 **Content:**
 ![Bounded Contexts](../diagrams/bounded-contexts.svg)
 
@@ -205,7 +205,7 @@ This is a fundamental shift. Instead of "call the billing service to create a su
 ---
 
 ## Slide 15: Sync vs Async
-**Type:** code
+**Type:** image
 **Content:**
 ![Sync vs Async](../diagrams/sync-vs-async.svg)
 
@@ -278,7 +278,7 @@ Level 4 is rarely needed. If your code is well-structured, the code itself is th
 ---
 
 ## Slide 20: C4 Level 1 — System Context
-**Type:** code
+**Type:** image
 **Content:**
 ![System Context](../diagrams/system-context.svg)
 
@@ -289,7 +289,7 @@ For the Subscription Platform: a merchant interacts with the platform to create 
 ---
 
 ## Slide 21: C4 Level 2 — Container
-**Type:** code
+**Type:** image
 **Content:**
 ![Container Diagram](../diagrams/container-diagram.svg)
 
