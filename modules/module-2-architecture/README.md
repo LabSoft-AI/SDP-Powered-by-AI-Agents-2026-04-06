@@ -153,25 +153,7 @@ scales automatically. This is why serverless is ideal for:
 In traditional architectures, services call each other directly (synchronous).
 In EDA, services communicate by publishing and consuming events (asynchronous).
 
-**Synchronous (request-response):**
-
-```text
-Client → API Gateway → Lambda A → Lambda B → Lambda C → Response
-         (waits)       (waits)     (waits)     (processes)
-```
-
-If Lambda C is slow or down, the entire chain fails.
-
-**Asynchronous (event-driven):**
-
-```text
-Client → API Gateway → Lambda A → publishes "Workout Logged" event
-                                        ↓
-                        EventBridge routes to:
-                          → Lambda B (update streak)
-                          → Lambda C (check PR)
-                          → Lambda D (calculate volume)
-```
+![Sync vs Async](./diagrams/sync-vs-async.svg)
 
 Lambda A responds immediately. B, C, D process independently. If one
 fails, the others still succeed.
@@ -233,33 +215,14 @@ Level 4: Code             → Zoom into a component: class diagrams (rarely need
 Shows the big picture. Who uses the system? What external systems does it
 integrate with?
 
-```text
-┌─────────┐       ┌──────────────────┐       ┌──────────┐
-│Merchant │──────→│ Subscription     │──────→│ Cognito  │
-│ (person)│       │ Platform (system)│       │ (ext)    │
-└─────────┘       └──────────────────┘       └──────────┘
-```
+![System Context](./diagrams/system-context.svg)
 
 **Level 2 — Container:**
 
 Shows the major technical building blocks. Each container is a separately
 deployable unit.
 
-```text
-┌──────────────────────────────────────────┐
-│          Subscription Platform System    │
-│                                          │
-│  ┌─────────┐  ┌──────────┐  ┌────────┐ │
-│  │ React   │  │ API      │  │DynamoDB│ │
-│  │ SPA     │→ │ Gateway  │→ │ Table  │ │
-│  └─────────┘  └──────────┘  └────────┘ │
-│                    ↓                     │
-│              ┌──────────┐               │
-│              │ Lambda   │               │
-│              │Functions │               │
-│              └──────────┘               │
-└──────────────────────────────────────────┘
-```
+![Container Diagram](./diagrams/container-diagram.svg)
 
 **Level 3 — Component:**
 
@@ -271,57 +234,13 @@ individual Lambda functions and their responsibilities.
 PlantUML lets you write diagrams in a text format that compiles to images.
 This means diagrams are versioned in Git alongside your code.
 
-**C4 Context diagram in PlantUML:**
+**C4 Context diagram in PlantUML** (see [`diagrams/system-context.puml`](./diagrams/system-context.puml)):
 
-```plantuml
-@startuml c4-context
-!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
+![System Context](./diagrams/system-context.svg)
 
-title Subscription Platform - System Context
+**C4 Container diagram in PlantUML** (see [`diagrams/container-diagram.puml`](./diagrams/container-diagram.puml)):
 
-Person(user, "Merchant", "Creates products and manages subscriptions")
-System(subplatform, "Subscription Platform", "Serverless subscription and payments service")
-System_Ext(cognito, "AWS Cognito", "Authentication")
-
-Rel(user, subplatform, "Uses", "HTTPS")
-Rel(subplatform, cognito, "Authenticates via", "OAuth2/JWT")
-@enduml
-```
-
-**C4 Container diagram in PlantUML:**
-
-```plantuml
-@startuml c4-container
-!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
-
-title Subscription Platform - Container Diagram
-
-Person(user, "Merchant")
-
-System_Boundary(subplatform, "Subscription Platform") {
-    Container(spa, "React SPA", "React 18", "Merchant dashboard")
-    Container(api, "API Gateway", "AWS", "REST API endpoints")
-    Container(catalog_fn, "Catalog Lambda", "Python 3.12", "Products, variants, prices")
-    Container(identity_fn, "Identity Lambda", "Python 3.12", "Auth, customers, API keys")
-    Container(order_fn, "Order Lambda", "Python 3.12", "Checkouts, orders, discounts")
-    Container(billing_fn, "Billing Lambda", "Python 3.12", "Subscriptions, invoices, usage")
-    ContainerDb(db, "DynamoDB", "Single-table", "All application data")
-}
-
-System_Ext(cognito, "AWS Cognito", "User pools")
-
-Rel(user, spa, "Uses", "HTTPS")
-Rel(spa, api, "Calls", "REST/JSON")
-Rel(api, catalog_fn, "Routes to")
-Rel(api, identity_fn, "Routes to")
-Rel(api, order_fn, "Routes to")
-Rel(api, billing_fn, "Routes to")
-Rel(identity_fn, cognito, "Authenticates")
-Rel(catalog_fn, db, "Reads/Writes")
-Rel(order_fn, db, "Reads/Writes")
-Rel(billing_fn, db, "Reads/Writes")
-@enduml
-```
+![Container Diagram](./diagrams/container-diagram.svg)
 
 **Generating SVG from PlantUML:**
 

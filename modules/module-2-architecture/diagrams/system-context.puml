@@ -1,0 +1,13 @@
+@startuml system-context
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
+
+title Subscription Platform - System Context
+
+Person(merchant, "Merchant", "Creates products and manages subscriptions")
+System(subplatform, "Subscription Platform", "Serverless subscription and payments service")
+System_Ext(cognito, "AWS Cognito", "Authentication")
+
+Rel(merchant, subplatform, "Uses", "HTTPS")
+Rel(subplatform, cognito, "Authenticates via", "OAuth2/JWT")
+
+@enduml

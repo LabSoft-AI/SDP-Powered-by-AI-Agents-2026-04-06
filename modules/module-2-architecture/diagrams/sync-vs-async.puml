@@ -1,0 +1,42 @@
+@startuml sync-vs-async
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Sequence.puml
+
+title Synchronous vs Asynchronous
+
+== Synchronous (request-response) ==
+
+participant "Client" as C1
+participant "API Gateway" as API1
+participant "Lambda A" as A1
+participant "Lambda B" as B1
+participant "Lambda C" as C1b
+
+C1 -> API1: POST /checkout
+API1 -> A1: invoke
+A1 -> B1: invoke (waits)
+B1 -> C1b: invoke (waits)
+C1b --> B1: response
+B1 --> A1: response
+A1 --> API1: response
+API1 --> C1: response\n(slow if C is slow)
+
+== Asynchronous (event-driven) ==
+
+participant "Client" as C2
+participant "API Gateway" as API2
+participant "Lambda A" as A2
+participant "EventBridge" as EB
+participant "Lambda B\n(create subscription)" as B2
+participant "Lambda C\n(generate invoice)" as C2b
+participant "Lambda D\n(send email)" as D2
+
+C2 -> API2: POST /checkout
+API2 -> A2: invoke
+A2 -> EB: publish "CheckoutCompleted"
+A2 --> API2: 200 OK
+API2 --> C2: response\n(immediate)
+EB ->> B2: route event
+EB ->> C2b: route event
+EB ->> D2: route event
+
+@enduml

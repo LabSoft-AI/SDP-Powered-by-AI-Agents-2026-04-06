@@ -120,27 +120,7 @@ Each domain has its own language. In AUTH, a User is credentials and tokens. In 
 ## Slide 9: Bounded Contexts
 **Type:** code
 **Content:**
-```text
-┌──────────────────────────────────────────────────────────┐
-│               Subscription Platform                      │
-│                                                          │
-│  ┌──────────┐   ┌──────────────┐   ┌────────────────┐   │
-│  │ CATALOG  │   │   IDENTITY   │   │    ORDER       │   │
-│  │          │   │              │   │                │   │
-│  │ products │   │ merchants    │   │  checkouts     │   │
-│  │ variants │   │ customers    │   │  orders        │   │
-│  │ prices   │   │ API keys     │   │  discounts     │   │
-│  └──────────┘   └──────────────┘   └────────────────┘   │
-│                                                          │
-│                 ┌────────────────┐                        │
-│                 │    BILLING     │                        │
-│                 │                │                        │
-│                 │ subscriptions  │                        │
-│                 │ invoices       │                        │
-│                 │ usage records  │                        │
-│                 └────────────────┘                        │
-└──────────────────────────────────────────────────────────┘
-```
+![Bounded Contexts](../diagrams/bounded-contexts.svg)
 
 **Notes:**
 Here's the Subscription Platform decomposed into four bounded contexts. CATALOG handles products and pricing. IDENTITY handles merchant auth and customer management. ORDER handles checkouts, payments, and discounts. BILLING handles subscription lifecycle, invoicing, and usage tracking.
@@ -227,21 +207,7 @@ This is a fundamental shift. Instead of "call the billing service to create a su
 ## Slide 15: Sync vs Async
 **Type:** code
 **Content:**
-```text
-Synchronous (request-response):
-  Client → API → Lambda A → Lambda B → Lambda C
-           waits   waits      waits     processes
-  If C is slow, entire chain is slow.
-
-Asynchronous (event-driven):
-  Client → API → Lambda A → publishes "CheckoutCompleted"
-           done!                  ↓
-                    EventBridge routes to:
-                      → Lambda B (create subscription)
-                      → Lambda C (generate invoice)
-                      → Lambda D (send confirmation email)
-  A responds immediately. B, C, D process independently.
-```
+![Sync vs Async](../diagrams/sync-vs-async.svg)
 
 **Notes:**
 Look at the difference. In the synchronous model, the user waits for the entire chain. If Lambda C takes 5 seconds, the user waits 5 seconds.
@@ -314,16 +280,7 @@ Level 4 is rarely needed. If your code is well-structured, the code itself is th
 ## Slide 20: C4 Level 1 — System Context
 **Type:** code
 **Content:**
-```text
-Level 1: System Context
-
-┌──────────┐       ┌──────────────────┐       ┌──────────┐
-│ Merchant │──────→│  Subscription    │──────→│ Cognito  │
-│ (person) │       │  Platform (sys)  │       │ (ext)    │
-└──────────┘       └──────────────────┘       └──────────┘
-
-Who uses it? What does it connect to?
-```
+![System Context](../diagrams/system-context.svg)
 
 **Notes:**
 This is the simplest diagram. One box for your system, surrounded by the people who use it and the external systems it talks to.
@@ -334,23 +291,7 @@ For the Subscription Platform: a merchant interacts with the platform to create 
 ## Slide 21: C4 Level 2 — Container
 **Type:** code
 **Content:**
-```text
-Level 2: Container (zoom into Subscription Platform)
-
-┌──────────────────────────────────────────────┐
-│        Subscription Platform System          │
-│                                              │
-│  ┌─────────┐  ┌──────────┐  ┌────────┐     │
-│  │ React   │  │ API      │  │DynamoDB│     │
-│  │ SPA     │→ │ Gateway  │→ │ Table  │     │
-│  └─────────┘  └──────────┘  └────────┘     │
-│                    ↓                         │
-│              ┌──────────┐                   │
-│              │ Lambda   │                   │
-│              │Functions │                   │
-│              └──────────┘                   │
-└──────────────────────────────────────────────┘
-```
+![Container Diagram](../diagrams/container-diagram.svg)
 
 **Notes:**
 Now we zoom in. The Subscription Platform contains a React SPA, an API Gateway, Lambda functions, and a DynamoDB table. Each of these is a container — a separately deployable unit.
