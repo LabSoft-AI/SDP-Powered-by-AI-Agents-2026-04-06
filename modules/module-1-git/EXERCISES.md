@@ -45,6 +45,11 @@
 
 ## Part 2: Use Your Agent
 
+> **Agent:** `git-agent`
+> ```bash
+> kiro-cli chat --agent git-agent
+> ```
+
 ### Step 1: Build the Git Agent
 
 - [ ] Agent config created at `.kiro/agents/git-agent.json`

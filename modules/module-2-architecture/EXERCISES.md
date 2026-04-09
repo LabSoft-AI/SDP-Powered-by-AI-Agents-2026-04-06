@@ -54,6 +54,11 @@
 
 ## Part 2: Build and Use the Architecture Agent
 
+> **Agent:** `architecture-agent`
+> ```bash
+> kiro-cli chat --agent architecture-agent
+> ```
+
 ### Step 1: Build the Architecture Agent
 
 - [ ] Agent config created at `.kiro/agents/architecture-agent.json`
@@ -89,6 +94,11 @@
 - [ ] No PlantUML syntax errors
 
 ### Step 4: Commit via Git Agent
+
+> **Switch agent:** `git-agent`
+> ```bash
+> kiro-cli chat --agent git-agent
+> ```
 
 - [ ] Feature branch created for architecture issue
 - [ ] Architecture documents committed with issue reference
