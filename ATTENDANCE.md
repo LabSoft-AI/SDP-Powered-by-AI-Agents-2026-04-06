@@ -10,7 +10,7 @@ Location: 507 НТП | Time: 17:00
 | Jovan Glintic | ✅ | ✅ | | |
 | Jana Petrovic | ❌ | ✅ | | |
 | Vuk Antovic | ✅ | ✅ | | |
-| Ana Zec | ❌ | ❌ | ✅ | |
+| Ana Zec | ❌ | ❌ | | |
 
 Friday 10.4. — no class (Good Friday)
 
