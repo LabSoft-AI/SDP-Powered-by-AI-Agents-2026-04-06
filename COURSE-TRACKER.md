@@ -1,4 +1,4 @@
-# Attendance
+# Course Tracker
 
 Location: 507 НТП | Time: 17:00
 
@@ -6,18 +6,18 @@ Location: 507 НТП | Time: 17:00
 
 | Rank | Student | 🟢 Merged | ✅ Approved | 🟡 Open | 🔴 Rejected | Score | Streak |
 |------|---------|-----------|------------|---------|-------------|-------|--------|
-| 🥇 | Aleksandar Cetkovic | 0 | 1 | 0 | 0 | 4 | 🔥 1 |
-| 🥇 | Jovan Glintic | 0 | 1 | 0 | 0 | 4 | 🔥 1 |
-| 3 | Aleksandar Antonic | 0 | 0 | 0 | 0 | 0 | |
-| 3 | Ana Zec | 0 | 0 | 0 | 1 | 0 | |
+| 🥇 | [Aleksandar Cetkovic](https://github.com/cetko4/sdp-powered-by-ai-agents-aleksandar-cetkovic/pulls) | 0 | 1 | 0 | 0 | 4 | 🔥 1 |
+| 🥇 | [Jovan Glintic](https://github.com/jglintic/sdp-powered-by-ai-agents-jovan-glintic/pulls) | 0 | 1 | 0 | 0 | 4 | 🔥 1 |
+| 3 | [Aleksandar Antonic](https://github.com/antonic00/sdp-powered-by-ai-agents-name-surname/pulls) | 0 | 0 | 0 | 0 | 0 | |
+| 3 | [Ana Zec](https://github.com/AnaZec/sdp-powered-by-ai-agents-ana-zec/pulls) | 0 | 0 | 0 | 1 | 0 | |
 | 3 | Ante Resetar | 0 | 0 | 0 | 0 | 0 | |
-| 3 | Jana Petrovic | 0 | 0 | 0 | 1 | 0 | |
+| 3 | [Jana Petrovic](https://github.com/ktzjana/sdp-powered-by-ai-agents-jana-petrovic/pulls) | 0 | 0 | 0 | 1 | 0 | |
 | 3 | Luka Misojcic | 0 | 0 | 0 | 0 | 0 | |
 | 3 | Luka Vidakovic | 0 | 0 | 0 | 0 | 0 | |
 | 3 | Mihailo Dikanovic | 0 | 0 | 0 | 0 | 0 | |
 | 3 | Nikola Boskovic | 0 | 0 | 0 | 0 | 0 | |
-| 3 | Stefan Mitic | 0 | 0 | 0 | 0 | 0 | |
-| 3 | Vuk Antovic | 0 | 0 | 0 | 1 | 0 | |
+| 3 | [Stefan Mitic](https://github.com/notstefan1/sdp-powered-by-ai-agents-stefan-mitic/pulls) | 0 | 0 | 0 | 0 | 0 | |
+| 3 | [Vuk Antovic](https://github.com/antovic/sdp-powered-by-ai-agents-vuk-antovic/pulls) | 0 | 0 | 0 | 1 | 0 | |
 
 **Scoring:** 🟡 Open = 2 pts | ✅ Approved = 4 pts | 🟢 Merged = 5 pts | 🔴 Changes Requested = 0 pts
 **Streak:** Consecutive modules with a PR submitted 🔥
