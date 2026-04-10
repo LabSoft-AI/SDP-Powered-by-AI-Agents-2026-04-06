@@ -37,7 +37,7 @@ The course has two parts:
 |---|--------|-----------------|-------------|
 | 0 | [Intro](modules/intro/) | Context engineering, harness engineering | — |
 | 1 | [Git](modules/module-1-git/) | Branching, commits, PRs, issue tracking | Issue creator, PR creator |
-| 2 | Software Architecture | arc42 template, C4 model | Architecture doc generator |
+| 2 | [Software Architecture](modules/module-2-architecture/) | arc42 template, C4 model | Architecture doc generator |
 | 3 | Software Requirements | User stories, DDD, Pareto prioritization | Story derivation agent |
 | 4 | CI/CD | GitHub Actions, SAM, AWS deployment | Deployment pipeline agent |
 | 5 | TDD/BDD | RED-GREEN-REFACTOR, backend-first | Multi-agent TDD system |
