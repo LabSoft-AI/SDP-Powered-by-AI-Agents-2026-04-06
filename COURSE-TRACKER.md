@@ -31,6 +31,8 @@ Location: 507 НТП | Time: 17:00
 | Project | 45 | Team project using all agents |
 | Test | 30 | Written/practical exam |
 
+> ⚠️ **Prerequisite:** All 5 module PRs must be merged before you can be assigned to a team for the project.
+
 ## Week 1
 
 | # | Student | Tue 7.4. | Wed 8.4. | Thu 9.4. | ~~Fri 10.4.~~ |
