@@ -14,7 +14,7 @@ cp modules/module-2-architecture/starter/architecture-agent.json .kiro/agents/
 Start the agent:
 
 ```bash
-kiro-cli chat --agent architecture-agent
+kiro-cli --tui --agent architecture-agent
 ```
 
 ## What You Need to Complete

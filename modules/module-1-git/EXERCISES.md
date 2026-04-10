@@ -47,7 +47,7 @@
 
 > **Agent:** `git-agent`
 > ```bash
-> kiro-cli chat --agent git-agent
+> kiro-cli --tui --agent git-agent
 > ```
 
 ### Step 1: Build the Git Agent
