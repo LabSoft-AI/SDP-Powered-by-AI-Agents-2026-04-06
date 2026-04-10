@@ -431,7 +431,7 @@ The agent must:
 ### Step 2: Use the Agent to Design Your Kata Architecture
 
 ```bash
-kiro-cli chat --agent architecture-agent
+kiro-cli --tui --agent architecture-agent
 
 > Design the architecture for [your kata name].
 > [Describe the kata problem and your chosen tech stack]
@@ -470,7 +470,7 @@ Fix any PlantUML syntax errors manually.
 Use your Git agent from Module 1:
 
 ```bash
-kiro-cli chat --agent git-agent
+kiro-cli --tui --agent git-agent
 
 > Create a branch for the architecture issue
 > Commit the architecture documents

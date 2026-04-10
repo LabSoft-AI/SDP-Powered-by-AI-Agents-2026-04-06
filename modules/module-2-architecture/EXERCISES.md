@@ -56,7 +56,7 @@
 
 > **Agent:** `architecture-agent`
 > ```bash
-> kiro-cli chat --agent architecture-agent
+> kiro-cli --tui --agent architecture-agent
 > ```
 
 ### Step 1: Build the Architecture Agent
@@ -69,7 +69,7 @@
 
 ### Step 2: Generate Kata Architecture
 
-- [ ] Started agent: `kiro-cli chat --agent architecture-agent`
+- [ ] Started agent: `kiro-cli --tui --agent architecture-agent`
 - [ ] Described kata problem and tech stack to agent
 - [ ] Chapters generated and approved one by one:
   - [ ] `01-introduction-and-goals.md` — approved
@@ -97,7 +97,7 @@
 
 > **Switch agent:** `git-agent`
 > ```bash
-> kiro-cli chat --agent git-agent
+> kiro-cli --tui --agent git-agent
 > ```
 
 - [ ] Feature branch created for architecture issue
