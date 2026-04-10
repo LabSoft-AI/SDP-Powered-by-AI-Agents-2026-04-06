@@ -13,6 +13,11 @@ The course is grounded in two emerging disciplines:
   steer the agent before it acts, and sensors (feedback controls) that
   detect and self-correct issues after it acts. Pre-commit hooks, linters,
   test suites, and review agents are all part of the harness.
+- **Spec-Driven Development** — writing specifications (tests, schemas,
+  acceptance criteria) before implementation, then using AI agents to
+  generate code that satisfies them. TDD and BDD with AI agents flip the
+  traditional workflow: the spec becomes the feedforward guide, and the
+  test suite becomes the sensor that validates the agent's output.
 
 Each module teaches a software development process, then has students
 encode it as context (agent config) and harness (guides + sensors) around
