@@ -13,6 +13,11 @@ The course is grounded in two emerging disciplines:
   steer the agent before it acts, and sensors (feedback controls) that
   detect and self-correct issues after it acts. Pre-commit hooks, linters,
   test suites, and review agents are all part of the harness.
+- **Spec-Driven Development** — writing specifications (tests, schemas,
+  acceptance criteria) before implementation, then using AI agents to
+  generate code that satisfies them. TDD and BDD with AI agents flip the
+  traditional workflow: the spec becomes the feedforward guide, and the
+  test suite becomes the sensor that validates the agent's output.
 
 Each module teaches a software development process, then has students
 encode it as context (agent config) and harness (guides + sensors) around
@@ -202,6 +207,7 @@ This creates a Python virtual environment and installs:
 
 - [Harness Engineering (Fowler)](https://martinfowler.com/articles/harness-engineering.html)
 - [Context Engineering (Fowler)](https://martinfowler.com/articles/exploring-gen-ai/context-engineering-coding-agents.html)
+- [Spec-Driven Development (Fowler)](https://martinfowler.com/articles/exploring-gen-ai/sdd-3-tools.html)
 - [arc42 Template](https://arc42.org/overview)
 - [C4 Model](https://c4model.com/)
 - [Conventional Commits](https://www.conventionalcommits.org/)
