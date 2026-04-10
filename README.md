@@ -55,8 +55,8 @@ recurring billing. Built entirely by AI agents.
 
 | Days | Activity | Deliverable |
 |------|----------|-------------|
-| 1–2 | Module 1: Git | Git agent + practice exercise |
-| 3–4 | Module 2: Architecture | Architecture agent + kata design |
+| 1–2 | [Module 1: Git](modules/module-1-git/) | Git agent + practice exercise |
+| 3–4 | [Module 2: Architecture](modules/module-2-architecture/) | Architecture agent + kata design |
 | 5–6 | Module 3: Requirements | Story agent + kata backlog |
 | 7–8 | Module 4: CI/CD | Deploy agent + pipeline exercise |
 | 9–12 | Module 5: TDD/BDD | Multi-agent TDD system + practice |
