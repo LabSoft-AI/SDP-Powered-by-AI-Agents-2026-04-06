@@ -6,9 +6,9 @@ Location: 507 НТП | Time: 17:00
 
 | Rank | Student | 🟢 Merged | ✅ Approved | 🟡 Open | 🔴 Rejected | Score | Streak |
 |------|---------|-----------|------------|---------|-------------|-------|--------|
-| 🥇 | [Aleksandar Cetkovic](https://github.com/cetko4/sdp-powered-by-ai-agents-aleksandar-cetkovic/pulls) | 0 | 1 | 0 | 0 | 4 | 🔥 1 |
-| 🥇 | [Ana Zec](https://github.com/AnaZec/sdp-powered-by-ai-agents-ana-zec/pulls) | 0 | 1 | 0 | 0 | 4 | 🔥 1 |
-| 🥇 | [Jovan Glintic](https://github.com/jglintic/sdp-powered-by-ai-agents-jovan-glintic/pulls) | 0 | 1 | 0 | 0 | 4 | 🔥 1 |
+| 🥇 | [Ana Zec](https://github.com/AnaZec/sdp-powered-by-ai-agents-ana-zec/pulls) ⚡ | 1 | 0 | 0 | 0 | 8 | 🔥 1 |
+| 🥈 | [Aleksandar Cetkovic](https://github.com/cetko4/sdp-powered-by-ai-agents-aleksandar-cetkovic/pulls) | 0 | 1 | 0 | 0 | 4 | 🔥 1 |
+| 🥈 | [Jovan Glintic](https://github.com/jglintic/sdp-powered-by-ai-agents-jovan-glintic/pulls) | 0 | 1 | 0 | 0 | 4 | 🔥 1 |
 | 4 | [Aleksandar Antonic](https://github.com/antonic00/sdp-powered-by-ai-agents-name-surname/pulls) | 0 | 0 | 0 | 0 | 0 | |
 | 4 | Ante Resetar | 0 | 0 | 0 | 0 | 0 | |
 | 4 | [Jana Petrovic](https://github.com/ktzjana/sdp-powered-by-ai-agents-jana-petrovic/pulls) | 0 | 0 | 0 | 1 | 0 | |
@@ -96,7 +96,7 @@ Project work (schedule TBD)
 |---|---------|-------|-------|-------|-------|-------|-------|-------|------------|
 | 1 | [Aleksandar Antonic](https://github.com/antonic00/sdp-powered-by-ai-agents-name-surname) | E2 69/2025 | <aleksandar.antonic00@gmail.com> | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
 | 2 | [Aleksandar Cetkovic](https://github.com/cetko4/sdp-powered-by-ai-agents-aleksandar-cetkovic) | E2 2/2025 | <aleksandarcetkovic@gmail.com> | [#4](https://github.com/cetko4/sdp-powered-by-ai-agents-aleksandar-cetkovic/pull/4) ✅ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
-| 3 | [Ana Zec](https://github.com/AnaZec/sdp-powered-by-ai-agents-ana-zec) | E2 71/2025 | <ana.zecus@gmail.com> | [#12](https://github.com/AnaZec/sdp-powered-by-ai-agents-ana-zec/pull/12) ✅ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| 3 | [Ana Zec](https://github.com/AnaZec/sdp-powered-by-ai-agents-ana-zec) | E2 71/2025 | <ana.zecus@gmail.com> | [#12](https://github.com/AnaZec/sdp-powered-by-ai-agents-ana-zec/pull/12) 🟢 | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
 | 4 | Ante Resetar | E2 74/2025 | <ante.resetar@rt-rk.com> | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
 | 5 | [Jana Petrovic](https://github.com/ktzjana/sdp-powered-by-ai-agents-jana-petrovic) | E2 105/2025 | <petrovic.jana12@gmail.com> | [#7](https://github.com/ktzjana/sdp-powered-by-ai-agents-jana-petrovic/pull/7) 🔴 | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
 | 6 | [Jovan Glintic](https://github.com/jglintic/sdp-powered-by-ai-agents-jovan-glintic) | E2 51/2025 | <jovanglintic@gmail.com> | [#9](https://github.com/jglintic/sdp-powered-by-ai-agents-jovan-glintic/pull/9) ✅ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
