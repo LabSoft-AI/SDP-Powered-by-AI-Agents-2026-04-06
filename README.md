@@ -207,6 +207,7 @@ This creates a Python virtual environment and installs:
 
 - [Harness Engineering (Fowler)](https://martinfowler.com/articles/harness-engineering.html)
 - [Context Engineering (Fowler)](https://martinfowler.com/articles/exploring-gen-ai/context-engineering-coding-agents.html)
+- [Spec-Driven Development (Fowler)](https://martinfowler.com/articles/exploring-gen-ai/sdd-3-tools.html)
 - [arc42 Template](https://arc42.org/overview)
 - [C4 Model](https://c4model.com/)
 - [Conventional Commits](https://www.conventionalcommits.org/)
