@@ -23,6 +23,14 @@ Location: 507 НТП | Time: 17:00
 **Streak:** Consecutive modules with a PR submitted 🔥
 **Bonus:** First to merge a module PR = +3 pts ⚡
 
+### Grading Breakdown (100 pts total)
+
+| Component | Points | Details |
+|-----------|--------|---------|
+| Modules (M1–M5) | 25 | 5 pts per module (merged PR) |
+| Project | 45 | Team project using all agents |
+| Test | 30 | Written/practical exam |
+
 ## Week 1
 
 | # | Student | Tue 7.4. | Wed 8.4. | Thu 9.4. | ~~Fri 10.4.~~ |
