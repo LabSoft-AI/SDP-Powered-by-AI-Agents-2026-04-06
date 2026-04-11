@@ -14,7 +14,7 @@ Location: 507 НТП | Time: 17:00
 | 4 | [Jana Petrovic](https://github.com/ktzjana/sdp-powered-by-ai-agents-jana-petrovic/pulls) | 0 | 0 | 0 | 1 | 0 | |
 | 4 | Luka Misojcic | 0 | 0 | 0 | 0 | 0 | |
 | 4 | Luka Vidakovic | 0 | 0 | 0 | 0 | 0 | |
-| 4 | Mihailo Dikanovic | 0 | 0 | 0 | 0 | 0 | |
+| 4 | [Mihailo Dikanovic](https://github.com/dikanovicmihailo/sdp-powered-by-ai-agents-mihailo-dikanovic/pulls) | 0 | 0 | 2 | 0 | 4 | 🔥 2 |
 | 4 | Nikola Boskovic | 0 | 0 | 0 | 0 | 0 | |
 | 4 | [Stefan Mitic](https://github.com/notstefan1/sdp-powered-by-ai-agents-stefan-mitic/pulls) | 0 | 0 | 0 | 0 | 0 | |
 | 4 | [Vuk Antovic](https://github.com/antovic/sdp-powered-by-ai-agents-vuk-antovic/pulls) | 0 | 0 | 0 | 1 | 0 | |
@@ -102,7 +102,7 @@ Project work (schedule TBD)
 | 6 | [Jovan Glintic](https://github.com/jglintic/sdp-powered-by-ai-agents-jovan-glintic) | E2 51/2025 | <jovanglintic@gmail.com> | [#9](https://github.com/jglintic/sdp-powered-by-ai-agents-jovan-glintic/pull/9) ✅ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
 | 7 | Luka Misojcic | E2 39/2025 | <luka.misojcic.2019@gmail.com> | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
 | 8 | Luka Vidakovic | E2 40/2025 | <luka.vidakovic@labsoft.dev> | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
-| 9 | Mihailo Dikanovic | E2 54/2025 | <mihailo.dikanovic@rt-rk.com> | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| 9 | [Mihailo Dikanovic](https://github.com/dikanovicmihailo/sdp-powered-by-ai-agents-mihailo-dikanovic) | E2 54/2025 | <mihailo.dikanovic@rt-rk.com> | [#10](https://github.com/dikanovicmihailo/sdp-powered-by-ai-agents-mihailo-dikanovic/pull/10) 🟡 | [#12](https://github.com/dikanovicmihailo/sdp-powered-by-ai-agents-mihailo-dikanovic/pull/12) 🟡 | ⬜ | ⬜ | ⬜ | ⬜ |
 | 10 | Nikola Boskovic | E2 57/2025 | <nikola.boskovic.2003@gmail.com> | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
 | 11 | [Stefan Mitic](https://github.com/notstefan1/sdp-powered-by-ai-agents-stefan-mitic) | E2 128/2025 | <stefan.mitic@rt-rk.com> | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
 | 12 | [Vuk Antovic](https://github.com/antovic/sdp-powered-by-ai-agents-vuk-antovic) | E2 76/2025 | <vuk.antovic48@gmail.com> | [#8](https://github.com/antovic/sdp-powered-by-ai-agents-vuk-antovic/pull/8) 🔴 | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
