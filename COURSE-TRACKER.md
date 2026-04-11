@@ -9,7 +9,7 @@ Location: 507 НТП | Time: 17:00
 | 🥇 | [Ana Zec](https://github.com/AnaZec/sdp-powered-by-ai-agents-ana-zec/pulls) ⚡⚡ | 2 | 0 | 0 | 0 | 16 | 🔥 2 |
 | 🥈 | [Aleksandar Cetkovic](https://github.com/cetko4/sdp-powered-by-ai-agents-aleksandar-cetkovic/pulls) | 0 | 1 | 0 | 0 | 4 | 🔥 1 |
 | 🥈 | [Jovan Glintic](https://github.com/jglintic/sdp-powered-by-ai-agents-jovan-glintic/pulls) | 0 | 1 | 0 | 0 | 4 | 🔥 1 |
-| 🥈 | [Mihailo Dikanovic](https://github.com/dikanovicmihailo/sdp-powered-by-ai-agents-mihailo-dikanovic/pulls) | 0 | 2 | 0 | 0 | 8 | 🔥 2 |
+| 🥈 | [Mihailo Dikanovic](https://github.com/dikanovicmihailo/sdp-powered-by-ai-agents-mihailo-dikanovic/pulls) | 0 | 1 | 0 | 1 | 4 | 🔥 2 |
 | 5 | [Aleksandar Antonic](https://github.com/antonic00/sdp-powered-by-ai-agents-name-surname/pulls) | 0 | 0 | 0 | 0 | 0 | |
 | 5 | Ante Resetar | 0 | 0 | 0 | 0 | 0 | |
 | 5 | [Jana Petrovic](https://github.com/ktzjana/sdp-powered-by-ai-agents-jana-petrovic/pulls) | 0 | 0 | 0 | 1 | 0 | |
@@ -102,7 +102,7 @@ Project work (schedule TBD)
 | 6 | [Jovan Glintic](https://github.com/jglintic/sdp-powered-by-ai-agents-jovan-glintic) | E2 51/2025 | <jovanglintic@gmail.com> | [#9](https://github.com/jglintic/sdp-powered-by-ai-agents-jovan-glintic/pull/9) ✅ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
 | 7 | Luka Misojcic | E2 39/2025 | <luka.misojcic.2019@gmail.com> | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
 | 8 | Luka Vidakovic | E2 40/2025 | <luka.vidakovic@labsoft.dev> | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
-| 9 | [Mihailo Dikanovic](https://github.com/dikanovicmihailo/sdp-powered-by-ai-agents-mihailo-dikanovic) | E2 54/2025 | <mihailo.dikanovic@rt-rk.com> | [#10](https://github.com/dikanovicmihailo/sdp-powered-by-ai-agents-mihailo-dikanovic/pull/10) ✅ | [#12](https://github.com/dikanovicmihailo/sdp-powered-by-ai-agents-mihailo-dikanovic/pull/12) ✅ | ⬜ | ⬜ | ⬜ | ⬜ |
+| 9 | [Mihailo Dikanovic](https://github.com/dikanovicmihailo/sdp-powered-by-ai-agents-mihailo-dikanovic) | E2 54/2025 | <mihailo.dikanovic@rt-rk.com> | [#10](https://github.com/dikanovicmihailo/sdp-powered-by-ai-agents-mihailo-dikanovic/pull/10) ✅ | [#12](https://github.com/dikanovicmihailo/sdp-powered-by-ai-agents-mihailo-dikanovic/pull/12) 🔴 | ⬜ | ⬜ | ⬜ | ⬜ |
 | 10 | Nikola Boskovic | E2 57/2025 | <nikola.boskovic.2003@gmail.com> | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
 | 11 | [Stefan Mitic](https://github.com/notstefan1/sdp-powered-by-ai-agents-stefan-mitic) | E2 128/2025 | <stefan.mitic@rt-rk.com> | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
 | 12 | [Vuk Antovic](https://github.com/antovic/sdp-powered-by-ai-agents-vuk-antovic) | E2 76/2025 | <vuk.antovic48@gmail.com> | [#8](https://github.com/antovic/sdp-powered-by-ai-agents-vuk-antovic/pull/8) 🔴 | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
