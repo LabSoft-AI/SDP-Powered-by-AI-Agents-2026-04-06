@@ -10,7 +10,7 @@
 | 6 | Jovan Glintic | [sdp-powered-by-ai-agents-jovan-glintic](https://github.com/jglintic/sdp-powered-by-ai-agents-jovan-glintic) | [#9](https://github.com/jglintic/sdp-powered-by-ai-agents-jovan-glintic/pull/9) | ✅ Approved | @momokrunic |
 | 7 | Luka Misojcic | — | — | ⬜ Not started | — |
 | 8 | Luka Vidakovic | — | — | ⬜ Not started | — |
-| 9 | Mihailo Dikanovic | — | — | ⬜ Not started | — |
+| 9 | Mihailo Dikanovic | [sdp-powered-by-ai-agents-mihailo-dikanovic](https://github.com/dikanovicmihailo/sdp-powered-by-ai-agents-mihailo-dikanovic) | [#10](https://github.com/dikanovicmihailo/sdp-powered-by-ai-agents-mihailo-dikanovic/pull/10) | 🔴 Changes Requested | @momokrunic |
 | 10 | Nikola Boskovic | — | — | ⬜ Not started | — |
 | 11 | Stefan Mitic | [sdp-powered-by-ai-agents-stefan-mitic](https://github.com/notstefan1/sdp-powered-by-ai-agents-stefan-mitic) | — | ⬜ Not started | — |
 | 12 | Vuk Antovic | [sdp-powered-by-ai-agents-vuk-antovic](https://github.com/antovic/sdp-powered-by-ai-agents-vuk-antovic) | [#8](https://github.com/antovic/sdp-powered-by-ai-agents-vuk-antovic/pull/8) | 🔴 Changes Requested | @momokrunic |
