@@ -43,7 +43,7 @@ The course has two parts:
 | 0 | [Intro](modules/intro/) | Context engineering, harness engineering | — |
 | 1 | [Git](modules/module-1-git/) | Branching, commits, PRs, issue tracking | Issue creator, PR creator |
 | 2 | [Software Architecture](modules/module-2-architecture/) | arc42 template, C4 model | Architecture doc generator |
-| 3 | Software Requirements | User stories, DDD, Pareto prioritization | Story derivation agent |
+| 3 | [Software Requirements](modules/module-3-requirements/) | User stories, DDD, Pareto prioritization | Story derivation agent |
 | 4 | CI/CD | GitHub Actions, SAM, AWS deployment | Deployment pipeline agent |
 | 5 | TDD/BDD | RED-GREEN-REFACTOR, backend-first | Multi-agent TDD system |
 | 6 | Subscription Platform | Full lifecycle (team project) | All agents from M1–M5 |
@@ -62,7 +62,7 @@ recurring billing. Built entirely by AI agents.
 |------|----------|-------------|
 | 1–2 | [Module 1: Git](modules/module-1-git/) | Git agent + practice exercise |
 | 3–4 | [Module 2: Architecture](modules/module-2-architecture/) | Architecture agent + kata design |
-| 5–6 | Module 3: Requirements | Story agent + kata backlog |
+| 5–6 | [Module 3: Requirements](modules/module-3-requirements/) | Story agent + kata backlog |
 | 7–8 | Module 4: CI/CD | Deploy agent + pipeline exercise |
 | 9–12 | Module 5: TDD/BDD | Multi-agent TDD system + practice |
 | 13–18 | Module 6: Subscription Platform (teams) | Working app deployed on AWS |

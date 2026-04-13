@@ -1,0 +1,20 @@
+@startuml architecture-to-stories
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
+
+HIDE_STEREOTYPE()
+
+title Architecture (Module 2) → User Stories (Module 3)
+
+rectangle "Module 2: Architecture" as arch {
+  rectangle "Bounded Context:\nOrder Management" as bc_order
+  rectangle "Bounded Context:\nInventory" as bc_inv
+}
+
+rectangle "Module 3: User Stories" as stories {
+  rectangle "Domain: ORDER\nORDER-STORY-001\nORDER-STORY-002" as s_order
+  rectangle "Domain: INVENTORY\nINVENTORY-STORY-001" as s_inv
+}
+
+bc_order -right-> s_order : derives
+bc_inv -right-> s_inv : derives
+@enduml
