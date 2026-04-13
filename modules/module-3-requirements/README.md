@@ -91,18 +91,7 @@ SO THAT I can find what I'm looking for quickly
 Your architecture document (Module 2) identified bounded contexts — these
 become the domains for your user stories.
 
-```text
-Architecture (Module 2)          →  User Stories (Module 3)
-┌─────────────────────┐            ┌─────────────────────┐
-│ Bounded Context:    │            │ Domain: ORDER       │
-│ Order Management    │     →      │ ORDER-STORY-001     │
-│                     │            │ ORDER-STORY-002     │
-└─────────────────────┘            └─────────────────────┘
-┌─────────────────────┐            ┌─────────────────────┐
-│ Bounded Context:    │            │ Domain: INVENTORY   │
-│ Inventory           │     →      │ INVENTORY-STORY-001 │
-└─────────────────────┘            └─────────────────────┘
-```
+![Architecture to Stories](./diagrams/architecture-to-stories.svg)
 
 Each bounded context from your architecture maps to a domain in your
 story IDs. This maintains traceability from architecture to requirements.
