@@ -9,18 +9,18 @@ Location: 507 НТП | Time: 17:00
 | 🥇 | [Ana Zec](https://github.com/AnaZec/sdp-powered-by-ai-agents-ana-zec/pulls) ⚡⚡ | 2 | 0 | 0 | 0 | 16 | 🔥 2 |
 | 🥈 | [Ante Resetar](https://github.com/antres1/sdp-powered-by-ai-agents-ante-resetar/pulls) | 1 | 1 | 0 | 0 | 9 | 🔥 2 |
 | 🥈 | [Mihailo Dikanovic](https://github.com/dikanovicmihailo/sdp-powered-by-ai-agents-mihailo-dikanovic/pulls) | 1 | 1 | 0 | 0 | 9 | 🔥 2 |
-| 4 | [Aleksandar Cetkovic](https://github.com/cetko4/sdp-powered-by-ai-agents-aleksandar-cetkovic/pulls) | 0 | 1 | 0 | 1 | 4 | 🔥 2 |
-| 4 | [Jovan Glintic](https://github.com/jglintic/sdp-powered-by-ai-agents-jovan-glintic/pulls) | 0 | 1 | 0 | 0 | 4 | 🔥 1 |
-| 4 | [Nikola Boskovic](https://github.com/nbskvc/sdp-powered-by-ai-agents-nikola-boskovic/pulls) | 0 | 1 | 0 | 1 | 4 | 🔥 2 |
-| 7 | [Aleksandar Ivanovic](https://github.com/Ivanovic0245/sdp-powered-by-ai-agents-aleksandar-ivanovic/pulls) | 0 | 0 | 1 | 0 | 2 | 🔥 1 |
-| 8 | [Aleksandar Antonic](https://github.com/antonic00/sdp-powered-by-ai-agents-name-surname/pulls) | 0 | 0 | 0 | 0 | 0 | |
-| 8 | [Jana Petrovic](https://github.com/ktzjana/sdp-powered-by-ai-agents-jana-petrovic/pulls) | 0 | 0 | 0 | 1 | 0 | |
-| 8 | Luka Misojcic | 0 | 0 | 0 | 0 | 0 | |
-| 8 | Luka Vidakovic | 0 | 0 | 0 | 0 | 0 | |
-| 8 | [Stefan Mitic](https://github.com/notstefan1/sdp-powered-by-ai-agents-stefan-mitic/pulls) | 0 | 0 | 0 | 0 | 0 | |
-| 8 | [Vuk Antovic](https://github.com/antovic/sdp-powered-by-ai-agents-vuk-antovic/pulls) | 0 | 0 | 0 | 2 | 0 | |
+| 4 | [Aleksandar Cetkovic](https://github.com/cetko4/sdp-powered-by-ai-agents-aleksandar-cetkovic/pulls) | 0 | 1 | 0 | 1 | 5 | 🔥 2 |
+| 4 | [Nikola Boskovic](https://github.com/nbskvc/sdp-powered-by-ai-agents-nikola-boskovic/pulls) | 0 | 1 | 0 | 1 | 5 | 🔥 2 |
+| 6 | [Aleksandar Ivanovic](https://github.com/Ivanovic0245/sdp-powered-by-ai-agents-aleksandar-ivanovic/pulls) | 0 | 1 | 0 | 0 | 4 | 🔥 1 |
+| 6 | [Jovan Glintic](https://github.com/jglintic/sdp-powered-by-ai-agents-jovan-glintic/pulls) | 0 | 1 | 0 | 0 | 4 | 🔥 1 |
+| 8 | [Vuk Antovic](https://github.com/antovic/sdp-powered-by-ai-agents-vuk-antovic/pulls) | 0 | 0 | 0 | 2 | 2 | 🔥 2 |
+| 9 | [Jana Petrovic](https://github.com/ktzjana/sdp-powered-by-ai-agents-jana-petrovic/pulls) | 0 | 0 | 0 | 1 | 1 | 🔥 1 |
+| 10 | [Aleksandar Antonic](https://github.com/antonic00/sdp-powered-by-ai-agents-name-surname/pulls) | 0 | 0 | 0 | 0 | 0 | |
+| 10 | Luka Misojcic | 0 | 0 | 0 | 0 | 0 | |
+| 10 | Luka Vidakovic | 0 | 0 | 0 | 0 | 0 | |
+| 10 | [Stefan Mitic](https://github.com/notstefan1/sdp-powered-by-ai-agents-stefan-mitic/pulls) | 0 | 0 | 0 | 0 | 0 | |
 
-**Scoring:** 🟡 Open = 2 pts | ✅ Approved = 4 pts | 🟢 Merged = 5 pts | 🔴 Changes Requested = 0 pts
+**Scoring:** 🟡 Open = 2 pts | ✅ Approved = 4 pts | 🟢 Merged = 5 pts | 🔴 Changes Requested = 1 pt
 **Streak:** Consecutive modules with a PR submitted 🔥
 **Bonus:** First to merge a module PR = +3 pts ⚡
 
@@ -99,7 +99,7 @@ Project work (schedule TBD)
 | 2 | [Aleksandar Cetkovic](https://github.com/cetko4/sdp-powered-by-ai-agents-aleksandar-cetkovic) | E2 2/2025 | <aleksandarcetkovic@gmail.com> | [#4](https://github.com/cetko4/sdp-powered-by-ai-agents-aleksandar-cetkovic/pull/4) ✅ | [#10](https://github.com/cetko4/sdp-powered-by-ai-agents-aleksandar-cetkovic/pull/10) 🔴 | ⬜ | ⬜ | ⬜ | ⬜ |
 | 3 | [Ana Zec](https://github.com/AnaZec/sdp-powered-by-ai-agents-ana-zec) | E2 71/2025 | <ana.zecus@gmail.com> | [#12](https://github.com/AnaZec/sdp-powered-by-ai-agents-ana-zec/pull/12) 🟢 | [#14](https://github.com/AnaZec/sdp-powered-by-ai-agents-ana-zec/pull/14) 🟢 | ⬜ | ⬜ | ⬜ | ⬜ |
 | 4 | [Ante Resetar](https://github.com/antres1/sdp-powered-by-ai-agents-ante-resetar) | E2 74/2025 | <ante.resetar@rt-rk.com> | [#7](https://github.com/antres1/sdp-powered-by-ai-agents-ante-resetar/pull/7) 🟢 | [#8](https://github.com/antres1/sdp-powered-by-ai-agents-ante-resetar/pull/8) ✅ | ⬜ | ⬜ | ⬜ | ⬜ |
-| 5 | [Aleksandar Ivanovic](https://github.com/Ivanovic0245/sdp-powered-by-ai-agents-aleksandar-ivanovic) | — | — | [#6](https://github.com/Ivanovic0245/sdp-powered-by-ai-agents-aleksandar-ivanovic/pull/6) 🟡 | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| 5 | [Aleksandar Ivanovic](https://github.com/Ivanovic0245/sdp-powered-by-ai-agents-aleksandar-ivanovic) | — | — | [#6](https://github.com/Ivanovic0245/sdp-powered-by-ai-agents-aleksandar-ivanovic/pull/6) ✅ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
 | 6 | [Jana Petrovic](https://github.com/ktzjana/sdp-powered-by-ai-agents-jana-petrovic) | E2 105/2025 | <petrovic.jana12@gmail.com> | [#7](https://github.com/ktzjana/sdp-powered-by-ai-agents-jana-petrovic/pull/7) 🔴 | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
 | 7 | [Jovan Glintic](https://github.com/jglintic/sdp-powered-by-ai-agents-jovan-glintic) | E2 51/2025 | <jovanglintic@gmail.com> | [#9](https://github.com/jglintic/sdp-powered-by-ai-agents-jovan-glintic/pull/9) ✅ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
 | 8 | Luka Misojcic | E2 39/2025 | <luka.misojcic.2019@gmail.com> | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
