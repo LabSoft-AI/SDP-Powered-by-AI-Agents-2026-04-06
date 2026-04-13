@@ -7,17 +7,17 @@ Location: 507 НТП | Time: 17:00
 | Rank | Student | 🟢 Merged | ✅ Approved | 🟡 Open | 🔴 Rejected | Score | Streak |
 |------|---------|-----------|------------|---------|-------------|-------|--------|
 | 🥇 | [Ana Zec](https://github.com/AnaZec/sdp-powered-by-ai-agents-ana-zec/pulls) ⚡⚡ | 2 | 0 | 0 | 0 | 16 | 🔥 2 |
-| 🥈 | [Aleksandar Cetkovic](https://github.com/cetko4/sdp-powered-by-ai-agents-aleksandar-cetkovic/pulls) | 0 | 1 | 0 | 0 | 4 | 🔥 1 |
-| 🥈 | [Jovan Glintic](https://github.com/jglintic/sdp-powered-by-ai-agents-jovan-glintic/pulls) | 0 | 1 | 0 | 0 | 4 | 🔥 1 |
 | 🥈 | [Mihailo Dikanovic](https://github.com/dikanovicmihailo/sdp-powered-by-ai-agents-mihailo-dikanovic/pulls) | 1 | 1 | 0 | 0 | 9 | 🔥 2 |
-| 5 | [Aleksandar Antonic](https://github.com/antonic00/sdp-powered-by-ai-agents-name-surname/pulls) | 0 | 0 | 0 | 0 | 0 | |
-| 5 | [Ante Resetar](https://github.com/antres1/sdp-powered-by-ai-agents-ante-resetar/pulls) | 0 | 1 | 0 | 1 | 4 | 🔥 2 |
-| 5 | [Jana Petrovic](https://github.com/ktzjana/sdp-powered-by-ai-agents-jana-petrovic/pulls) | 0 | 0 | 0 | 1 | 0 | |
-| 5 | Luka Misojcic | 0 | 0 | 0 | 0 | 0 | |
-| 5 | Luka Vidakovic | 0 | 0 | 0 | 0 | 0 | |
-| 5 | Nikola Boskovic | 0 | 0 | 0 | 0 | 0 | |
-| 5 | [Stefan Mitic](https://github.com/notstefan1/sdp-powered-by-ai-agents-stefan-mitic/pulls) | 0 | 0 | 0 | 0 | 0 | |
-| 5 | [Vuk Antovic](https://github.com/antovic/sdp-powered-by-ai-agents-vuk-antovic/pulls) | 0 | 0 | 0 | 1 | 0 | |
+| 🥉 | [Aleksandar Cetkovic](https://github.com/cetko4/sdp-powered-by-ai-agents-aleksandar-cetkovic/pulls) | 0 | 1 | 0 | 0 | 4 | 🔥 1 |
+| 🥉 | [Ante Resetar](https://github.com/antres1/sdp-powered-by-ai-agents-ante-resetar/pulls) | 0 | 1 | 0 | 1 | 4 | 🔥 2 |
+| 🥉 | [Jovan Glintic](https://github.com/jglintic/sdp-powered-by-ai-agents-jovan-glintic/pulls) | 0 | 1 | 0 | 0 | 4 | 🔥 1 |
+| 6 | [Aleksandar Antonic](https://github.com/antonic00/sdp-powered-by-ai-agents-name-surname/pulls) | 0 | 0 | 0 | 0 | 0 | |
+| 6 | [Jana Petrovic](https://github.com/ktzjana/sdp-powered-by-ai-agents-jana-petrovic/pulls) | 0 | 0 | 0 | 1 | 0 | |
+| 6 | Luka Misojcic | 0 | 0 | 0 | 0 | 0 | |
+| 6 | Luka Vidakovic | 0 | 0 | 0 | 0 | 0 | |
+| 6 | Nikola Boskovic | 0 | 0 | 0 | 0 | 0 | |
+| 6 | [Stefan Mitic](https://github.com/notstefan1/sdp-powered-by-ai-agents-stefan-mitic/pulls) | 0 | 0 | 0 | 0 | 0 | |
+| 6 | [Vuk Antovic](https://github.com/antovic/sdp-powered-by-ai-agents-vuk-antovic/pulls) | 0 | 0 | 0 | 1 | 0 | |
 
 **Scoring:** 🟡 Open = 2 pts | ✅ Approved = 4 pts | 🟢 Merged = 5 pts | 🔴 Changes Requested = 0 pts
 **Streak:** Consecutive modules with a PR submitted 🔥
