@@ -105,6 +105,6 @@ Project work (schedule TBD)
 | 9 | [Mihailo Dikanovic](https://github.com/dikanovicmihailo/sdp-powered-by-ai-agents-mihailo-dikanovic) | E2 54/2025 | <mihailo.dikanovic@rt-rk.com> | [#10](https://github.com/dikanovicmihailo/sdp-powered-by-ai-agents-mihailo-dikanovic/pull/10) 🟢 | [#12](https://github.com/dikanovicmihailo/sdp-powered-by-ai-agents-mihailo-dikanovic/pull/12) ✅ | ⬜ | ⬜ | ⬜ | ⬜ |
 | 10 | [Nikola Boskovic](https://github.com/nbskvc/sdp-powered-by-ai-agents-nikola-boskovic) | E2 57/2025 | <nikola.boskovic.2003@gmail.com> | [#7](https://github.com/nbskvc/sdp-powered-by-ai-agents-nikola-boskovic/pull/7) ✅ | [#8](https://github.com/nbskvc/sdp-powered-by-ai-agents-nikola-boskovic/pull/8) 🔴 | ⬜ | ⬜ | ⬜ | ⬜ |
 | 11 | [Stefan Mitic](https://github.com/notstefan1/sdp-powered-by-ai-agents-stefan-mitic) | E2 128/2025 | <stefan.mitic@rt-rk.com> | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
-| 12 | [Vuk Antovic](https://github.com/antovic/sdp-powered-by-ai-agents-vuk-antovic) | E2 76/2025 | <vuk.antovic48@gmail.com> | [#8](https://github.com/antovic/sdp-powered-by-ai-agents-vuk-antovic/pull/8) 🔴 | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| 12 | [Vuk Antovic](https://github.com/antovic/sdp-powered-by-ai-agents-vuk-antovic) | E2 76/2025 | <vuk.antovic48@gmail.com> | [#8](https://github.com/antovic/sdp-powered-by-ai-agents-vuk-antovic/pull/8) 🔴 | [#9](https://github.com/antovic/sdp-powered-by-ai-agents-vuk-antovic/pull/9) 🔴 | ⬜ | ⬜ | ⬜ | ⬜ |
 
 Legend: 🟢 Merged | ✅ Approved | 🟡 Open | 🔴 Changes Requested | ⬜ Not started

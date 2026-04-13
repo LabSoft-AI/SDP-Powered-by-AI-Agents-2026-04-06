@@ -13,6 +13,6 @@
 | 9 | Mihailo Dikanovic | [sdp-powered-by-ai-agents-mihailo-dikanovic](https://github.com/dikanovicmihailo/sdp-powered-by-ai-agents-mihailo-dikanovic) | [#12](https://github.com/dikanovicmihailo/sdp-powered-by-ai-agents-mihailo-dikanovic/pull/12) | ✅ Approved | @momokrunic |
 | 10 | Nikola Boskovic | [sdp-powered-by-ai-agents-nikola-boskovic](https://github.com/nbskvc/sdp-powered-by-ai-agents-nikola-boskovic) | [#8](https://github.com/nbskvc/sdp-powered-by-ai-agents-nikola-boskovic/pull/8) | 🔴 Changes Requested | @momokrunic |
 | 11 | Stefan Mitic | [sdp-powered-by-ai-agents-stefan-mitic](https://github.com/notstefan1/sdp-powered-by-ai-agents-stefan-mitic) | — | ⬜ Not started | — |
-| 12 | Vuk Antovic | [sdp-powered-by-ai-agents-vuk-antovic](https://github.com/antovic/sdp-powered-by-ai-agents-vuk-antovic) | — | ⬜ Not started | — |
+| 12 | Vuk Antovic | [sdp-powered-by-ai-agents-vuk-antovic](https://github.com/antovic/sdp-powered-by-ai-agents-vuk-antovic) | [#9](https://github.com/antovic/sdp-powered-by-ai-agents-vuk-antovic/pull/9) | 🔴 Changes Requested | @momokrunic |
 
 Legend: 🟢 Merged | ✅ Approved | 🟡 Open | 🔴 Changes Requested | ⬜ Not started
