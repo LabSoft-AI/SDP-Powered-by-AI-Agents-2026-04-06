@@ -50,27 +50,29 @@ Location: 507 НТП | Time: 17:00
 | 10 | Nikola Boskovic | ❌ | ❌ | ✅ | |
 | 11 | Stefan Mitic | ❌ | ❌ | ✅ | |
 | 12 | Vuk Antovic | ✅ | ✅ | ✅ | |
+| 13 | Aleksandar Ivanovic | ❌ | ❌ | ❌ | |
+| 14 | Vladan Lazarevic | ❌ | ❌ | ❌ | |
 
 Friday 10.4. — no class (Good Friday)
 
 ## Week 2
 
-| # | Student | ~~Mon 14.4.~~ | Tue 15.4. | Thu 17.4. | Fri 18.4. |
-|---|---------|---------------|-----------|-----------|-----------|
-| 1 | Aleksandar Antonic | | | | |
-| 2 | Aleksandar Cetkovic | | | | |
-| 3 | Ana Zec | | | | |
-| 4 | Ante Resetar | | | | |
-| 5 | Jana Petrovic | | | | |
-| 6 | Jovan Glintic | | | | |
-| 7 | Luka Misojcic | | | | |
-| 8 | Luka Vidakovic | | | | |
-| 9 | Mihailo Dikanovic | | | | |
-| 10 | Nikola Boskovic | | | | |
-| 11 | Stefan Mitic | | | | |
-| 12 | Vuk Antovic | | | | |
-
-Monday 14.4. — no class
+| # | Student | Tue 14.4. | Wed 15.4. | Thu 17.4. | Fri 18.4. |
+|---|---------|-----------|-----------|-----------|-----------|
+| 1 | Aleksandar Antonic | ❌ | | | |
+| 2 | Aleksandar Cetkovic | ❌ | | | |
+| 3 | Aleksandar Ivanovic | ✅ | | | |
+| 4 | Ana Zec | ✅ | | | |
+| 5 | Ante Resetar | ✅ | | | |
+| 6 | Jana Petrovic | ✅ | | | |
+| 7 | Jovan Glintic | ✅ | | | |
+| 8 | Luka Misojcic | ✅ | | | |
+| 9 | Luka Vidakovic | ❌ | | | |
+| 10 | Mihailo Dikanovic | ✅ | | | |
+| 11 | Nikola Boskovic | ✅ | | | |
+| 12 | Stefan Mitic | ✅ | | | |
+| 13 | Vladan Lazarevic | ✅ | | | |
+| 14 | Vuk Antovic | ✅ | | | |
 
 ## Week 3
 
@@ -97,7 +99,7 @@ Project work (schedule TBD)
 |---|---------|-------|-------|-------|-------|-------|-------|-------|------------|
 | 1 | [Aleksandar Antonic](https://github.com/antonic00/sdp-powered-by-ai-agents-name-surname) | E2 69/2025 | <aleksandar.antonic00@gmail.com> | ⬜ | ⬜ | ⬜ | ⬜ |
 | 2 | [Aleksandar Cetkovic](https://github.com/cetko4/sdp-powered-by-ai-agents-aleksandar-cetkovic) | E2 2/2025 | <aleksandarcetkovic@gmail.com> | [#4](https://github.com/cetko4/sdp-powered-by-ai-agents-aleksandar-cetkovic/pull/4) 🟢 | [#10](https://github.com/cetko4/sdp-powered-by-ai-agents-aleksandar-cetkovic/pull/10) 🟢 | [#13](https://github.com/cetko4/sdp-powered-by-ai-agents-aleksandar-cetkovic/pull/13) 🟢 | ⬜ |
-| 3 | [Aleksandar Ivanovic](https://github.com/Ivanovic0245/sdp-powered-by-ai-agents-aleksandar-ivanovic) | — | — | [#6](https://github.com/Ivanovic0245/sdp-powered-by-ai-agents-aleksandar-ivanovic/pull/6) 🟢 | [#7](https://github.com/Ivanovic0245/sdp-powered-by-ai-agents-aleksandar-ivanovic/pull/7) 🟢 | ⬜ | ⬜ |
+| 3 | [Aleksandar Ivanovic](https://github.com/Ivanovic0245/sdp-powered-by-ai-agents-aleksandar-ivanovic) | E2 73/2025 | <sale.ivanovic0245@gmail.com> | [#6](https://github.com/Ivanovic0245/sdp-powered-by-ai-agents-aleksandar-ivanovic/pull/6) 🟢 | [#7](https://github.com/Ivanovic0245/sdp-powered-by-ai-agents-aleksandar-ivanovic/pull/7) 🟢 | ⬜ | ⬜ |
 | 4 | [Ana Zec](https://github.com/AnaZec/sdp-powered-by-ai-agents-ana-zec) | E2 71/2025 | <ana.zecus@gmail.com> | [#12](https://github.com/AnaZec/sdp-powered-by-ai-agents-ana-zec/pull/12) 🟢 | [#14](https://github.com/AnaZec/sdp-powered-by-ai-agents-ana-zec/pull/14) 🟢 | [#17](https://github.com/AnaZec/sdp-powered-by-ai-agents-ana-zec/pull/17) 🟢 | ⬜ |
 | 5 | [Ante Resetar](https://github.com/antres1/sdp-powered-by-ai-agents-ante-resetar) | E2 74/2025 | <ante.resetar@rt-rk.com> | [#7](https://github.com/antres1/sdp-powered-by-ai-agents-ante-resetar/pull/7) 🟢 | [#8](https://github.com/antres1/sdp-powered-by-ai-agents-ante-resetar/pull/8) 🟢 | ⬜ | ⬜ |
 | 6 | [Jana Petrovic](https://github.com/ktzjana/sdp-powered-by-ai-agents-jana-petrovic) | E2 105/2025 | <petrovic.jana12@gmail.com> | [#7](https://github.com/ktzjana/sdp-powered-by-ai-agents-jana-petrovic/pull/7) 🔴 | ⬜ | ⬜ | ⬜ |
@@ -108,5 +110,6 @@ Project work (schedule TBD)
 | 11 | [Nikola Boskovic](https://github.com/nbskvc/sdp-powered-by-ai-agents-nikola-boskovic) | E2 57/2025 | <nikola.boskovic.2003@gmail.com> | [#7](https://github.com/nbskvc/sdp-powered-by-ai-agents-nikola-boskovic/pull/7) 🟢 | [#8](https://github.com/nbskvc/sdp-powered-by-ai-agents-nikola-boskovic/pull/8) ✅ | ⬜ | ⬜ |
 | 12 | [Stefan Mitic](https://github.com/notstefan1/sdp-powered-by-ai-agents-stefan-mitic) | E2 128/2025 | <stefan.mitic@rt-rk.com> | [#7](https://github.com/notstefan1/sdp-powered-by-ai-agents-stefan-mitic/pull/7) 🔴 | [#8](https://github.com/notstefan1/sdp-powered-by-ai-agents-stefan-mitic/pull/8) 🔴 | ⬜ | ⬜ |
 | 13 | [Vuk Antovic](https://github.com/antovic/sdp-powered-by-ai-agents-vuk-antovic) | E2 76/2025 | <vuk.antovic48@gmail.com> | [#8](https://github.com/antovic/sdp-powered-by-ai-agents-vuk-antovic/pull/8) 🟢 | [#9](https://github.com/antovic/sdp-powered-by-ai-agents-vuk-antovic/pull/9) 🔴 | ⬜ | ⬜ |
+| 14 | Vladan Lazarevic | E2 42/2025 | <vladanlazarevicBA@gmail.com> | ⬜ | ⬜ | ⬜ | ⬜ |
 
 Legend: 🟢 Merged | ✅ Approved | 🟡 Open | 🔴 Changes Requested | ⬜ Not started
