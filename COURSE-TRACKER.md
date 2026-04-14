@@ -6,7 +6,7 @@ Location: 507 НТП | Time: 17:00
 
 | Rank | Student | 🟢 Merged | ✅ Approved | 🟡 Open | 🔴 Rejected | Score | Streak |
 |------|---------|-----------|------------|---------|-------------|-------|--------|
-| 🥇 | [Ana Zec](https://github.com/AnaZec/sdp-powered-by-ai-agents-ana-zec/pulls) ⚡⚡ | 3 | 0 | 0 | 0 | 21 | 🔥 3 |
+| 🥇 | [Ana Zec](https://github.com/AnaZec/sdp-powered-by-ai-agents-ana-zec/pulls) ⚡⚡⚡ | 3 | 0 | 0 | 0 | 24 | 🔥 3 |
 | 🥈 | [Aleksandar Cetkovic](https://github.com/cetko4/sdp-powered-by-ai-agents-aleksandar-cetkovic/pulls) | 2 | 0 | 0 | 0 | 10 | 🔥 2 |
 | 🥈 | [Ante Resetar](https://github.com/antres1/sdp-powered-by-ai-agents-ante-resetar/pulls) | 2 | 0 | 0 | 0 | 10 | 🔥 2 |
 | 🥈 | [Mihailo Dikanovic](https://github.com/dikanovicmihailo/sdp-powered-by-ai-agents-mihailo-dikanovic/pulls) | 2 | 0 | 0 | 0 | 10 | 🔥 2 |
