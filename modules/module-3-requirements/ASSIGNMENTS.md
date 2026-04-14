@@ -3,7 +3,7 @@
 | # | Student | Repository | PR | Status | Reviewers |
 |---|---------|-----------|-----|--------|-----------|
 | 1 | Aleksandar Antonic | [sdp-powered-by-ai-agents-name-surname](https://github.com/antonic00/sdp-powered-by-ai-agents-name-surname) | — | ⬜ Not started | — |
-| 2 | Aleksandar Cetkovic | [sdp-powered-by-ai-agents-aleksandar-cetkovic](https://github.com/cetko4/sdp-powered-by-ai-agents-aleksandar-cetkovic) | — | ⬜ Not started | — |
+| 2 | Aleksandar Cetkovic | [sdp-powered-by-ai-agents-aleksandar-cetkovic](https://github.com/cetko4/sdp-powered-by-ai-agents-aleksandar-cetkovic) | [#13](https://github.com/cetko4/sdp-powered-by-ai-agents-aleksandar-cetkovic/pull/13) | 🟢 Merged | @momokrunic |
 | 3 | Aleksandar Ivanovic | [sdp-powered-by-ai-agents-aleksandar-ivanovic](https://github.com/Ivanovic0245/sdp-powered-by-ai-agents-aleksandar-ivanovic) | — | ⬜ Not started | — |
 | 4 | Ana Zec | [sdp-powered-by-ai-agents-ana-zec](https://github.com/AnaZec/sdp-powered-by-ai-agents-ana-zec) | [#17](https://github.com/AnaZec/sdp-powered-by-ai-agents-ana-zec/pull/17) | 🟢 Merged | @momokrunic |
 | 5 | Ante Resetar | [sdp-powered-by-ai-agents-ante-resetar](https://github.com/antres1/sdp-powered-by-ai-agents-ante-resetar) | — | ⬜ Not started | — |
