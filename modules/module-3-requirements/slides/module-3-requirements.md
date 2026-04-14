@@ -82,16 +82,17 @@ The fundamental unit of requirements in agile development.
 ---
 
 ## Slide 7: User Story Format
-**Type:** content
+**Type:** code
 **Content:**
-- User Story Format
-- **AS A** <role>
-- **I WANT** <feature>
-- **SO THAT** <benefit>
-- Example:
-- AS A customer
-- I WANT to search products by name
-- SO THAT I can find what I'm looking for quickly
+AS A <role>
+I WANT <feature>
+SO THAT <benefit>
+
+Example:
+
+AS A customer
+I WANT to search products by name
+SO THAT I can find what I'm looking for quickly
 
 **Notes:**
 Three parts: who wants it, what they want, and why they want it. The "so that" is critical — it captures the business value. Without it, you're just listing features with no justification.
@@ -169,16 +170,17 @@ The most important part of a user story is not the story itself — it's the acc
 ---
 
 ## Slide 13: GIVEN-WHEN-THEN Format
-**Type:** content
+**Type:** code
 **Content:**
-- GIVEN-WHEN-THEN
-- **GIVEN** — preconditions (test setup)
-- **WHEN** — action under test (trigger)
-- **THEN** — expected outcome (assertions)
-- Example:
-- GIVEN product catalogue contains "Red Widget"
-- WHEN I search for "Widget"
-- THEN results show "Red Widget"
+GIVEN <preconditions>     ← test setup
+WHEN  <action under test> ← trigger
+THEN  <expected outcome>  ← assertions
+
+Example:
+
+GIVEN product catalogue contains "Red Widget"
+WHEN  I search for "Widget"
+THEN  results show "Red Widget"
 
 **Notes:**
 This format comes from Behavior-Driven Development. It maps directly to test code: GIVEN is your setup, WHEN is the action you're testing, THEN is your assertions.
@@ -187,21 +189,19 @@ Every scenario you write in this format can be turned into an automated test. Th
 ---
 
 ## Slide 14: GIVEN-WHEN-THEN → Test Code
-**Type:** content
+**Type:** code
 **Content:**
-- Scenarios Map to Tests
-- ```python
-- def test_search_returns_matching():
--     # GIVEN
--     catalogue = create(["Red Widget"])
--     # WHEN
--     results = search(catalogue, "Widget")
--     # THEN
--     assert results[0].name == "Red Widget"
-- ```
-- Every GIVEN = setup
-- Every WHEN = action
-- Every THEN = assertion
+def test_search_returns_matching():
+    # GIVEN
+    catalogue = create(["Red Widget"])
+
+    # WHEN
+    results = search(catalogue, "Widget")
+
+    # THEN
+    assert results[0].name == "Red Widget"
+
+Every GIVEN = setup | Every WHEN = action | Every THEN = assertion
 
 **Notes:**
 This is spec-driven development in action. You write the spec first as GIVEN-WHEN-THEN, then the test writes itself. The agent in Module 5 will actually generate these tests from your stories — but only if the stories are well-written.
@@ -220,14 +220,14 @@ A single user story is too big to implement directly. We need to break it down b
 ---
 
 ## Slide 16: Decomposition Pattern
-**Type:** content
+**Type:** code
 **Content:**
-- Story Decomposition: Original → Sub-stories
-- **Original Story** — the user-facing requirement (E2E test)
-- **FE Stories** — UI components (component tests)
-- **BE Stories** — API/business logic (unit tests)
-- **INFRA Stories** — Lambda, DynamoDB, events, monitoring
-- Implementation order: **INFRA → BE → FE → E2E**
+Original Story  → user-facing requirement     → E2E test
+    ├── FE     → UI components                → component tests
+    ├── BE     → API / business logic          → unit tests
+    └── INFRA  → Lambda, DynamoDB, events      → infra tests
+
+Implementation order:  INFRA → BE → FE → E2E
 
 **Notes:**
 You can't build a UI for an API that doesn't exist. You can't deploy code without infrastructure. That's why the order is always infrastructure first, then backend, then frontend, then end-to-end verification.
@@ -269,10 +269,10 @@ You can't build everything at once. The Pareto principle tells you what to build
 ## Slide 19: The 80/20 Rule
 **Type:** big_number
 **Content:**
-20%
-of stories deliver
 80%
-of the value
+of the value is generated from
+20%
+of user stories
 
 **Notes:**
 This is the Pareto principle applied to software requirements. Not all stories are equal. A small number of stories — usually around 20% — deliver the vast majority of user value.
@@ -358,12 +358,12 @@ Now let's automate everything we just learned. You'll build an agent that reads 
 **Type:** content
 **Content:**
 - Requirements Agent Workflow
-- 1. Read architecture document
-- 2. Extract domains (bounded contexts)
-- 3. Generate prioritized story list (Pareto)
-- 4. Write story bundles one at a time
-- 5. Wait for approval before next story
-- 6. Track progress with Pareto metrics
+- Read architecture document
+- Extract domains (bounded contexts)
+- Generate prioritized story list (Pareto)
+- Write story bundles one at a time
+- Wait for approval before next story
+- Track progress with Pareto metrics
 
 **Notes:**
 Same pattern as the architecture agent — work incrementally, wait for approval. The agent reads your Module 2 output and produces Module 3 output.
@@ -372,18 +372,16 @@ The key context engineering challenge is encoding the story format, the decompos
 ---
 
 ## Slide 26: What the Agent Produces
-**Type:** content
+**Type:** code
 **Content:**
-- Agent Output
-- ```
-- docs/user-stories/
-- ├── README.md          ← inventory + progress
-- ├── {domain-1}.md      ← STORY + FE + BE + INFRA
-- ├── {domain-2}.md      ← STORY + FE + BE + INFRA
-- └── {domain-3}.md      ← STORY + FE + BE + INFRA
-- ```
-- Each file = one **story bundle**
-- Original + all sub-stories in one file
+docs/user-stories/
+├── README.md          ← inventory + progress
+├── {domain-1}.md      ← STORY + FE + BE + INFRA
+├── {domain-2}.md      ← STORY + FE + BE + INFRA
+└── {domain-3}.md      ← STORY + FE + BE + INFRA
+
+Each file = one story bundle
+Original + all sub-stories in one file
 
 **Notes:**
 Story bundles keep everything together. When you open a domain file, you see the original story, all its frontend stories, all its backend stories, and all its infrastructure stories. No jumping between files.
@@ -395,13 +393,13 @@ The README tracks overall progress and Pareto completion percentage.
 **Type:** content
 **Content:**
 - Context Engineering: What Goes in the Prompt
-- ✅ Story format (AS A / I WANT / SO THAT)
-- ✅ GIVEN-WHEN-THEN template
-- ✅ Story ID naming convention
-- ✅ Decomposition rules (FE + BE + INFRA)
-- ✅ INFRA minimums (Lambda, data, events, monitoring)
-- ✅ Pareto analysis instructions
-- ✅ Architecture reference rules
+- Story format (AS A / I WANT / SO THAT)
+- GIVEN-WHEN-THEN template
+- Story ID naming convention
+- Decomposition rules (FE + BE + INFRA)
+- INFRA minimums (Lambda, data, events, monitoring)
+- Pareto analysis instructions
+- Architecture reference rules
 
 **Notes:**
 This is your TODO list for the agent prompt. The starter template has placeholders for each of these. Fill them in based on what we covered today.
@@ -418,7 +416,7 @@ The better your prompt, the better your stories. This is context engineering —
 - 3. Generate all core stories (Pareto 20%)
 - 4. Commit via git-agent, create PR
 - 5. Add `@momokrunic` as reviewer
-- Deadline: check COURSE-TRACKER for dates
+- Deadline: 16.04.2026
 
 **Notes:**
 Same workflow as Module 2. Build the agent, use it on your kata, commit the results, create a PR.
