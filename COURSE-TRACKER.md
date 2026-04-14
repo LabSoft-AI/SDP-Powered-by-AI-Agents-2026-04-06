@@ -57,7 +57,7 @@ Friday 10.4. — no class (Good Friday)
 
 ## Week 2
 
-| # | Student | Tue 14.4. | Wed 15.4. | Thu 17.4. | Fri 18.4. |
+| # | Student | Tue 14.4. | ~~Wed 15.4.~~ | Thu 17.4. | Fri 18.4. |
 |---|---------|-----------|-----------|-----------|-----------|
 | 1 | Aleksandar Antonic | ❌ | | | |
 | 2 | Aleksandar Cetkovic | ❌ | | | |
