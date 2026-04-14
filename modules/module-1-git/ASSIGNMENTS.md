@@ -4,9 +4,9 @@
 |---|---------|-----------|-----|--------|-----------|
 | 1 | Aleksandar Antonic | [sdp-powered-by-ai-agents-name-surname](https://github.com/antonic00/sdp-powered-by-ai-agents-name-surname) | — | ⬜ Not started | — |
 | 2 | Aleksandar Cetkovic | [sdp-powered-by-ai-agents-aleksandar-cetkovic](https://github.com/cetko4/sdp-powered-by-ai-agents-aleksandar-cetkovic) | [#4](https://github.com/cetko4/sdp-powered-by-ai-agents-aleksandar-cetkovic/pull/4) | 🟢 Merged | @momokrunic |
-| 3 | Ana Zec | [sdp-powered-by-ai-agents-ana-zec](https://github.com/AnaZec/sdp-powered-by-ai-agents-ana-zec) | [#12](https://github.com/AnaZec/sdp-powered-by-ai-agents-ana-zec/pull/12) | 🟢 Merged | @momokrunic |
-| 4 | Ante Resetar | [sdp-powered-by-ai-agents-ante-resetar](https://github.com/antres1/sdp-powered-by-ai-agents-ante-resetar) | [#7](https://github.com/antres1/sdp-powered-by-ai-agents-ante-resetar/pull/7) | 🟢 Merged | @momokrunic |
-| 5 | Aleksandar Ivanovic | [sdp-powered-by-ai-agents-aleksandar-ivanovic](https://github.com/Ivanovic0245/sdp-powered-by-ai-agents-aleksandar-ivanovic) | [#6](https://github.com/Ivanovic0245/sdp-powered-by-ai-agents-aleksandar-ivanovic/pull/6) | 🟢 Merged | @momokrunic |
+| 3 | Aleksandar Ivanovic | [sdp-powered-by-ai-agents-aleksandar-ivanovic](https://github.com/Ivanovic0245/sdp-powered-by-ai-agents-aleksandar-ivanovic) | [#6](https://github.com/Ivanovic0245/sdp-powered-by-ai-agents-aleksandar-ivanovic/pull/6) | 🟢 Merged | @momokrunic |
+| 4 | Ana Zec | [sdp-powered-by-ai-agents-ana-zec](https://github.com/AnaZec/sdp-powered-by-ai-agents-ana-zec) | [#12](https://github.com/AnaZec/sdp-powered-by-ai-agents-ana-zec/pull/12) | 🟢 Merged | @momokrunic |
+| 5 | Ante Resetar | [sdp-powered-by-ai-agents-ante-resetar](https://github.com/antres1/sdp-powered-by-ai-agents-ante-resetar) | [#7](https://github.com/antres1/sdp-powered-by-ai-agents-ante-resetar/pull/7) | 🟢 Merged | @momokrunic |
 | 6 | Jana Petrovic | [sdp-powered-by-ai-agents-jana-petrovic](https://github.com/ktzjana/sdp-powered-by-ai-agents-jana-petrovic) | [#7](https://github.com/ktzjana/sdp-powered-by-ai-agents-jana-petrovic/pull/7) | 🔴 Changes Requested | @momokrunic |
 | 7 | Jovan Glintic | [sdp-powered-by-ai-agents-jovan-glintic](https://github.com/jglintic/sdp-powered-by-ai-agents-jovan-glintic) | [#9](https://github.com/jglintic/sdp-powered-by-ai-agents-jovan-glintic/pull/9) | ✅ Approved | @momokrunic |
 | 8 | Luka Misojcic | — | — | ⬜ Not started | — |
