@@ -6,13 +6,13 @@ Location: 507 НТП | Time: 17:00
 
 | Rank | Student | 🟢 Merged | ✅ Approved | 🟡 Open | 🔴 Rejected | Score | Streak |
 |------|---------|-----------|------------|---------|-------------|-------|--------|
-| 🥇 | [Ana Zec](https://github.com/AnaZec/sdp-powered-by-ai-agents-ana-zec/pulls) ⚡⚡⚡ | 3 | 0 | 0 | 0 | 24 | 🔥 3 |
+| 🥇 | [Ana Zec](https://github.com/AnaZec/sdp-powered-by-ai-agents-ana-zec/pulls) ⚡⚡ | 3 | 0 | 0 | 0 | 21 | 🔥 3 |
 | 🥈 | [Aleksandar Cetkovic](https://github.com/cetko4/sdp-powered-by-ai-agents-aleksandar-cetkovic/pulls) | 2 | 0 | 0 | 0 | 10 | 🔥 2 |
 | 🥈 | [Ante Resetar](https://github.com/antres1/sdp-powered-by-ai-agents-ante-resetar/pulls) | 2 | 0 | 0 | 0 | 10 | 🔥 2 |
 | 🥈 | [Mihailo Dikanovic](https://github.com/dikanovicmihailo/sdp-powered-by-ai-agents-mihailo-dikanovic/pulls) | 2 | 0 | 0 | 0 | 10 | 🔥 2 |
 | 🥉 | [Nikola Boskovic](https://github.com/nbskvc/sdp-powered-by-ai-agents-nikola-boskovic/pulls) | 1 | 1 | 0 | 0 | 9 | 🔥 2 |
-| 6 | [Aleksandar Ivanovic](https://github.com/Ivanovic0245/sdp-powered-by-ai-agents-aleksandar-ivanovic/pulls) | 1 | 0 | 0 | 1 | 6 | 🔥 2 |
-| 6 | [Vuk Antovic](https://github.com/antovic/sdp-powered-by-ai-agents-vuk-antovic/pulls) | 1 | 0 | 0 | 1 | 6 | 🔥 2 |
+| 🥉 | [Vuk Antovic](https://github.com/antovic/sdp-powered-by-ai-agents-vuk-antovic/pulls) ⚡ | 1 | 0 | 0 | 1 | 9 | 🔥 2 |
+| 7 | [Aleksandar Ivanovic](https://github.com/Ivanovic0245/sdp-powered-by-ai-agents-aleksandar-ivanovic/pulls) | 1 | 0 | 0 | 1 | 6 | 🔥 2 |
 | 8 | [Jovan Glintic](https://github.com/jglintic/sdp-powered-by-ai-agents-jovan-glintic/pulls) | 0 | 1 | 0 | 0 | 4 | 🔥 1 |
 | 9 | [Jana Petrovic](https://github.com/ktzjana/sdp-powered-by-ai-agents-jana-petrovic/pulls) | 0 | 0 | 0 | 1 | 1 | 🔥 1 |
 | 10 | [Aleksandar Antonic](https://github.com/antonic00/sdp-powered-by-ai-agents-name-surname/pulls) | 0 | 0 | 0 | 0 | 0 |  |
@@ -98,7 +98,7 @@ Project work (schedule TBD)
 | 1 | [Aleksandar Antonic](https://github.com/antonic00/sdp-powered-by-ai-agents-name-surname) | E2 69/2025 | <aleksandar.antonic00@gmail.com> | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
 | 2 | [Aleksandar Cetkovic](https://github.com/cetko4/sdp-powered-by-ai-agents-aleksandar-cetkovic) | E2 2/2025 | <aleksandarcetkovic@gmail.com> | [#4](https://github.com/cetko4/sdp-powered-by-ai-agents-aleksandar-cetkovic/pull/4) 🟢 | [#10](https://github.com/cetko4/sdp-powered-by-ai-agents-aleksandar-cetkovic/pull/10) 🟢 | ⬜ | ⬜ | ⬜ | ⬜ |
 | 3 | [Aleksandar Ivanovic](https://github.com/Ivanovic0245/sdp-powered-by-ai-agents-aleksandar-ivanovic) | — | — | [#6](https://github.com/Ivanovic0245/sdp-powered-by-ai-agents-aleksandar-ivanovic/pull/6) 🟢 | [#7](https://github.com/Ivanovic0245/sdp-powered-by-ai-agents-aleksandar-ivanovic/pull/7) 🔴 | ⬜ | ⬜ | ⬜ | ⬜ |
-| 4 | [Ana Zec](https://github.com/AnaZec/sdp-powered-by-ai-agents-ana-zec) | E2 71/2025 | <ana.zecus@gmail.com> | [#12](https://github.com/AnaZec/sdp-powered-by-ai-agents-ana-zec/pull/12) 🟢 | [#16](https://github.com/AnaZec/sdp-powered-by-ai-agents-ana-zec/pull/16) 🟢 | [#17](https://github.com/AnaZec/sdp-powered-by-ai-agents-ana-zec/pull/17) 🟢 | ⬜ | ⬜ | ⬜ |
+| 4 | [Ana Zec](https://github.com/AnaZec/sdp-powered-by-ai-agents-ana-zec) | E2 71/2025 | <ana.zecus@gmail.com> | [#12](https://github.com/AnaZec/sdp-powered-by-ai-agents-ana-zec/pull/12) 🟢 | [#14](https://github.com/AnaZec/sdp-powered-by-ai-agents-ana-zec/pull/14) 🟢 | [#17](https://github.com/AnaZec/sdp-powered-by-ai-agents-ana-zec/pull/17) 🟢 | ⬜ | ⬜ | ⬜ |
 | 5 | [Ante Resetar](https://github.com/antres1/sdp-powered-by-ai-agents-ante-resetar) | E2 74/2025 | <ante.resetar@rt-rk.com> | [#7](https://github.com/antres1/sdp-powered-by-ai-agents-ante-resetar/pull/7) 🟢 | [#8](https://github.com/antres1/sdp-powered-by-ai-agents-ante-resetar/pull/8) 🟢 | ⬜ | ⬜ | ⬜ | ⬜ |
 | 6 | [Jana Petrovic](https://github.com/ktzjana/sdp-powered-by-ai-agents-jana-petrovic) | E2 105/2025 | <petrovic.jana12@gmail.com> | [#7](https://github.com/ktzjana/sdp-powered-by-ai-agents-jana-petrovic/pull/7) 🔴 | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
 | 7 | [Jovan Glintic](https://github.com/jglintic/sdp-powered-by-ai-agents-jovan-glintic) | E2 51/2025 | <jovanglintic@gmail.com> | [#9](https://github.com/jglintic/sdp-powered-by-ai-agents-jovan-glintic/pull/9) ✅ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
