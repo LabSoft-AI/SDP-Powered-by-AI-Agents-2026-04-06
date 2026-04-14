@@ -6,13 +6,13 @@ Location: 507 НТП | Time: 17:00
 
 | Rank | Student | 🟢 Merged | ✅ Approved | 🟡 Open | 🔴 Rejected | Score | Streak |
 |------|---------|-----------|------------|---------|-------------|-------|--------|
-| 🥇 | [Ana Zec](https://github.com/AnaZec/sdp-powered-by-ai-agents-ana-zec/pulls) ⚡⚡ | 3 | 0 | 0 | 0 | 21 | 🔥 3 |
+| 🥇 | [Ana Zec](https://github.com/AnaZec/sdp-powered-by-ai-agents-ana-zec/pulls) ⚡⚡⚡ | 3 | 0 | 0 | 0 | 24 | 🔥 3 |
 | 🥈 | [Aleksandar Cetkovic](https://github.com/cetko4/sdp-powered-by-ai-agents-aleksandar-cetkovic/pulls) | 2 | 0 | 0 | 0 | 10 | 🔥 2 |
 | 🥈 | [Ante Resetar](https://github.com/antres1/sdp-powered-by-ai-agents-ante-resetar/pulls) | 2 | 0 | 0 | 0 | 10 | 🔥 2 |
 | 🥈 | [Mihailo Dikanovic](https://github.com/dikanovicmihailo/sdp-powered-by-ai-agents-mihailo-dikanovic/pulls) | 2 | 0 | 0 | 0 | 10 | 🔥 2 |
 | 🥉 | [Nikola Boskovic](https://github.com/nbskvc/sdp-powered-by-ai-agents-nikola-boskovic/pulls) | 1 | 1 | 0 | 0 | 9 | 🔥 2 |
-| 🥉 | [Vuk Antovic](https://github.com/antovic/sdp-powered-by-ai-agents-vuk-antovic/pulls) ⚡ | 1 | 0 | 0 | 1 | 9 | 🔥 2 |
-| 7 | [Aleksandar Ivanovic](https://github.com/Ivanovic0245/sdp-powered-by-ai-agents-aleksandar-ivanovic/pulls) | 1 | 0 | 0 | 1 | 6 | 🔥 2 |
+| 6 | [Aleksandar Ivanovic](https://github.com/Ivanovic0245/sdp-powered-by-ai-agents-aleksandar-ivanovic/pulls) | 1 | 0 | 0 | 1 | 6 | 🔥 2 |
+| 6 | [Vuk Antovic](https://github.com/antovic/sdp-powered-by-ai-agents-vuk-antovic/pulls) | 1 | 0 | 0 | 1 | 6 | 🔥 2 |
 | 8 | [Jovan Glintic](https://github.com/jglintic/sdp-powered-by-ai-agents-jovan-glintic/pulls) | 0 | 1 | 0 | 0 | 4 | 🔥 1 |
 | 9 | [Jana Petrovic](https://github.com/ktzjana/sdp-powered-by-ai-agents-jana-petrovic/pulls) | 0 | 0 | 0 | 1 | 1 | 🔥 1 |
 | 10 | [Aleksandar Antonic](https://github.com/antonic00/sdp-powered-by-ai-agents-name-surname/pulls) | 0 | 0 | 0 | 0 | 0 |  |
