@@ -220,13 +220,7 @@ CMD ["./build/run_tests"]
 
 A well-designed pipeline has clear stages:
 
-```text
-┌─────────┐    ┌──────────┐    ┌──────────┐    ┌──────────┐
-│  Build   │───▶│   Test   │───▶│  Deploy  │───▶│  Verify  │
-│  Docker  │    │  in      │    │  to AWS  │    │  Smoke   │
-│  Image   │    │  Docker  │    │  (SAM)   │    │  Tests   │
-└─────────┘    └──────────┘    └──────────┘    └──────────┘
-```
+![Pipeline Stages](./diagrams/pipeline-stages.svg)
 
 **For your kata, the pipeline should:**
 

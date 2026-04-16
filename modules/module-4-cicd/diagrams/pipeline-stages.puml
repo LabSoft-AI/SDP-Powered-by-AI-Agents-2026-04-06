@@ -1,0 +1,18 @@
+@startuml pipeline-stages
+
+skinparam backgroundColor white
+skinparam defaultFontSize 14
+skinparam rectangle {
+  RoundCorner 15
+}
+
+rectangle "**Build**\nDocker\nImage" as build #LightBlue
+rectangle "**Test**\nin\nDocker" as test #LightGreen
+rectangle "**Deploy**\nto AWS\n(SAM)" as deploy #LightYellow
+rectangle "**Verify**\nSmoke\nTests" as verify #LightCoral
+
+build -right-> test
+test -right-> deploy
+deploy -right-> verify
+
+@enduml
