@@ -157,12 +157,12 @@ Not all tests are created equal. Let's look at what makes a test good.
 **Type:** content
 **Content:**
 - Properties of Good Tests
-  - **Understandable** — anyone can read it and know what it verifies
-  - **Maintainable** — changing implementation doesn't break unrelated tests
-  - **Repeatable** — same result every time, no external dependencies
-  - **Necessary** — every test verifies a distinct behavior
-  - **Granular** — one test = one behavior = one reason to fail
-  - **Fast** — full suite runs in seconds, not minutes
+- **Understandable** — anyone can read it and know what it verifies
+- **Maintainable** — changing implementation doesn't break unrelated tests
+- **Repeatable** — same result every time, no external dependencies
+- **Necessary** — every test verifies a distinct behavior
+- **Granular** — one test = one behavior = one reason to fail
+- **Fast** — full suite runs in seconds, not minutes
 
 **Notes:**
 These properties come from Kent Beck's Test Driven Development by Example. The most important one for beginners is Granular — one test should test one thing. If a test fails, you should immediately know what's broken.
@@ -174,12 +174,9 @@ Isolated tests are critical: tests should not affect one another. One broken tes
 **Type:** content
 **Content:**
 - Three Types of Tests in TDD
-- Test a **return value** or exception
-  - `assert calculate_tax(100) == 10`
-- Test a **change in state**
-  - `account.withdraw(30)` then `assert account.balance == 70`
-- Test an **interaction** (mock/spy)
-  - `assert email_service.send.called_once_with("user@example.com")`
+- Test a **return value** or exception — `assert calculate_tax(100) == 10`
+- Test a **change in state** — `account.withdraw(30)` then `assert account.balance == 70`
+- Test an **interaction** (mock/spy) — `assert email_service.send.called_once_with(...)`
 
 **Notes:**
 Most of your kata tests will be type 1 (return value) and type 2 (state change). Type 3 (interaction) is used when you need to verify that your code calls an external dependency correctly — that's where mocking comes in.
@@ -224,13 +221,9 @@ Why is this powerful? Two effects. Psychological: having a green bar feels compl
 **Type:** content
 **Content:**
 - Green Bar Patterns
-- **Fake It** — return a constant, generalize later with Triangulation
-  - Safest. Use when unsure about the abstraction.
-- **Triangulate** — add a second example to force generalization
-  - Use when you need two data points to see the pattern.
-- **Obvious Implementation** — go ahead if you're confident
-  - Fastest. But if surprised by RED, fall back to Fake It.
-  - Keep track of how often you're surprised — that tells you when to slow down.
+- **Fake It** — return a constant, generalize later. Safest when unsure.
+- **Triangulate** — add a second example to force generalization.
+- **Obvious Implementation** — go ahead if confident. Fall back to Fake It if surprised by RED.
 
 **Notes:**
 These three patterns give you a toolkit for any situation. Unsure? Fake It. Need to generalize? Triangulate. Confident? Obvious Implementation. The key is honesty with yourself — if Obvious Implementation keeps surprising you with red bars, slow down and use Fake It.
@@ -254,10 +247,8 @@ The third step of RED-GREEN-REFACTOR. Often skipped, always important.
 - Refactoring
 - Changing software to **improve internal structure** while preserving behavior
 - Only refactor during GREEN — never on RED
-- The **Two Hats** rule:
-  - Hat 1: Adding functionality (write test + implementation)
-  - Hat 2: Improving design (refactor)
-  - Never wear both hats at the same time
+- The **Two Hats** rule: one hat for adding functionality, one hat for improving design
+- Never wear both hats at the same time
 
 **Notes:**
 Refactoring is not rewriting. It's small, safe improvements to code structure while tests protect you. The Two Hats metaphor is from Martin Fowler: when you're adding functionality, don't improve design. When you're improving design, don't add functionality. Mixing them leads to bugs.
