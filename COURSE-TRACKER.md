@@ -16,7 +16,7 @@ Location: 507 НТП | Time: 17:00
 | 8 | [Jovan Glintic](https://github.com/jglintic/sdp-powered-by-ai-agents-jovan-glintic/pulls) | 1 | 1 | 0 | 1 | 10 | 🔥 3 |
 | 9 | [Luka Misojcic](https://github.com/misojca/sdp-powered-by-ai-agents-luka-misojcic/pulls) | 1 | 0 | 0 | 0 | 5 | 🔥 1 |
 | 10 | [Stefan Mitic](https://github.com/notstefan1/sdp-powered-by-ai-agents-stefan-mitic/pulls) | 0 | 0 | 0 | 2 | 2 | 🔥 2 |
-| 11 | [Jana Petrovic](https://github.com/ktzjana/sdp-powered-by-ai-agents-jana-petrovic/pulls) | 0 | 0 | 0 | 1 | 1 | 🔥 1 |
+| 11 | [Jana Petrovic](https://github.com/ktzjana/sdp-powered-by-ai-agents-jana-petrovic/pulls) | 0 | 1 | 0 | 1 | 5 | 🔥 1 |
 | 11 | [Vladan Lazarevic](https://github.com/VladanLazarevic/sdp-powered-by-ai-agents-vladan-lazarevic/pulls) | 0 | 0 | 0 | 1 | 1 | 🔥 1 |
 | 13 | [Aleksandar Antonic](https://github.com/antonic00/sdp-powered-by-ai-agents-name-surname/pulls) | 0 | 0 | 0 | 0 | 0 |  |
 | 13 | Luka Vidakovic | 0 | 0 | 0 | 0 | 0 |  |
@@ -103,7 +103,7 @@ Project work (schedule TBD)
 | 3 | [Aleksandar Ivanovic](https://github.com/Ivanovic0245/sdp-powered-by-ai-agents-aleksandar-ivanovic) | E2 73/2025 | <sale.ivanovic0245@gmail.com> | [#6](https://github.com/Ivanovic0245/sdp-powered-by-ai-agents-aleksandar-ivanovic/pull/6) 🟢 | [#7](https://github.com/Ivanovic0245/sdp-powered-by-ai-agents-aleksandar-ivanovic/pull/7) 🟢 | [#8](https://github.com/Ivanovic0245/sdp-powered-by-ai-agents-aleksandar-ivanovic/pull/8) 🟢 | ⬜ | ⬜ |
 | 4 | [Ana Zec](https://github.com/AnaZec/sdp-powered-by-ai-agents-ana-zec) | E2 71/2025 | <ana.zecus@gmail.com> | [#12](https://github.com/AnaZec/sdp-powered-by-ai-agents-ana-zec/pull/12) 🟢 | [#14](https://github.com/AnaZec/sdp-powered-by-ai-agents-ana-zec/pull/14) 🟢 | [#17](https://github.com/AnaZec/sdp-powered-by-ai-agents-ana-zec/pull/17) 🟢 | ⬜ | ⬜ |
 | 5 | [Ante Resetar](https://github.com/antres1/sdp-powered-by-ai-agents-ante-resetar) | E2 74/2025 | <ante.resetar@rt-rk.com> | [#7](https://github.com/antres1/sdp-powered-by-ai-agents-ante-resetar/pull/7) 🟢 | [#8](https://github.com/antres1/sdp-powered-by-ai-agents-ante-resetar/pull/8) 🟢 | [#9](https://github.com/antres1/sdp-powered-by-ai-agents-ante-resetar/pull/9) 🟢 | ⬜ | ⬜ |
-| 6 | [Jana Petrovic](https://github.com/ktzjana/sdp-powered-by-ai-agents-jana-petrovic) | E2 105/2025 | <petrovic.jana12@gmail.com> | [#7](https://github.com/ktzjana/sdp-powered-by-ai-agents-jana-petrovic/pull/7) 🔴 | ⬜ | ⬜ | ⬜ | ⬜ |
+| 6 | [Jana Petrovic](https://github.com/ktzjana/sdp-powered-by-ai-agents-jana-petrovic) | E2 105/2025 | <petrovic.jana12@gmail.com> | [#7](https://github.com/ktzjana/sdp-powered-by-ai-agents-jana-petrovic/pull/7) ✅ | ⬜ | ⬜ | ⬜ | ⬜ |
 | 7 | [Jovan Glintic](https://github.com/jglintic/sdp-powered-by-ai-agents-jovan-glintic) | E2 51/2025 | <jovanglintic@gmail.com> | [#9](https://github.com/jglintic/sdp-powered-by-ai-agents-jovan-glintic/pull/9) 🟢 | [#10](https://github.com/jglintic/sdp-powered-by-ai-agents-jovan-glintic/pull/10) 🔴 | [#11](https://github.com/jglintic/sdp-powered-by-ai-agents-jovan-glintic/pull/11) ✅ | ⬜ | ⬜ |
 | 8 | [Luka Misojcic](https://github.com/misojca/sdp-powered-by-ai-agents-luka-misojcic) | E2 39/2025 | <luka.misojcic.2019@gmail.com> | [#7](https://github.com/misojca/sdp-powered-by-ai-agents-luka-misojcic/pull/7) 🟢 | ⬜ | ⬜ | ⬜ | ⬜ |
 | 9 | Luka Vidakovic | E2 40/2025 | <luka.vidakovic@labsoft.dev> | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
