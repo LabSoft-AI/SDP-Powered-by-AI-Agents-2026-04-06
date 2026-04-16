@@ -222,6 +222,10 @@ A well-designed pipeline has clear stages:
 
 ![Pipeline Stages](./diagrams/pipeline-stages.svg)
 
+The full flow from push to merge:
+
+![CI/CD Pipeline Flow](./diagrams/ci-cd-pipeline.svg)
+
 **For your kata, the pipeline should:**
 
 1. **Build** — Build the Docker image from your Dockerfile
