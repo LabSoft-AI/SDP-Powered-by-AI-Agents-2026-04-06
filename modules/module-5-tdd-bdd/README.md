@@ -236,6 +236,8 @@ The cycle is:
 7. Commit (test is GREEN = safe to commit)
 8. Move to the next scenario
 
+![TDD Cycle](./diagrams/tdd-cycle.svg)
+
 **Once a test is GREEN, commit.** Your Git history should show the
 RED-GREEN-REFACTOR rhythm clearly.
 
