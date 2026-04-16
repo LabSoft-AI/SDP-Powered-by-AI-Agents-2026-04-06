@@ -1,0 +1,47 @@
+@startuml ci-cd-pipeline
+
+skinparam backgroundColor white
+skinparam defaultFontSize 14
+
+title CI/CD Pipeline Flow
+
+|Developer|
+start
+:Push to feature branch;
+
+|GitHub Actions|
+:Trigger workflow\n(on push / pull_request);
+:Checkout code;
+:Build Docker image\n`docker build -t kata-tests .`;
+
+if (Build succeeds?) then (yes)
+  :Run tests in container\n`docker run --rm kata-tests`;
+  if (Tests pass?) then (yes)
+    :Report ✅ on PR;
+    |Developer|
+    :Request review;
+    |Reviewer|
+    :Review PR;
+    if (Approved?) then (yes)
+      |Developer|
+      :Merge to main;
+      stop
+    else (no)
+      |Developer|
+      :Fix and push again;
+      detach
+    endif
+  else (no)
+    :Report ❌ on PR;
+    |Developer|
+    :Fix tests and push again;
+    detach
+  endif
+else (no)
+  :Report ❌ on PR;
+  |Developer|
+  :Fix Dockerfile and push again;
+  detach
+endif
+
+@enduml
