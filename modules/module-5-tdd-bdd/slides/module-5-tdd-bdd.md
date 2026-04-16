@@ -177,16 +177,13 @@ Isolated tests are critical: tests should not affect one another. One broken tes
 Three Types of Tests in TDD
 
 - **Return value**
-
   `assert calculate_tax(100) == 10`
 
 - **Change in state**
-
   `account.withdraw(30)` then `assert account.balance == 70`
 
 - **Interaction** (mock/spy)
-
-   `assert email_service.send.called_once_with(...)`
+`assert email_service.send.called_once_with(...)`
 
 **Notes:**
 Most of your kata tests will be type 1 (return value) and type 2 (state change). Type 3 (interaction) is used when you need to verify that your code calls an external dependency correctly — that's where mocking comes in.
