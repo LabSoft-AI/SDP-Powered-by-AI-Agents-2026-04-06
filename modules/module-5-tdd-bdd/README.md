@@ -71,6 +71,8 @@ The heartbeat of TDD:
 You write **one test at a time**. You do not move to the next test
 until you are satisfied with how your code looks.
 
+![Red-Green-Refactor Cycle](./diagrams/red-green-refactor.svg)
+
 ### 1.3 TDD Is a Design Technique
 
 TDD is not primarily a testing technique — it's a **design technique**.
@@ -170,6 +172,8 @@ it, go ahead. But if you're surprised by red bars, fall back to Fake It.
 Keep track of how often you're surprised — that tells you when to slow
 down.
 
+![Green Bar Patterns](./diagrams/green-bar-patterns.svg)
+
 ### 1.7 Refactoring: The Third Step
 
 Refactoring means changing software to **improve its internal structure**
@@ -208,6 +212,8 @@ implementation order matters:
 3. FE stories    → Build UI components (if applicable)
 4. E2E tests     → Verify the full flow works end-to-end
 ```
+
+![Implementation Order](./diagrams/implementation-order.svg)
 
 You can't build a UI for an API that doesn't exist. You can't deploy
 code without infrastructure. Follow the order.

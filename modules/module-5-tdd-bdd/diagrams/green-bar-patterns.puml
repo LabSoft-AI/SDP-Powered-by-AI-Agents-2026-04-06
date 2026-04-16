@@ -1,0 +1,39 @@
+@startuml green-bar-patterns
+
+skinparam backgroundColor white
+skinparam defaultFontSize 14
+
+title Green Bar Patterns — How to Make RED → GREEN
+
+start
+
+:Test is 🔴 RED;
+
+if (Confident in\nthe implementation?) then (yes)
+
+  :Use **Obvious Implementation**\nWrite the real code directly;
+  :Run test;
+
+  if (Surprised by RED?) then (yes)
+    :Slow down!\nFall back to Fake It;
+    detach
+  else (no — ✅ GREEN)
+  endif
+
+else (no — unsure)
+
+  :Use **Fake It**\nReturn a constant;
+  :Run test → ✅ GREEN;
+
+  :Add a **second test**\n(different input);
+  :Run test → 🔴 RED;
+
+  :Use **Triangulate**\nGeneralize from\ntwo examples;
+  :Run both tests → ✅ GREEN;
+
+endif
+
+:Proceed to ♻️ REFACTOR;
+stop
+
+@enduml

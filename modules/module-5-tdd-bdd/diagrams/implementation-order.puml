@@ -1,0 +1,35 @@
+@startuml implementation-order
+
+skinparam backgroundColor white
+skinparam defaultFontSize 14
+skinparam rectangle {
+  RoundCorner 15
+}
+
+title Implementation Order — Backend First
+
+rectangle "**1. INFRA**\nDocker setup\n(Module 4 ✅)" as infra #LightBlue
+rectangle "**2. BE**\nBusiness logic\n+ unit tests" as be #LightGreen
+rectangle "**3. FE**\nUI components\n(if applicable)" as fe #LightYellow
+rectangle "**4. E2E**\nFull flow\nverification" as e2e #LightCoral
+
+infra -right-> be : infrastructure\nready
+be -right-> fe : API\nexists
+fe -right-> e2e : UI\nconnected
+
+note bottom of infra
+  Dockerfile, CI pipeline,
+  project structure
+end note
+
+note bottom of be
+  TDD: one test at a time
+  RED → GREEN → REFACTOR
+end note
+
+note bottom of e2e
+  Verify the complete
+  user story works
+end note
+
+@enduml
