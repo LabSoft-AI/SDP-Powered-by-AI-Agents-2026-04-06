@@ -45,7 +45,7 @@ The course has two parts:
 | 2 | [Software Architecture](modules/module-2-architecture/) | arc42 template, C4 model | Architecture doc generator |
 | 3 | [Software Requirements](modules/module-3-requirements/) | User stories, DDD, Pareto prioritization | Story derivation agent |
 | 4 | [CI/CD](modules/module-4-cicd/) | GitHub Actions, Docker, pipelines | CI/CD pipeline agent |
-| 5 | TDD/BDD | RED-GREEN-REFACTOR, backend-first | Multi-agent TDD system |
+| 5 | [TDD/BDD](modules/module-5-tdd-bdd/) | RED-GREEN-REFACTOR, backend-first | TDD/BDD implementation agent |
 | 6 | Subscription Platform | Full lifecycle (team project) | All agents from M1–M5 |
 
 ## Course Project: SubscriptionPlatform

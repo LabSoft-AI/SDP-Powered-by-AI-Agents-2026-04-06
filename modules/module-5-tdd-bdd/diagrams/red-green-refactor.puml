@@ -1,0 +1,35 @@
+@startuml red-green-refactor
+
+skinparam backgroundColor white
+skinparam defaultFontSize 14
+
+title Red-Green-Refactor Cycle
+
+state "🔴 RED\nWrite a failing test" as red #FFcccc
+state "✅ GREEN\nMake it pass\n(simplest code)" as green #ccFFcc
+state "♻️ REFACTOR\nImprove design\n(tests protect you)" as refactor #ccccFF
+
+[*] --> red
+red --> green : implement
+green --> refactor : clean up
+refactor --> red : next test
+refactor --> [*] : done
+
+note right of red
+  Test must fail.
+  If it passes, something
+  is wrong with the test.
+end note
+
+note right of green
+  Write the minimum code.
+  Fake It if unsure.
+end note
+
+note right of refactor
+  Eliminate duplication.
+  Improve names.
+  Run tests after each change.
+end note
+
+@enduml
