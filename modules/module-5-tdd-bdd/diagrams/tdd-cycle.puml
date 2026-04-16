@@ -1,0 +1,44 @@
+@startuml tdd-cycle
+
+skinparam backgroundColor white
+skinparam defaultFontSize 14
+
+title TDD/BDD Agent Cycle — One Scenario at a Time
+
+start
+
+:Pick next scenario\nfrom user stories;
+
+:Write ONE test\n(GIVEN-WHEN-THEN);
+
+:Run test;
+
+if (Test fails?) then (yes — 🔴 RED)
+  :Write just enough\nimplementation;
+  :Run test;
+  if (Test passes?) then (yes — ✅ GREEN)
+    :Run ALL tests;
+    if (All pass?) then (yes)
+      :Check refactoring\nopportunities;
+      :Commit with\nStory/Scenario ID;
+      if (More scenarios?) then (yes)
+        :Move to next scenario;
+        detach
+      else (no)
+        :Done ✅;
+        stop
+      endif
+    else (no — regression)
+      :Fix regression;
+      detach
+    endif
+  else (no)
+    :Fix implementation;
+    detach
+  endif
+else (no — test already passes)
+  :Test is wrong or\ncode already exists.\nReview and fix.;
+  detach
+endif
+
+@enduml
