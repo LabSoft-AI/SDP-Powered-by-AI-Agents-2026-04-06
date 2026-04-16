@@ -44,7 +44,7 @@ The course has two parts:
 | 1 | [Git](modules/module-1-git/) | Branching, commits, PRs, issue tracking | Issue creator, PR creator |
 | 2 | [Software Architecture](modules/module-2-architecture/) | arc42 template, C4 model | Architecture doc generator |
 | 3 | [Software Requirements](modules/module-3-requirements/) | User stories, DDD, Pareto prioritization | Story derivation agent |
-| 4 | CI/CD | GitHub Actions, SAM, AWS deployment | Deployment pipeline agent |
+| 4 | [CI/CD](modules/module-4-cicd/) | GitHub Actions, Docker, pipelines | CI/CD pipeline agent |
 | 5 | [TDD/BDD](modules/module-5-tdd-bdd/) | RED-GREEN-REFACTOR, backend-first | TDD/BDD implementation agent |
 | 6 | Subscription Platform | Full lifecycle (team project) | All agents from M1–M5 |
 
@@ -202,6 +202,7 @@ This creates a Python virtual environment and installs:
   - PlantUML SVG auto-generation from `.puml` files
   - Commit message format validation (`#<issue> <type>(<scope>): <description>`)
   - Direct commits to `main` blocked (must use PRs)
+  - Docker test: builds image and runs tests before commit (when `Dockerfile` exists)
 
 ## References
 
