@@ -58,22 +58,22 @@ Friday 10.4. — no class (Good Friday)
 
 ## Week 2
 
-| # | Student | Tue 14.4. | ~~Wed 15.4.~~ | Thu 17.4. | Fri 18.4. |
+| # | Student | Tue 14.4. | Wed 16.4. | Thu 17.4. | Fri 18.4. |
 |---|---------|-----------|-----------|-----------|-----------|
-| 1 | Aleksandar Antonic | ❌ | | | |
-| 2 | Aleksandar Cetkovic | ❌ | | | |
-| 3 | Aleksandar Ivanovic | ✅ | | | |
-| 4 | Ana Zec | ✅ | | | |
-| 5 | Ante Resetar | ✅ | | | |
-| 6 | Jana Petrovic | ✅ | | | |
-| 7 | Jovan Glintic | ✅ | | | |
-| 8 | Luka Misojcic | ✅ | | | |
-| 9 | Luka Vidakovic | ❌ | | | |
-| 10 | Mihailo Dikanovic | ✅ | | | |
-| 11 | Nikola Boskovic | ✅ | | | |
-| 12 | Stefan Mitic | ✅ | | | |
-| 13 | Vladan Lazarevic | ✅ | | | |
-| 14 | Vuk Antovic | ✅ | | | |
+| 1 | Aleksandar Antonic | ❌ | ❌ | | |
+| 2 | Aleksandar Cetkovic | ❌ | ✅ | | |
+| 3 | Aleksandar Ivanovic | ✅ | ✅ | | |
+| 4 | Ana Zec | ✅ | ❌ | | |
+| 5 | Ante Resetar | ✅ | ✅ | | |
+| 6 | Jana Petrovic | ✅ | ✅ | | |
+| 7 | Jovan Glintic | ✅ | ✅ | | |
+| 8 | Luka Misojcic | ✅ | ✅ | | |
+| 9 | Luka Vidakovic | ❌ | ❌ | | |
+| 10 | Mihailo Dikanovic | ✅ | ✅ | | |
+| 11 | Nikola Boskovic | ✅ | ✅ | | |
+| 12 | Stefan Mitic | ✅ | ❌ | | |
+| 13 | Vladan Lazarevic | ✅ | ❌ | | |
+| 14 | Vuk Antovic | ✅ | ❌ | | |
 
 ## Week 3
 
