@@ -46,9 +46,9 @@ Today we have instant feedback, but many developers have lost that
 discipline. TDD brings it back — not because computer time is scarce,
 but because **good design thinking is scarce**.
 
-At BMW, with 500 million lines of code and 160,000 CI jobs per day,
+At one large European OEM, with 500 million lines of code and 160,000 CI jobs per day,
 TDD was the only way 2,000+ developers could work on the same codebase
-without breaking each other's work. At Volkswagen, teams that adopted
+without breaking each other's work. At another automotive platform project, teams that adopted
 TDD delivered **40% faster** with **35% fewer defects**.
 
 ### 1.2 The Red-Green-Refactor Cycle
@@ -86,7 +86,7 @@ When you write the test first:
 - You identify **dependencies** before they become entangled
 - You design for **testability**, which means designing for modularity
 
-A senior developer at VW told me: *"I used to think TDD was about
+A senior developer told me: *"I used to think TDD was about
 catching bugs. Now I realize it's about not creating bugs in the first
 place by forcing better design."*
 

@@ -8,7 +8,7 @@ Software Development Processes Powered by AI Agents
 
 **Notes:**
 Welcome to Module 5 — the most important module in the course. Today you learn Test-Driven Development and Behavior-Driven Development, and you build the most complex agent: one that implements your kata using strict RED-GREEN-REFACTOR discipline.
-This module draws heavily from real industry experience at BMW, Volkswagen, and aerospace projects.
+This module draws heavily from real industry experience at major European automotive OEMs and aerospace projects.
 
 ---
 
@@ -65,13 +65,13 @@ The key insight: you write ONE test at a time. You do not move to the next test 
 
 ---
 
-## Slide 6: The VW Story
+## Slide 6: The Automotive Platform Story
 **Type:** storytelling
 **Content:**
-In 2022, at Volkswagen, we were building a next-generation software platform. Multiple teams across countries, different vehicle models, long-term maintainability required. Early on, we noticed problems: high coupling, low cohesion, hidden dependencies, difficult testing. We mandated TDD for all new components. Something remarkable happened. Component interfaces became cleaner. Dependencies became explicit. Design discussions improved. Integration problems decreased. Teams that adopted TDD delivered 40% faster with 35% fewer defects. A senior developer told me: "I used to think TDD was about catching bugs. Now I realize it's about not creating bugs in the first place."
+In 2022, at a major European automotive OEM, we were building a next-generation software platform. Multiple teams across countries, different vehicle models, long-term maintainability required. Early on, we noticed problems: high coupling, low cohesion, hidden dependencies, difficult testing. We mandated TDD for all new components. Something remarkable happened. Component interfaces became cleaner. Dependencies became explicit. Design discussions improved. Integration problems decreased. Teams that adopted TDD delivered 40% faster with 35% fewer defects. A senior developer told me: "I used to think TDD was about catching bugs. Now I realize it's about not creating bugs in the first place."
 
 **Notes:**
-This is the key lesson from the VW project: TDD is not primarily a testing technique — it's a design technique. The tests are valuable, but the real value is in the thinking process TDD forces you through.
+This is the key lesson from that automotive platform project: TDD is not primarily a testing technique — it's a design technique. The tests are valuable, but the real value is in the thinking process TDD forces you through.
 When you write the test first, you think about behavior before implementation, you consider the interface before the internals, you identify dependencies before they become entangled, you design for testability which means designing for modularity.
 
 ---
