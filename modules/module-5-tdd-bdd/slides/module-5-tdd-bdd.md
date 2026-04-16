@@ -173,10 +173,20 @@ Isolated tests are critical: tests should not affect one another. One broken tes
 ## Slide 13: Three Types of Tests
 **Type:** content
 **Content:**
-- Three Types of Tests in TDD
-- **Return value** — `assert calculate_tax(100) == 10`
-- **Change in state** — `account.withdraw(30)` then `assert account.balance == 70`
-- **Interaction** (mock/spy) — `assert email_service.send.called_once_with(...)`
+
+Three Types of Tests in TDD
+
+- **Return value**
+
+  `assert calculate_tax(100) == 10`
+
+- **Change in state**
+
+  `account.withdraw(30)` then `assert account.balance == 70`
+
+- **Interaction** (mock/spy)
+
+   `assert email_service.send.called_once_with(...)`
 
 **Notes:**
 Most of your kata tests will be type 1 (return value) and type 2 (state change). Type 3 (interaction) is used when you need to verify that your code calls an external dependency correctly — that's where mocking comes in.
@@ -436,9 +446,18 @@ The workflow: start the agent, point it at your user stories, and let it impleme
 ---
 
 ## Slide 30: Acceptance Criteria
-**Type:** storytelling
+**Type:** content
 **Content:**
-Acceptance Criteria: Requirements agent updated for Docker-based INFRA. INFRA stories pass (Docker build + test run). Agent config at .kiro/agents/tdd-bdd-agent.json. Agent writes ONE test at a time. Agent confirms RED before implementing. Agent confirms GREEN after implementing. Agent runs ALL tests for regressions. Agent commits on GREEN with story reference. Git history shows RED-GREEN-REFACTOR rhythm.
+- Acceptance Criteria
+- [ ] Requirements agent updated for Docker-based INFRA
+- [ ] INFRA stories pass (Docker build + test run)
+- [ ] Agent config at `.kiro/agents/tdd-bdd-agent.json`
+- [ ] Agent writes ONE test at a time
+- [ ] Agent confirms RED before implementing
+- [ ] Agent confirms GREEN after implementing
+- [ ] Agent runs ALL tests for regressions
+- [ ] Agent commits on GREEN with story reference
+- [ ] Git history shows RED-GREEN-REFACTOR rhythm
 
 **Notes:**
 The most important criterion: Git history shows the rhythm. Each commit should be a GREEN test. No commits with failing tests. The story and scenario IDs should be traceable in test names and commit messages.
