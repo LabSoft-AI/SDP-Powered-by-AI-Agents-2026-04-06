@@ -54,11 +54,6 @@
 
 ## Part 2: Build and Use the TDD/BDD Agent
 
-> **Agent:** `tdd-bdd-agent`
-> ```bash
-> kiro-cli --agent tdd-bdd-agent
-> ```
-
 ### Step 1: Build the TDD/BDD Agent
 
 - [ ] Copied `tdd-bdd-agent.json` and `tdd-bdd-prompt.md` to `.kiro/agents/`
@@ -69,50 +64,52 @@
 - [ ] Completed TODO: Commit Message Format
 - [ ] Completed TODO: postToolUse Hook (runs pytest after writes)
 
-### Step 2: Use the Agent
-
-- [ ] Started agent: `kiro-cli --agent tdd-bdd-agent`
-- [ ] Agent read user stories
-- [ ] Agent followed INFRA → BE → FE → E2E order
-- [ ] For each scenario:
-  - [ ] Agent wrote ONE test → confirmed RED
-  - [ ] Agent wrote implementation → confirmed GREEN
-  - [ ] Agent ran ALL tests → no regressions
-  - [ ] Agent checked for refactoring
-  - [ ] Agent committed on GREEN
-
-### Step 3: Multi-Agent Workflow
+### Step 2: Multi-Agent Workflow (repeat for each user story)
 
 For each user story, follow this loop:
-
-- [ ] **Git agent:** took highest priority unimplemented story
-- [ ] **Git agent:** created GitHub issue with story content
-- [ ] **Git agent:** created feature branch for the issue
-- [ ] **TDD/BDD agent:** implemented the issue (RED-GREEN-REFACTOR)
-- [ ] **Git agent:** created PR closing the issue
-- [ ] **Git agent:** added instructor as reviewer
-- [ ] Repeated for next story
-
-### Step 4: Verify TDD Discipline
-
-- [ ] Git log shows one commit per GREEN test
-- [ ] No commits with failing tests
-- [ ] Test names include Story/Scenario IDs
-- [ ] All tests have GIVEN-WHEN-THEN comments
-
-### Step 5: Commit via Git Agent
 
 > **Switch agent:** `git-agent`
 > ```bash
 > kiro-cli --agent git-agent
 > ```
 
-- [ ] Feature branch created for TDD implementation issue
-- [ ] PR created closing the issue
+- [ ] **Git agent:** took highest priority unimplemented story
+- [ ] **Git agent:** created GitHub issue with story content and acceptance criteria
+- [ ] **Git agent:** created feature branch for the issue
 
-### Step 6: Review and Merge
+> **Switch agent:** `tdd-bdd-agent`
+> ```bash
+> kiro-cli --agent tdd-bdd-agent
+> ```
 
-- [ ] Instructor added as reviewer (`gh pr edit --add-reviewer momokrunic`)
+- [ ] **TDD/BDD agent:** read the issue and user story scenarios
+- [ ] **TDD/BDD agent:** followed INFRA → BE → FE → E2E order
+- [ ] For each scenario in the story:
+  - [ ] Wrote ONE test → ran → confirmed RED
+  - [ ] Wrote implementation → ran → confirmed GREEN
+  - [ ] Ran ALL tests → no regressions
+  - [ ] Checked for refactoring opportunities
+  - [ ] Committed on GREEN with story/scenario reference
+
+> **Switch agent:** `git-agent`
+> ```bash
+> kiro-cli --agent git-agent
+> ```
+
+- [ ] **Git agent:** created PR closing the issue
+- [ ] **Git agent:** added instructor as reviewer (`gh pr edit --add-reviewer momokrunic`)
+
+> ♻️ **Repeat from the top** with the next highest priority story.
+
+### Step 3: Verify TDD Discipline
+
+- [ ] Git log shows one commit per GREEN test
+- [ ] No commits with failing tests
+- [ ] Test names include Story/Scenario IDs
+- [ ] All tests have GIVEN-WHEN-THEN comments
+
+### Step 4: Review and Merge
+
 - [ ] PR approved by instructor
 - [ ] Merged to main via `gh pr merge --squash`
 - [ ] Issue auto-closed
