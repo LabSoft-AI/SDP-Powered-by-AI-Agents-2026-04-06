@@ -428,6 +428,37 @@ The agent should:
 6. Commit with story/scenario reference
 7. Ask which scenario to do next
 
+### The Full Multi-Agent Workflow
+
+In practice, you orchestrate the Git agent and TDD/BDD agent together.
+This is the workflow you should follow for each user story:
+
+![Multi-Agent Workflow](./diagrams/multi-agent-workflow.svg)
+
+**Example session:**
+
+```bash
+# 1. Git agent — create issue and branch
+kiro-cli --agent git-agent
+> Take the highest priority unimplemented user story from docs/user-stories/
+> Create a GitHub issue with the story content and acceptance criteria
+> Create a feature branch for the issue
+
+# 2. TDD/BDD agent — implement
+kiro-cli --agent tdd-bdd-agent
+> Implement GitHub issue #<N>
+> Follow strict RED-GREEN-REFACTOR — one test at a time
+
+# 3. Git agent — PR
+kiro-cli --agent git-agent
+> Create a PR closing issue #<N>
+> Add momokrunic as reviewer
+
+# 4. Repeat with next story
+```
+
+This loop continues until all core (Pareto 20%) stories are implemented.
+
 ### Step 4: Verify TDD Discipline in Git History
 
 Your Git log should show the RED-GREEN-REFACTOR rhythm:

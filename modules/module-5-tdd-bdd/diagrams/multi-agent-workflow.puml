@@ -1,0 +1,46 @@
+@startuml multi-agent-workflow
+
+skinparam backgroundColor white
+skinparam defaultFontSize 13
+skinparam swimlaneWidth 220
+skinparam activityBorderColor #333333
+
+title Multi-Agent Workflow — Story by Story
+
+|#LightBlue|Git Agent|
+|#LightGreen|TDD/BDD Agent|
+
+|Git Agent|
+start
+:Pick highest priority\nunimplemented user story;
+:Create GitHub Issue\nwith story content\nand acceptance criteria;
+:Create feature branch\nfor the issue;
+
+|TDD/BDD Agent|
+:Read issue and\nuser story scenarios;
+
+repeat
+  :Write **ONE** test\n(GIVEN-WHEN-THEN);
+  :Run test → confirm 🔴 RED;
+  :Write just enough\nimplementation;
+  :Run test → confirm ✅ GREEN;
+  :Run **ALL** tests\n→ no regressions;
+  :Refactor if needed;
+  :Commit with\nstory/scenario reference;
+repeat while (More scenarios?) is (yes)
+->no;
+
+|Git Agent|
+:Create PR\nclosing the issue;
+:Add instructor\nas reviewer;
+
+if (More stories?) then (yes)
+  |Git Agent|
+  :Pick next story;
+  detach
+else (no)
+  :All core stories\nimplemented ✅;
+  stop
+endif
+
+@enduml

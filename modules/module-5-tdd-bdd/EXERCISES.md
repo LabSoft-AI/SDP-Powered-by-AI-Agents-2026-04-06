@@ -81,14 +81,26 @@
   - [ ] Agent checked for refactoring
   - [ ] Agent committed on GREEN
 
-### Step 3: Verify TDD Discipline
+### Step 3: Multi-Agent Workflow
+
+For each user story, follow this loop:
+
+- [ ] **Git agent:** took highest priority unimplemented story
+- [ ] **Git agent:** created GitHub issue with story content
+- [ ] **Git agent:** created feature branch for the issue
+- [ ] **TDD/BDD agent:** implemented the issue (RED-GREEN-REFACTOR)
+- [ ] **Git agent:** created PR closing the issue
+- [ ] **Git agent:** added instructor as reviewer
+- [ ] Repeated for next story
+
+### Step 4: Verify TDD Discipline
 
 - [ ] Git log shows one commit per GREEN test
 - [ ] No commits with failing tests
 - [ ] Test names include Story/Scenario IDs
 - [ ] All tests have GIVEN-WHEN-THEN comments
 
-### Step 4: Commit via Git Agent
+### Step 5: Commit via Git Agent
 
 > **Switch agent:** `git-agent`
 > ```bash
@@ -98,7 +110,7 @@
 - [ ] Feature branch created for TDD implementation issue
 - [ ] PR created closing the issue
 
-### Step 5: Review and Merge
+### Step 6: Review and Merge
 
 - [ ] Instructor added as reviewer (`gh pr edit --add-reviewer momokrunic`)
 - [ ] PR approved by instructor
