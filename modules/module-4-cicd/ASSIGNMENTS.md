@@ -13,8 +13,8 @@
 | 9 | Luka Vidakovic | — | — | ⬜ Not started | — |
 | 10 | Mihailo Dikanovic | [sdp-powered-by-ai-agents-mihailo-dikanovic](https://github.com/dikanovicmihailo/sdp-powered-by-ai-agents-mihailo-dikanovic) | — | ⬜ Not started | — |
 | 11 | Nikola Boskovic | [sdp-powered-by-ai-agents-nikola-boskovic](https://github.com/nbskvc/sdp-powered-by-ai-agents-nikola-boskovic) | — | ⬜ Not started | — |
-| 12 | Stefan Mitic | [sdp-powered-by-ai-agents-stefan-mitic](https://github.com/notstefan1/sdp-powered-by-ai-agents-stefan-mitic) | — | ⬜ Not started | — |
+| 12 | Stefan Mitic | [sdp-powered-by-ai-agents-stefan-mitic](https://github.com/notstefan1/sdp-powered-by-ai-agents-stefan-mitic) | [#10](https://github.com/notstefan1/sdp-powered-by-ai-agents-stefan-mitic/pull/10) | ✅ Approved | @momokrunic |
 | 13 | Vladan Lazarevic | [sdp-powered-by-ai-agents-vladan-lazarevic](https://github.com/VladanLazarevic/sdp-powered-by-ai-agents-vladan-lazarevic) | — | ⬜ Not started | — |
-| 14 | Vuk Antovic | [sdp-powered-by-ai-agents-vuk-antovic](https://github.com/antovic/sdp-powered-by-ai-agents-vuk-antovic) | [#12](https://github.com/antovic/sdp-powered-by-ai-agents-vuk-antovic/pull/12) | ✅ Approved | @momokrunic |
+| 14 | Vuk Antovic | [sdp-powered-by-ai-agents-vuk-antovic](https://github.com/antovic/sdp-powered-by-ai-agents-vuk-antovic) | [#12](https://github.com/antovic/sdp-powered-by-ai-agents-vuk-antovic/pull/12) | 🟢 Merged | @momokrunic |
 
 Legend: 🟢 Merged | ✅ Approved | 🟡 Open | 🔴 Changes Requested | ⬜ Not started

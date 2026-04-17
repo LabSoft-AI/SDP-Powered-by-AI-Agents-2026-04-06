@@ -3,9 +3,9 @@
 | # | Student | Repository | PR | Status | Reviewers |
 |---|---------|-----------|-----|--------|-----------|
 | 1 | Aleksandar Antonic | [sdp-powered-by-ai-agents-name-surname](https://github.com/antonic00/sdp-powered-by-ai-agents-name-surname) | — | ⬜ Not started | — |
-| 2 | Aleksandar Cetkovic | [sdp-powered-by-ai-agents-aleksandar-cetkovic](https://github.com/cetko4/sdp-powered-by-ai-agents-aleksandar-cetkovic) | — | ⬜ Not started | — |
+| 2 | Aleksandar Cetkovic | [sdp-powered-by-ai-agents-aleksandar-cetkovic](https://github.com/cetko4/sdp-powered-by-ai-agents-aleksandar-cetkovic) | [#16](https://github.com/cetko4/sdp-powered-by-ai-agents-aleksandar-cetkovic/pull/16) | 🟢 Merged | @momokrunic |
 | 3 | Aleksandar Ivanovic | [sdp-powered-by-ai-agents-aleksandar-ivanovic](https://github.com/Ivanovic0245/sdp-powered-by-ai-agents-aleksandar-ivanovic) | — | ⬜ Not started | — |
-| 4 | Ana Zec | [sdp-powered-by-ai-agents-ana-zec](https://github.com/AnaZec/sdp-powered-by-ai-agents-ana-zec) | — | ⬜ Not started | — |
+| 4 | Ana Zec | [sdp-powered-by-ai-agents-ana-zec](https://github.com/AnaZec/sdp-powered-by-ai-agents-ana-zec) | [#21](https://github.com/AnaZec/sdp-powered-by-ai-agents-ana-zec/pull/21) | 🔴 Changes Requested | @momokrunic |
 | 5 | Ante Resetar | [sdp-powered-by-ai-agents-ante-resetar](https://github.com/antres1/sdp-powered-by-ai-agents-ante-resetar) | — | ⬜ Not started | — |
 | 6 | Jana Petrovic | [sdp-powered-by-ai-agents-jana-petrovic](https://github.com/ktzjana/sdp-powered-by-ai-agents-jana-petrovic) | — | ⬜ Not started | — |
 | 7 | Jovan Glintic | [sdp-powered-by-ai-agents-jovan-glintic](https://github.com/jglintic/sdp-powered-by-ai-agents-jovan-glintic) | — | ⬜ Not started | — |
