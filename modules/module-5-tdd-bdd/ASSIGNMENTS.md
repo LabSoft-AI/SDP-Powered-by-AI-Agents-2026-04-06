@@ -8,7 +8,7 @@
 | 4 | Ana Zec | [sdp-powered-by-ai-agents-ana-zec](https://github.com/AnaZec/sdp-powered-by-ai-agents-ana-zec) | [#21](https://github.com/AnaZec/sdp-powered-by-ai-agents-ana-zec/pull/21) | 🔴 Changes Requested | @momokrunic |
 | 5 | Ante Resetar | [sdp-powered-by-ai-agents-ante-resetar](https://github.com/antres1/sdp-powered-by-ai-agents-ante-resetar) | — | ⬜ Not started | — |
 | 6 | Jana Petrovic | [sdp-powered-by-ai-agents-jana-petrovic](https://github.com/ktzjana/sdp-powered-by-ai-agents-jana-petrovic) | — | ⬜ Not started | — |
-| 7 | Jovan Glintic | [sdp-powered-by-ai-agents-jovan-glintic](https://github.com/jglintic/sdp-powered-by-ai-agents-jovan-glintic) | — | ⬜ Not started | — |
+| 7 | Jovan Glintic | [sdp-powered-by-ai-agents-jovan-glintic](https://github.com/jglintic/sdp-powered-by-ai-agents-jovan-glintic) | [#13](https://github.com/jglintic/sdp-powered-by-ai-agents-jovan-glintic/pull/13) | 🔴 Changes Requested | @momokrunic |
 | 8 | Luka Misojcic | [sdp-powered-by-ai-agents-luka-misojcic](https://github.com/misojca/sdp-powered-by-ai-agents-luka-misojcic) | — | ⬜ Not started | — |
 | 9 | Luka Vidakovic | — | — | ⬜ Not started | — |
 | 10 | Mihailo Dikanovic | [sdp-powered-by-ai-agents-mihailo-dikanovic](https://github.com/dikanovicmihailo/sdp-powered-by-ai-agents-mihailo-dikanovic) | — | ⬜ Not started | — |
