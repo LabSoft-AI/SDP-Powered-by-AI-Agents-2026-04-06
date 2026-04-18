@@ -151,10 +151,10 @@ STORY: AS A customer I WANT to search products
 ├── FE STORY 1.2: Results list component
 ├── BE STORY 1.1: Search API endpoint
 ├── BE STORY 1.2: Search indexing logic
-├── INFRA STORY 1.1: Deploy search Lambda
-├── INFRA STORY 1.2: Create products DynamoDB table
-├── INFRA STORY 1.3: Configure search event
-└── INFRA STORY 1.4: Setup CloudWatch monitoring
+├── INFRA STORY 1.1: Deploy search service (Docker/Lambda/package)
+├── INFRA STORY 1.2: Create data store (DB table, file storage, etc.)
+├── INFRA STORY 1.3: Configure event handling (if applicable)
+└── INFRA STORY 1.4: Setup monitoring and observability
 ```
 
 **Why decompose?**
@@ -167,7 +167,7 @@ STORY: AS A customer I WANT to search products
 **Implementation order matters:**
 
 ```text
-1. INFRA stories first  → Deploy Lambda, create tables, configure events
+1. INFRA stories first  → Deploy service, create data store, configure events
 2. BE stories next      → Implement business logic, API endpoints
 3. FE stories last      → Build UI components that call the API
 4. Original story E2E   → Verify the full flow works end-to-end
@@ -338,7 +338,7 @@ For each story bundle, check:
 - [ ] All scenarios use GIVEN-WHEN-THEN format
 - [ ] Architecture references point to real sections
 - [ ] Story IDs follow the naming convention
-- [ ] INFRA stories cover: Lambda, data store, events, monitoring
+- [ ] INFRA stories cover: deployment, data store, events, monitoring (adapted to your architecture)
 - [ ] Pareto progress is tracked in README.md
 
 ### Step 4: Commit via Git Agent
@@ -372,7 +372,7 @@ gh pr merge --squash
 - [ ] All scenarios use GIVEN-WHEN-THEN format
 - [ ] Story IDs follow `{DOMAIN}-{TYPE}-{N}.{X}` convention
 - [ ] Architecture references link to real sections
-- [ ] INFRA stories cover Lambda, data store, events, monitoring
+- [ ] INFRA stories cover deployment, data store, events, monitoring (adapted to your architecture)
 - [ ] Progress tracked in `docs/user-stories/README.md`
 - [ ] Stories committed and PR created via Git agent
 - [ ] Instructor added as reviewer on PR

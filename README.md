@@ -63,8 +63,8 @@ recurring billing. Built entirely by AI agents.
 | 1–2 | [Module 1: Git](modules/module-1-git/) | Git agent + practice exercise |
 | 3–4 | [Module 2: Architecture](modules/module-2-architecture/) | Architecture agent + kata design |
 | 5–6 | [Module 3: Requirements](modules/module-3-requirements/) | Story agent + kata backlog |
-| 7–8 | Module 4: CI/CD | Deploy agent + pipeline exercise |
-| 9–12 | Module 5: TDD/BDD | Multi-agent TDD system + practice |
+| 7–8 | [Module 4: CI/CD](modules/module-4-cicd/) | Deploy agent + pipeline exercise |
+| 9–12 | [Module 5: TDD/BDD](modules/module-5-tdd-bdd/) | Multi-agent TDD system + practice |
 | 13–18 | Module 6: Subscription Platform (teams) | Working app deployed on AWS |
 | 19–21 | Buffer / presentations | Demo + retrospective |
 

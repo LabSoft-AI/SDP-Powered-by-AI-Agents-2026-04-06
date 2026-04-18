@@ -23,10 +23,10 @@
 - [ ] Written FE sub-stories with scenarios (if applicable)
 - [ ] Written BE sub-stories with scenarios
 - [ ] Written INFRA sub-stories with scenarios:
-  - [ ] INFRA: Lambda deployment
-  - [ ] INFRA: Data store (DynamoDB table or similar)
+  - [ ] INFRA: Deployment (Docker container, CI pipeline, or packaging)
+  - [ ] INFRA: Data store (database, file storage, or in-memory — appropriate for your architecture)
   - [ ] INFRA: Event handling (if applicable)
-  - [ ] INFRA: Monitoring and alarms
+  - [ ] INFRA: Monitoring and observability (logging, health checks, or alarms)
 
 ### Step 4: Verify Traceability
 
@@ -73,7 +73,7 @@
 - [ ] All scenarios use GIVEN-WHEN-THEN
 - [ ] Architecture references point to real sections
 - [ ] Story IDs follow `{DOMAIN}-{TYPE}-{N}.{X}` convention
-- [ ] INFRA stories cover: Lambda, data store, events, monitoring
+- [ ] INFRA stories cover: deployment, data store, events, monitoring (adapted to your architecture)
 - [ ] `docs/user-stories/README.md` has story inventory + Pareto progress
 
 ### Step 4: Commit via Git Agent
