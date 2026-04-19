@@ -113,4 +113,5 @@ Add a `LICENSE` file (MIT recommended) to the repository root.
 - [ ] Kata functional: `docker build && docker run`
 - [ ] CI/CD pipeline showing TDD commit history
 - [ ] Live Sphinx documentation site
+- [ ] Documentation CI/CD workflow deploying to GitHub Pages
 - [ ] Professional README + LICENSE
