@@ -1,141 +1,141 @@
-# Module 6: Final Project
+# Модул 6: Завршни пројекат
 
-## Slide 1: Module 6: Final Project
-**Type:** title
-**Content:**
-Module 6: Final Project
-Software Development Processes Powered by AI Agents
+## Слајд 1: Модул 6: Завршни пројекат
+**Тип:** наслов
+**Садржај:**
+Модул 6: Завршни пројекат
+Процеси развоја софтвера уз помоћ АИ агената
 
-**Notes:**
-This is the capstone module. Everything from Modules 1–5 comes together. You complete your kata end-to-end using all AI agents, with full TDD discipline, CI/CD pipelines, and professional documentation.
-
----
-
-## Slide 2: What You'll Deliver
-**Type:** content
-**Content:**
-- A fully functional kata: `docker build && docker run`
-- All user stories implemented with TDD discipline
-- CI/CD pipeline showing GREEN commits
-- Sphinx documentation site on GitHub Pages
-- Professional README + LICENSE
-
-**Notes:**
-This is not a new concept module — it's pure execution. You already have all the tools. Now use them to deliver a complete, professional project.
+**Белешке:**
+Ово је завршни модул. Све из модула 1–5 се спаја. Завршавате своју кату од почетка до краја користећи све АИ агенте, са пуном ТДД дисциплином, ЦИ/ЦД пајплајнима и професионалном документацијом.
 
 ---
 
-## Slide 3: The Full Picture
-**Type:** content
-**Content:**
-- Module 1: Git Agent → commits, branches, PRs
-- Module 2: Architecture Agent → arc42, C4 diagrams
-- Module 3: Requirements Agent → user stories, Pareto
-- Module 4: CI/CD Agent → Docker, pipelines
-- Module 5: TDD/BDD Agent → RED-GREEN-REFACTOR
-- **Module 6: All agents → complete project**
+## Слајд 2: Шта испоручујете
+**Тип:** садржај
+**Садржај:**
+- Потпуно функционална ката: `docker build && docker run`
+- Све корисничке приче имплементиране са ТДД дисциплином
+- ЦИ/ЦД пајплајн који показује ЗЕЛЕНЕ комитове
+- Sphinx документациони сајт на GitHub Pages
+- Професионални README + LICENSE
 
-**Notes:**
-Each module gave you one agent. Now you orchestrate all of them together. The git agent creates issues and PRs. The TDD agent implements stories. The CI/CD pipeline validates every push.
-
----
-
-## Slide 4: Step 1 — Fix INFRA Stories
-**Type:** content
-**Content:**
-- Update `requirements-agent` to enforce Docker deployment
-- Regenerate all INFRA scenarios
-- No Lambda/DynamoDB — use Docker containers
-- INFRA stories must cover: deployment, data store, events, monitoring
-
-**Notes:**
-Before you start implementing, your INFRA stories need to match your actual deployment target. The course exercises originally referenced AWS Lambda, but your katas use localhost Docker. Fix this first or your TDD agent will generate wrong infrastructure tests.
+**Белешке:**
+Ово није модул са новим концептима — ово је чиста егзекуција. Већ имате све алате. Сада их користите да испоручите комплетан, професионалан пројекат.
 
 ---
 
-## Slide 5: Step 2 — Implement with TDD
-**Type:** content
-**Content:**
-- For each story: INFRA → BE → FE → E2E
-- RED → GREEN → REFACTOR for each scenario
-- **Commit on every GREEN** — this is your evidence
-- Each commit references Story/Scenario ID
-- CI/CD pipeline must trigger and pass on every push
+## Слајд 3: Комплетна слика
+**Тип:** садржај
+**Садржај:**
+- Модул 1: Git агент → комитови, гране, PR-ови
+- Модул 2: Архитектура агент → arc42, C4 дијаграми
+- Модул 3: Захтеви агент → корисничке приче, Парето
+- Модул 4: ЦИ/ЦД агент → Docker, пајплајни
+- Модул 5: ТДД/БДД агент → ЦРВЕНО-ЗЕЛЕНО-РЕФАКТОРИСАЊЕ
+- **Модул 6: Сви агенти → комплетан пројекат**
 
-**Notes:**
-The key deliverable is the commit history. I need to see incremental GREEN commits in your CI/CD pipeline. Not one giant commit at the end — that's not TDD. Each scenario gets its own RED-GREEN-REFACTOR cycle and its own commit.
-
----
-
-## Slide 6: Step 3 — Documentation
-**Type:** content
-**Content:**
-- Move `architecture/` under `docs/`
-- Copy Sphinx starter files: `cp -r modules/module-6-project/starter/* docs/`
-- Edit `conf.py` and `index.rst`
-- Build locally: `cd docs && make html`
-- Copy `docs-deploy.yml` to `.github/workflows/`
-- Enable GitHub Pages: `gh api repos/{owner}/{repo}/pages -X PUT -f build_type=workflow`
-
-**Notes:**
-Starter files are provided — you don't need to write Sphinx config from scratch. Copy, customize, build. The workflow deploys automatically on every push to main that touches docs.
+**Белешке:**
+Сваки модул вам је дао по једног агента. Сада их оркестрирате заједно. Git агент креира issue-е и PR-ове. ТДД агент имплементира приче. ЦИ/ЦД пајплајн валидира сваки push.
 
 ---
 
-## Slide 7: Step 4 — Polish
-**Type:** content
-**Content:**
-- Professional `README.md`:
-  - What the kata solves
-  - How to build and run (`docker build && docker run`)
-  - How to run tests
-  - Link to Sphinx docs site
-  - Author info
-- Add `LICENSE` file (MIT recommended)
+## Слајд 4: Корак 1 — Поправите ИНФРА приче
+**Тип:** садржај
+**Садржај:**
+- Ажурирајте `requirements-agent` да форсира Docker deployment
+- Регенеришите све ИНФРА сценарије
+- Без Lambda/DynamoDB — користите Docker контејнере
+- ИНФРА приче морају покрити: deployment, data store, events, monitoring
 
-**Notes:**
-The README is the first thing anyone sees. Make it professional. Include build instructions that actually work. Link to your live documentation site.
+**Белешке:**
+Пре него што почнете имплементацију, ваше ИНФРА приче морају одговарати стварном deployment циљу. Вежбе су оригинално референцирале AWS Lambda, али ваше кате користе localhost Docker. Поправите ово прво или ће ваш ТДД агент генерисати погрешне инфраструктурне тестове.
 
 ---
 
-## Slide 8: Grading (45 pts)
-**Type:** content
-**Content:**
-| Criterion | Points |
-|-----------|--------|
-| Kata is functional (`docker build && docker run`) | 15 |
-| All user stories implemented (tests GREEN) | 10 |
-| TDD discipline visible in CI/CD history | 10 |
-| Sphinx documentation site on GitHub Pages | 5 |
-| Professional README + LICENSE | 5 |
+## Слајд 5: Корак 2 — Имплементирајте са ТДД
+**Тип:** садржај
+**Садржај:**
+- За сваку причу: ИНФРА → БЕ → ФЕ → Е2Е
+- ЦРВЕНО → ЗЕЛЕНО → РЕФАКТОРИСАЊЕ за сваки сценарио
+- **Комитујте на сваки ЗЕЛЕНИ** — ово је ваш доказ
+- Сваки комит референцира Story/Scenario ID
+- ЦИ/ЦД пајплајн мора да се покрене и прође на сваки push
 
-**Notes:**
-The biggest chunk is "kata works" — 15 points. If I can clone your repo, run docker build and docker run, and the kata works, that's 15 points. TDD discipline is the second biggest — I look at your CI/CD history for incremental GREEN commits.
+**Белешке:**
+Кључна испорука је историја комитова. Морам да видим инкременталне ЗЕЛЕНЕ комитове у вашем ЦИ/ЦД пајплајну. Не један огроман комит на крају — то није ТДД. Сваки сценарио добија свој ЦРВЕНО-ЗЕЛЕНО-РЕФАКТОРИСАЊЕ циклус и свој комит.
 
 ---
 
-## Slide 9: Timeline
-**Type:** content
-**Content:**
-| Day | Activity |
-|-----|----------|
-| Mon 20.4. | Project consultation (not mandatory) |
-| Wed 22.4. | Project consultation (not mandatory) |
-| **Fri 24.4.** | **Project presentations** |
+## Слајд 6: Корак 3 — Документација
+**Тип:** садржај
+**Садржај:**
+- Преместите `architecture/` под `docs/`
+- Копирајте Sphinx стартер фајлове: `cp -r modules/module-6-project/starter/* docs/`
+- Измените `conf.py` и `index.rst`
+- Билдујте локално: `cd docs && make html`
+- Копирајте `docs-deploy.yml` у `.github/workflows/`
+- Укључите GitHub Pages: `gh api repos/{owner}/{repo}/pages -X PUT -f build_type=workflow`
 
-**Notes:**
-Monday and Wednesday are open consultation days — come if you're stuck. Friday is presentations. Be ready to demo your kata and show your CI/CD pipeline.
+**Белешке:**
+Стартер фајлови су обезбеђени — не морате да пишете Sphinx конфигурацију од нуле. Копирајте, прилагодите, билдујте. Workflow се аутоматски deploy-ује на сваки push на main који мења документацију.
 
 ---
 
-## Slide 10: Go Build
-**Type:** closing
-**Content:**
-You have all the agents.
-You have all the tools.
-Now deliver.
+## Слајд 7: Корак 4 — Полирање
+**Тип:** садржај
+**Садржај:**
+- Професионални `README.md`:
+  - Шта ката решава
+  - Како билдовати и покренути (`docker build && docker run`)
+  - Како покренути тестове
+  - Линк ка Sphinx документационом сајту
+  - Информације о аутору
+- Додајте `LICENSE` фајл (препоручено MIT)
+
+**Белешке:**
+README је прва ствар коју било ко види. Направите га професионалним. Укључите инструкције за билд које стварно раде. Линкујте ка вашем живом документационом сајту.
+
+---
+
+## Слајд 8: Оцењивање (45 поена)
+**Тип:** садржај
+**Садржај:**
+| Критеријум | Поени |
+|------------|-------|
+| Ката је функционална (`docker build && docker run`) | 15 |
+| Све корисничке приче имплементиране (тестови ЗЕЛЕНИ) | 10 |
+| ТДД дисциплина видљива у ЦИ/ЦД историји | 10 |
+| Sphinx документациони сајт на GitHub Pages | 5 |
+| Професионални README + LICENSE | 5 |
+
+**Белешке:**
+Највећи део је „ката ради" — 15 поена. Ако могу да клонирам ваш репо, покренем docker build и docker run, и ката ради, то је 15 поена. ТДД дисциплина је друга по величини — гледам вашу ЦИ/ЦД историју за инкременталне ЗЕЛЕНЕ комитове.
+
+---
+
+## Слајд 9: Временски план
+**Тип:** садржај
+**Садржај:**
+| Дан | Активност |
+|-----|-----------|
+| Пон 20.4. | Консултације за пројекат (није обавезно) |
+| Сре 22.4. | Консултације за пројекат (није обавезно) |
+| **Пет 24.4.** | **Презентације пројеката** |
+
+**Белешке:**
+Понедељак и среда су отворени дани за консултације — дођите ако сте заглавили. Петак су презентације. Будите спремни да демонстрирате своју кату и покажете свој ЦИ/ЦД пајплајн.
+
+---
+
+## Слајд 10: Идите и градите
+**Тип:** затварање
+**Садржај:**
+Имате све агенте.
+Имате све алате.
+Сада испоручите.
 
 `docker build && docker run`
 
-**Notes:**
-No new theory. No new concepts. Just execution. Good luck.
+**Белешке:**
+Нема нове теорије. Нема нових концепата. Само егзекуција. Срећно.
