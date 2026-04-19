@@ -10,6 +10,7 @@ Starter files for building a Sphinx documentation site for your kata project.
 | `index.rst` | Main index — add your architecture chapters and user story files |
 | `requirements.txt` | Python dependencies for Sphinx |
 | `Makefile` | Build commands (`make html`, `make clean`) |
+| `docs-deploy.yml` | GitHub Actions workflow — copy to `.github/workflows/` |
 
 ## Setup
 
@@ -71,5 +72,15 @@ python -m http.server -d docs/_build/html 8000
 
 ## GitHub Pages Deployment
 
-Add `.github/workflows/docs-deploy.yml` to auto-deploy on changes.
-Your Sphinx agent can help you create this workflow.
+1. Copy the workflow file:
+
+```bash
+mkdir -p .github/workflows
+cp modules/module-6-project/starter/docs-deploy.yml .github/workflows/docs-deploy.yml
+```
+
+2. Enable GitHub Pages in your repo: **Settings → Pages → Source → GitHub Actions**
+
+3. Push to `main` — the workflow triggers on changes to `README.md` or `docs/**`
+
+4. Your site will be live at `https://<username>.github.io/<repo-name>/`
