@@ -1,6 +1,6 @@
 # Module 6: Final Project — Assignments
 
-| # | Student | Repository | PR | Status | Reviewers |
-|---|---------|-----------|-----|--------|-----------|
+| # | Student | Kata | Repository | PR | Status | Reviewers |
+|---|---------|------|-----------|-----|--------|-----------|
 
 Legend: 🟢 Merged | ✅ Approved | 🟡 Open | 🔴 Changes Requested | ⬜ Not started
