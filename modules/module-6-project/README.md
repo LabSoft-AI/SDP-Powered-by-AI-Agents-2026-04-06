@@ -74,7 +74,11 @@ mkdir -p .github/workflows
 cp modules/module-6-project/starter/docs-deploy.yml .github/workflows/
 ```
 
-Then enable GitHub Pages: **Settings → Pages → Source → GitHub Actions**.
+Then enable GitHub Pages:
+
+```bash
+gh api repos/{owner}/{repo}/pages -X PUT -f build_type=workflow
+```
 
 The workflow triggers on `README.md` and `docs/**` changes, builds the
 Sphinx site, and deploys to GitHub Pages.

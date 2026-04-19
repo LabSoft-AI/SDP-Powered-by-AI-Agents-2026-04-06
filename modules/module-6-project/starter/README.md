@@ -79,7 +79,11 @@ mkdir -p .github/workflows
 cp modules/module-6-project/starter/docs-deploy.yml .github/workflows/docs-deploy.yml
 ```
 
-2. Enable GitHub Pages in your repo: **Settings → Pages → Source → GitHub Actions**
+2. Enable GitHub Pages via CLI:
+
+```bash
+gh api repos/{owner}/{repo}/pages -X PUT -f build_type=workflow
+```
 
 3. Push to `main` — the workflow triggers on changes to `README.md` or `docs/**`
 
