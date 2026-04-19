@@ -43,8 +43,7 @@ docs/
 
 ### 4. Sphinx Documentation Site
 
-Create a **Sphinx agent** (`.kiro/agents/sphinx-agent.json`) that builds
-a static documentation site including:
+Build a static documentation site that includes:
 
 - Project README
 - Architecture documentation (all arc42 chapters)
@@ -62,6 +61,9 @@ Then edit `docs/conf.py` (project name, author, GitHub URL) and
 
 See `modules/module-6-project/starter/README.md` for detailed setup
 instructions.
+
+> **Optional:** Create a Sphinx agent (`.kiro/agents/sphinx-agent.json`)
+> to help you maintain the documentation site.
 
 ### 5. Documentation CI/CD Pipeline
 
