@@ -101,16 +101,16 @@ Add a `LICENSE` file (MIT recommended) to the repository root.
 
 | Criterion | Points |
 |-----------|--------|
-| All user stories implemented (tests GREEN) | 15 |
+| Kata is functional (`docker build && docker run`) | 15 |
+| All user stories implemented (tests GREEN) | 10 |
 | TDD discipline visible in CI/CD history | 10 |
-| Sphinx documentation site on GitHub Pages | 10 |
+| Sphinx documentation site on GitHub Pages | 5 |
 | Professional README + LICENSE | 5 |
-| Project presentation | 5 |
 
 ## Deliverables
 
 - [ ] PR with all implemented user stories
+- [ ] Kata functional: `docker build && docker run`
 - [ ] CI/CD pipeline showing TDD commit history
 - [ ] Live Sphinx documentation site
 - [ ] Professional README + LICENSE
-- [ ] 5-minute project presentation on Fri 24.4.

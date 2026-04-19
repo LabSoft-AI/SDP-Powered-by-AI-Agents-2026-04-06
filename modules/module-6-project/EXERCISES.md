@@ -75,12 +75,3 @@
 ### Step 2: License
 
 - [ ] `LICENSE` file at repository root (MIT recommended)
-
----
-
-## Part 5: Presentation
-
-- [ ] 5-minute presentation prepared for Fri 24.4.
-- [ ] Demo: `docker build && docker run` showing kata works
-- [ ] Show CI/CD pipeline with TDD commit history
-- [ ] Show live Sphinx documentation site
