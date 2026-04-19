@@ -64,9 +64,9 @@
 - [ ] Completed TODO: Commit Message Format
 - [ ] Completed TODO: postToolUse Hook (runs pytest after writes)
 
-### Step 2: Multi-Agent Workflow (repeat for each user story)
+### Step 2: Multi-Agent Workflow (at least one complete story)
 
-For each user story, follow this loop:
+Pick one user story and follow this loop:
 
 > **Switch agent:** `git-agent`
 > ```bash
@@ -99,10 +99,11 @@ For each user story, follow this loop:
 - [ ] **Git agent:** created PR closing the issue
 - [ ] **Git agent:** added instructor as reviewer (`gh pr edit --add-reviewer momokrunic`)
 
-> ♻️ **Repeat from the top** with the next highest priority story.
+> ♻️ **Optional:** Repeat with more stories for extra practice.
 
 ### Step 3: Verify TDD Discipline
 
+- [ ] At least one complete story implemented through multi-agent workflow
 - [ ] Git log shows one commit per GREEN test (each commit = one scenario passing)
 - [ ] All commits have passing tests (no RED commits in history)
 - [ ] Test names include Story/Scenario IDs
