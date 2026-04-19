@@ -79,8 +79,8 @@ Friday 10.4. — no class (Good Friday)
 
 Project consultations (presence not mandatory)
 
-| # | Student | Mon 20.4. | Wed 22.4. | Fri 24.4. |
-|---|---------|-----------|-----------|-----------|
+| # | Student | Mon 20.4. | Wed 22.4. | **Fri 24.4.** |
+|---|---------|-----------|-----------|---------------|
 | 1 | @antonic00 | | | |
 | 2 | @cetko4 | | | |
 | 3 | @AnaZec | | | |
@@ -95,6 +95,8 @@ Project consultations (presence not mandatory)
 | 12 | @antovic | | | |
 | 13 | @Ivanovic0245 | | | |
 | 14 | @VladanLazarevic | | | |
+
+Friday 24.4. — Project presentations (mandatory)
 
 ## Student Directory
 
