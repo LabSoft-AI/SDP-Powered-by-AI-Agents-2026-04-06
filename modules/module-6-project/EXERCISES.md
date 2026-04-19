@@ -50,11 +50,11 @@
 
 ### Step 3: Documentation CI/CD
 
-- [ ] `.github/workflows/docs-deploy.yml` created
-- [ ] Triggers on changes to README.md, docs/architecture/**, docs/user-stories/**
-- [ ] Builds Sphinx site
-- [ ] Deploys to GitHub Pages
-- [ ] Documentation site is live and accessible
+- [ ] Copied workflow: `mkdir -p .github/workflows && cp modules/module-6-project/starter/docs-deploy.yml .github/workflows/`
+- [ ] Enabled GitHub Pages: Settings → Pages → Source → GitHub Actions
+- [ ] Triggers on changes to `README.md` and `docs/**`
+- [ ] Builds Sphinx site and deploys to GitHub Pages
+- [ ] Documentation site is live at `https://<username>.github.io/<repo>/`
 
 ---
 

@@ -67,12 +67,17 @@ instructions.
 
 ### 5. Documentation CI/CD Pipeline
 
-Add a workflow (`.github/workflows/docs-deploy.yml`) that:
+A starter workflow is provided at `modules/module-6-project/starter/docs-deploy.yml`.
 
-- **Triggers** when `README.md`, `docs/architecture/**`, or
-  `docs/user-stories/**` change
-- **Builds** the Sphinx site
-- **Deploys** to GitHub Pages
+```bash
+mkdir -p .github/workflows
+cp modules/module-6-project/starter/docs-deploy.yml .github/workflows/
+```
+
+Then enable GitHub Pages: **Settings → Pages → Source → GitHub Actions**.
+
+The workflow triggers on `README.md` and `docs/**` changes, builds the
+Sphinx site, and deploys to GitHub Pages.
 
 ### 6. Professional README
 
