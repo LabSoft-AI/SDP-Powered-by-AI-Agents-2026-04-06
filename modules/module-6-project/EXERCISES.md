@@ -51,7 +51,7 @@
 ### Step 3: Documentation CI/CD
 
 - [ ] Copied workflow: `mkdir -p .github/workflows && cp modules/module-6-project/starter/docs-deploy.yml .github/workflows/`
-- [ ] Enabled GitHub Pages: `gh api repos/{owner}/{repo}/pages -X PUT -f build_type=workflow`
+- [ ] Enabled GitHub Pages: `gh api repos/{owner}/{repo}/pages -X PUT -f build_type=workflow` (or Settings → Pages → Source → GitHub Actions)
 - [ ] Triggers on changes to `README.md` and `docs/**`
 - [ ] Builds Sphinx site and deploys to GitHub Pages
 - [ ] Documentation site is live at `https://<username>.github.io/<repo>/`

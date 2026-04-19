@@ -85,6 +85,8 @@ cp modules/module-6-project/starter/docs-deploy.yml .github/workflows/docs-deplo
 gh api repos/{owner}/{repo}/pages -X PUT -f build_type=workflow
 ```
 
+Or manually: **Settings → Pages → Source → GitHub Actions**
+
 3. Push to `main` — the workflow triggers on changes to `README.md` or `docs/**`
 
 4. Your site will be live at `https://<username>.github.io/<repo-name>/`

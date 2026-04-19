@@ -80,6 +80,8 @@ Then enable GitHub Pages:
 gh api repos/{owner}/{repo}/pages -X PUT -f build_type=workflow
 ```
 
+Or manually: **Settings → Pages → Source → GitHub Actions**.
+
 The workflow triggers on `README.md` and `docs/**` changes, builds the
 Sphinx site, and deploys to GitHub Pages.
 
