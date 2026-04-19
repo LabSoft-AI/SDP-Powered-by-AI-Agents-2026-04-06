@@ -50,6 +50,19 @@ a static documentation site including:
 - Architecture documentation (all arc42 chapters)
 - User Stories (inventory + all story bundles)
 
+**Starter files** are provided in `modules/module-6-project/starter/`.
+Copy them to your `docs/` folder and customize:
+
+```bash
+cp -r modules/module-6-project/starter/* docs/
+```
+
+Then edit `docs/conf.py` (project name, author, GitHub URL) and
+`docs/index.rst` (add your architecture chapters and user story files).
+
+See `modules/module-6-project/starter/README.md` for detailed setup
+instructions.
+
 ### 5. Documentation CI/CD Pipeline
 
 Add a workflow (`.github/workflows/docs-deploy.yml`) that:

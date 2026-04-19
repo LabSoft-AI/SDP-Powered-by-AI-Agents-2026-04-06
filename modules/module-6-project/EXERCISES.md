@@ -42,8 +42,12 @@
 ### Step 2: Build Sphinx Agent
 
 - [ ] Sphinx agent created at `.kiro/agents/sphinx-agent.json`
+- [ ] Copied starter files to `docs/`: `cp -r modules/module-6-project/starter/* docs/`
+- [ ] Updated `docs/conf.py` with project name, author, GitHub URL
+- [ ] Updated `docs/index.rst` with architecture chapters and user story files
+- [ ] Installed dependencies: `pip install -r docs/requirements.txt`
 - [ ] Agent builds static site from README + architecture + user stories
-- [ ] Sphinx site builds locally without errors
+- [ ] Sphinx site builds locally without errors: `cd docs && make html`
 
 ### Step 3: Documentation CI/CD
 
