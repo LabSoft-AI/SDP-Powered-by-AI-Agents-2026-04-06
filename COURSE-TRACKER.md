@@ -77,9 +77,9 @@ Friday 10.4. — no class (Good Friday)
 
 ## Week 3
 
-Project work (schedule TBD)
+Project consultations (presence not mandatory)
 
-| # | Student | Session 1 | Session 2 | Session 3 |
+| # | Student | Mon 20.4. | Wed 22.4. | Fri 24.4. |
 |---|---------|-----------|-----------|-----------|
 | 1 | @antonic00 | | | |
 | 2 | @cetko4 | | | |
@@ -93,6 +93,8 @@ Project work (schedule TBD)
 | 10 | @nbskvc | | | |
 | 11 | @notstefan1 | | | |
 | 12 | @antovic | | | |
+| 13 | @Ivanovic0245 | | | |
+| 14 | @VladanLazarevic | | | |
 
 ## Student Directory
 
