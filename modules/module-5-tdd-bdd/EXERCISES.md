@@ -32,7 +32,7 @@
 
 - [ ] Written ONE test with GIVEN-WHEN-THEN comments
 - [ ] Test references Story ID and Scenario ID
-- [ ] Ran test — confirmed RED (failing)
+- [ ] Ran test locally — observed RED (failing). Do NOT commit on RED.
 
 ### Step 3: Make It Pass (GREEN)
 
@@ -46,7 +46,7 @@
 - [ ] Improved naming if needed
 - [ ] Ran ALL tests after refactoring
 
-### Step 5: Commit
+### Step 5: Commit (only on GREEN!)
 
 - [ ] Committed with story/scenario reference in message
 
@@ -64,9 +64,9 @@
 - [ ] Completed TODO: Commit Message Format
 - [ ] Completed TODO: postToolUse Hook (runs pytest after writes)
 
-### Step 2: Multi-Agent Workflow (repeat for each user story)
+### Step 2: Multi-Agent Workflow (at least one complete story)
 
-For each user story, follow this loop:
+Pick one user story and follow this loop:
 
 > **Switch agent:** `git-agent`
 > ```bash
@@ -85,11 +85,11 @@ For each user story, follow this loop:
 - [ ] **TDD/BDD agent:** read the issue and user story scenarios
 - [ ] **TDD/BDD agent:** followed INFRA → BE → FE → E2E order
 - [ ] For each scenario in the story:
-  - [ ] Wrote ONE test → ran → confirmed RED
-  - [ ] Wrote implementation → ran → confirmed GREEN
+  - [ ] Wrote ONE test → ran locally → observed RED (failing)
+  - [ ] Wrote implementation → ran → confirmed GREEN (passing)
   - [ ] Ran ALL tests → no regressions
   - [ ] Checked for refactoring opportunities
-  - [ ] Committed on GREEN with story/scenario reference
+  - [ ] **Committed on GREEN** with story/scenario reference (only commit on GREEN!)
 
 > **Switch agent:** `git-agent`
 > ```bash
@@ -99,12 +99,13 @@ For each user story, follow this loop:
 - [ ] **Git agent:** created PR closing the issue
 - [ ] **Git agent:** added instructor as reviewer (`gh pr edit --add-reviewer momokrunic`)
 
-> ♻️ **Repeat from the top** with the next highest priority story.
+> ♻️ **Optional:** Repeat with more stories for extra practice.
 
 ### Step 3: Verify TDD Discipline
 
-- [ ] Git log shows one commit per GREEN test
-- [ ] No commits with failing tests
+- [ ] At least one complete story implemented through multi-agent workflow
+- [ ] Git log shows one commit per GREEN test (each commit = one scenario passing)
+- [ ] All commits have passing tests (no RED commits in history)
 - [ ] Test names include Story/Scenario IDs
 - [ ] All tests have GIVEN-WHEN-THEN comments
 
