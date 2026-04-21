@@ -2,8 +2,8 @@
 
 | # | Student | Repository | PR | Status | Reviewers |
 |---|---------|-----------|-----|--------|-----------|
-| 1 | @AnaZec | [sdp-powered-by-ai-agents-ana-zec](https://github.com/AnaZec/sdp-powered-by-ai-agents-ana-zec) | [#21](https://github.com/AnaZec/sdp-powered-by-ai-agents-ana-zec/pull/21) | ✅ Approved | @momokrunic |
-| 2 | @Ivanovic0245 | [sdp-powered-by-ai-agents-aleksandar-ivanovic](https://github.com/Ivanovic0245/sdp-powered-by-ai-agents-aleksandar-ivanovic) | — | ⬜ Not started | — |
+| 1 | @AnaZec | [sdp-powered-by-ai-agents-ana-zec](https://github.com/AnaZec/sdp-powered-by-ai-agents-ana-zec) | [#21](https://github.com/AnaZec/sdp-powered-by-ai-agents-ana-zec/pull/21) | 🟢 Merged | @momokrunic |
+| 2 | @Ivanovic0245 | [sdp-powered-by-ai-agents-aleksandar-ivanovic](https://github.com/Ivanovic0245/sdp-powered-by-ai-agents-aleksandar-ivanovic) | [#10](https://github.com/Ivanovic0245/sdp-powered-by-ai-agents-aleksandar-ivanovic/pull/10) | 🔴 Changes Requested | @momokrunic |
 | 3 | @LukaVidakovic | — | — | ⬜ Not started | — |
 | 4 | @VladanLazarevic | [sdp-powered-by-ai-agents-vladan-lazarevic](https://github.com/VladanLazarevic/sdp-powered-by-ai-agents-vladan-lazarevic) | — | ⬜ Not started | — |
 | 5 | @antonic00 | [sdp-powered-by-ai-agents-name-surname](https://github.com/antonic00/sdp-powered-by-ai-agents-name-surname) | — | ⬜ Not started | — |
