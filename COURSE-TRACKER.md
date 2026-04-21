@@ -18,7 +18,6 @@ Location: 507 НТП | Time: 17:00
 | 10 | [@ktzjana](https://github.com/ktzjana/sdp-powered-by-ai-agents-jana-petrovic/pulls) | 4 | 0 | 0 | 0 | 20 | 🔥 4 |
 | 10 | [@notstefan1](https://github.com/notstefan1/sdp-powered-by-ai-agents-stefan-mitic/pulls) | 4 | 0 | 0 | 0 | 20 | 🔥 4 |
 | 12 | [@VladanLazarevic](https://github.com/VladanLazarevic/sdp-powered-by-ai-agents-vladan-lazarevic/pulls) | 1 | 0 | 0 | 0 | 5 | 🔥 1 |
-| 13 | @LukaVidakovic | 0 | 0 | 0 | 0 | 0 |  |
 | 13 | [@antonic00](https://github.com/antonic00/sdp-powered-by-ai-agents-name-surname/pulls) | 0 | 0 | 0 | 0 | 0 |  |
 
 **Scoring:** 🟡 Open = 2 pts | ✅ Approved = 4 pts | 🟢 Merged = 5 pts | 🔴 Changes Requested = 1 pt
@@ -46,7 +45,6 @@ Location: 507 НТП | Time: 17:00
 | 5 | @ktzjana | ❌ | ✅ | ✅ | |
 | 6 | @jglintic | ✅ | ✅ | ✅ | |
 | 7 | @misojca | ❌ | ❌ | ✅ | |
-| 8 | @LukaVidakovic | ❌ | ❌ | ❌ | |
 | 9 | @dikanovicmihailo | ❌ | ❌ | ✅ | |
 | 10 | @nbskvc | ❌ | ❌ | ✅ | |
 | 11 | @notstefan1 | ❌ | ❌ | ✅ | |
@@ -68,7 +66,6 @@ Friday 10.4. — no class (Good Friday)
 | 6 | @ktzjana | ✅ | ✅ | ✅ |
 | 7 | @jglintic | ✅ | ✅ | ✅ |
 | 8 | @misojca | ✅ | ✅ | ❌ |
-| 9 | @LukaVidakovic | ❌ | ❌ | ❌ |
 | 10 | @dikanovicmihailo | ✅ | ✅ | ✅ |
 | 11 | @nbskvc | ✅ | ✅ | ✅ |
 | 12 | @notstefan1 | ✅ | ❌ | ✅ |
@@ -88,7 +85,6 @@ Project consultations (presence not mandatory)
 | 5 | @ktzjana | | | |
 | 6 | @jglintic | | | |
 | 7 | @misojca | | | |
-| 8 | @LukaVidakovic | | | |
 | 9 | @dikanovicmihailo | | | |
 | 10 | @nbskvc | | | |
 | 11 | @notstefan1 | | | |
@@ -104,7 +100,6 @@ Project consultations (presence not mandatory)
 |---|---------|--- | --- | --- | --- | --- | ---|
 | 1 | [@AnaZec](https://github.com/AnaZec/sdp-powered-by-ai-agents-ana-zec) | [#12](https://github.com/AnaZec/sdp-powered-by-ai-agents-ana-zec/pull/12) 🟢 | [#14](https://github.com/AnaZec/sdp-powered-by-ai-agents-ana-zec/pull/14) 🟢 | [#17](https://github.com/AnaZec/sdp-powered-by-ai-agents-ana-zec/pull/17) 🟢 | [#20](https://github.com/AnaZec/sdp-powered-by-ai-agents-ana-zec/pull/20) 🟢 | [#21](https://github.com/AnaZec/sdp-powered-by-ai-agents-ana-zec/pull/21) 🟢 | ⬜ |
 | 2 | [@Ivanovic0245](https://github.com/Ivanovic0245/sdp-powered-by-ai-agents-aleksandar-ivanovic) | [#6](https://github.com/Ivanovic0245/sdp-powered-by-ai-agents-aleksandar-ivanovic/pull/6) 🟢 | [#7](https://github.com/Ivanovic0245/sdp-powered-by-ai-agents-aleksandar-ivanovic/pull/7) 🟢 | [#8](https://github.com/Ivanovic0245/sdp-powered-by-ai-agents-aleksandar-ivanovic/pull/8) 🟢 | [#9](https://github.com/Ivanovic0245/sdp-powered-by-ai-agents-aleksandar-ivanovic/pull/9) 🟢 | [#10](https://github.com/Ivanovic0245/sdp-powered-by-ai-agents-aleksandar-ivanovic/pull/10) 🟢 | ⬜ |
-| 3 | @LukaVidakovic | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
 | 4 | [@VladanLazarevic](https://github.com/VladanLazarevic/sdp-powered-by-ai-agents-vladan-lazarevic) | [#7](https://github.com/VladanLazarevic/sdp-powered-by-ai-agents-vladan-lazarevic/pull/7) 🟢 | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
 | 5 | [@antonic00](https://github.com/antonic00/sdp-powered-by-ai-agents-name-surname) | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
 | 6 | [@antovic](https://github.com/antovic/sdp-powered-by-ai-agents-vuk-antovic) | [#8](https://github.com/antovic/sdp-powered-by-ai-agents-vuk-antovic/pull/8) 🟢 | [#9](https://github.com/antovic/sdp-powered-by-ai-agents-vuk-antovic/pull/9) 🟢 | [#10](https://github.com/antovic/sdp-powered-by-ai-agents-vuk-antovic/pull/10) 🟢 | [#12](https://github.com/antovic/sdp-powered-by-ai-agents-vuk-antovic/pull/12) 🟢 | [#13](https://github.com/antovic/sdp-powered-by-ai-agents-vuk-antovic/pull/13) 🟢 | ⬜ |
