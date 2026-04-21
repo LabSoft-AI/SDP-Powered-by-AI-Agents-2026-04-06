@@ -15,6 +15,11 @@ CI/CD pipelines, and professional documentation.
 
 ## Project Requirements
 
+> **⚠️ PR Reviews:** During the project phase, do NOT request instructor
+> review on every story PR. Merge your own story PRs as you go. Only add
+> the instructor as reviewer on your **final Module 6 PR** when everything
+> is complete and ready for grading.
+
 ### 1. Complete All User Stories
 
 Use your AI agents to implement **all remaining kata user stories**.
