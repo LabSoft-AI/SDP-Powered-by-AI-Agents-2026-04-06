@@ -2,7 +2,7 @@
 
 | # | Student | Kata | Repository | PR | Status | Reviewers |
 |---|---------|------|-----------|-----|--------|-----------|
-| 1 | @AnaZec | Minesweeper Field Processor | [sdp-powered-by-ai-agents-ana-zec](https://github.com/AnaZec/sdp-powered-by-ai-agents-ana-zec) | [#38](https://github.com/AnaZec/sdp-powered-by-ai-agents-ana-zec/pull/38) | ✅ Approved | @momokrunic |
+| 1 | @AnaZec | Minesweeper Field Processor | [sdp-powered-by-ai-agents-ana-zec](https://github.com/AnaZec/sdp-powered-by-ai-agents-ana-zec) | [#38](https://github.com/AnaZec/sdp-powered-by-ai-agents-ana-zec/pull/38) | 🟢 Merged | @momokrunic |
 | 2 | @Ivanovic0245 | Social Network | [sdp-powered-by-ai-agents-aleksandar-ivanovic](https://github.com/Ivanovic0245/sdp-powered-by-ai-agents-aleksandar-ivanovic) | — | ⬜ Not started | — |
 | 3 | @VladanLazarevic | — | [sdp-powered-by-ai-agents-vladan-lazarevic](https://github.com/VladanLazarevic/sdp-powered-by-ai-agents-vladan-lazarevic) | — | ⬜ Not started | — |
 | 4 | @antonic00 | — | [sdp-powered-by-ai-agents-name-surname](https://github.com/antonic00/sdp-powered-by-ai-agents-name-surname) | — | ⬜ Not started | — |
