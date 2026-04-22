@@ -8,7 +8,7 @@
 | 4 | @antonic00 | — | [sdp-powered-by-ai-agents-name-surname](https://github.com/antonic00/sdp-powered-by-ai-agents-name-surname) | — | ⬜ Not started | — |
 | 5 | @antovic | Mars Rover | [sdp-powered-by-ai-agents-vuk-antovic](https://github.com/antovic/sdp-powered-by-ai-agents-vuk-antovic) | — | ⬜ Not started | — |
 | 6 | @antres1 | Trading Card Game | [sdp-powered-by-ai-agents-ante-resetar](https://github.com/antres1/sdp-powered-by-ai-agents-ante-resetar) | — | ⬜ Not started | — |
-| 7 | @cetko4 | Birthday Greetings | [sdp-powered-by-ai-agents-aleksandar-cetkovic](https://github.com/cetko4/sdp-powered-by-ai-agents-aleksandar-cetkovic) | — | ⬜ Not started | — |
+| 7 | @cetko4 | Birthday Greetings | [sdp-powered-by-ai-agents-aleksandar-cetkovic](https://github.com/cetko4/sdp-powered-by-ai-agents-aleksandar-cetkovic) | [#33](https://github.com/cetko4/sdp-powered-by-ai-agents-aleksandar-cetkovic/pull/33) | 🟢 Merged | @momokrunic |
 | 8 | @dikanovicmihailo | Mars Rover | [sdp-powered-by-ai-agents-mihailo-dikanovic](https://github.com/dikanovicmihailo/sdp-powered-by-ai-agents-mihailo-dikanovic) | — | ⬜ Not started | — |
 | 9 | @jglintic | Mars Rover | [sdp-powered-by-ai-agents-jovan-glintic](https://github.com/jglintic/sdp-powered-by-ai-agents-jovan-glintic) | — | ⬜ Not started | — |
 | 10 | @ktzjana | Minesweeper | [sdp-powered-by-ai-agents-jana-petrovic](https://github.com/ktzjana/sdp-powered-by-ai-agents-jana-petrovic) | — | ⬜ Not started | — |
