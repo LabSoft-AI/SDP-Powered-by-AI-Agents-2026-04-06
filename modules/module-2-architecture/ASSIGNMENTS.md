@@ -4,7 +4,7 @@
 |---|---------|-----------|-----|--------|-----------|
 | 1 | @AnaZec | [sdp-powered-by-ai-agents-ana-zec](https://github.com/AnaZec/sdp-powered-by-ai-agents-ana-zec) | [#14](https://github.com/AnaZec/sdp-powered-by-ai-agents-ana-zec/pull/14) | 🟢 Merged | @momokrunic |
 | 2 | @Ivanovic0245 | [sdp-powered-by-ai-agents-aleksandar-ivanovic](https://github.com/Ivanovic0245/sdp-powered-by-ai-agents-aleksandar-ivanovic) | [#7](https://github.com/Ivanovic0245/sdp-powered-by-ai-agents-aleksandar-ivanovic/pull/7) | 🟢 Merged | @momokrunic |
-| 3 | @VladanLazarevic | [sdp-powered-by-ai-agents-vladan-lazarevic](https://github.com/VladanLazarevic/sdp-powered-by-ai-agents-vladan-lazarevic) | — | ⬜ Not started | — |
+| 3 | @VladanLazarevic | [sdp-powered-by-ai-agents-vladan-lazarevic](https://github.com/VladanLazarevic/sdp-powered-by-ai-agents-vladan-lazarevic) | [#8](https://github.com/VladanLazarevic/sdp-powered-by-ai-agents-vladan-lazarevic/pull/8) | ✅ Approved | @momokrunic |
 | 4 | @antonic00 | [sdp-powered-by-ai-agents-name-surname](https://github.com/antonic00/sdp-powered-by-ai-agents-name-surname) | — | ⬜ Not started | — |
 | 5 | @antovic | [sdp-powered-by-ai-agents-vuk-antovic](https://github.com/antovic/sdp-powered-by-ai-agents-vuk-antovic) | [#9](https://github.com/antovic/sdp-powered-by-ai-agents-vuk-antovic/pull/9) | 🟢 Merged | @momokrunic |
 | 6 | @antres1 | [sdp-powered-by-ai-agents-ante-resetar](https://github.com/antres1/sdp-powered-by-ai-agents-ante-resetar) | [#8](https://github.com/antres1/sdp-powered-by-ai-agents-ante-resetar/pull/8) | 🟢 Merged | @momokrunic |
