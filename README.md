@@ -214,3 +214,12 @@ This creates a Python virtual environment and installs:
 - [Conventional Commits](https://www.conventionalcommits.org/)
 - [Pre-commit Framework](https://pre-commit.com/)
 - [Coding Dojo Kata Catalogue](https://codingdojo.org/kata/)
+
+## Author
+
+**Momcilo Krunic** — [LabSoft AI](https://labsoft.ai)
+
+## License
+
+This work is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+You are free to share and adapt, with attribution to the original author.
