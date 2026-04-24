@@ -217,7 +217,7 @@ This creates a Python virtual environment and installs:
 
 ## Author
 
-**Momcilo Krunic** — [LabSoft AI](https://labsoft.ai)
+**Momcilo Krunic** — [LabSoft AI](https://labsoft.ai) — momo@labsoft.ai
 
 ## License
 
