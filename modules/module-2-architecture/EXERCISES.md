@@ -107,6 +107,7 @@
 
 - [ ] Feature branch created for architecture issue
 - [ ] Architecture documents committed with issue reference
+- [ ] PR title **must** include `Module 2` (e.g. `#3 [FEAT] Module 2: Software architecture with arc42`)
 - [ ] PR created closing the architecture issue
 
 ### Step 5: Review and Merge

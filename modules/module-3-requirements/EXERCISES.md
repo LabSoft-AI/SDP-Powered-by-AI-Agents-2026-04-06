@@ -85,6 +85,7 @@
 
 - [ ] Feature branch created for requirements issue
 - [ ] User stories committed with issue reference
+- [ ] PR title **must** include `Module 3` (e.g. `#4 [FEAT] Module 3: Software requirements and user stories`)
 - [ ] PR created closing the requirements issue
 
 ### Step 5: Review and Merge

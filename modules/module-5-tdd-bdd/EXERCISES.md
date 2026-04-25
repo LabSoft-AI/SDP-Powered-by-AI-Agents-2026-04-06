@@ -97,6 +97,7 @@ Pick one user story and follow this loop:
 > ```
 
 - [ ] **Git agent:** created PR closing the issue
+- [ ] **Git agent:** PR title **must** include `Module 5` (e.g. `#7 [FEAT] Module 5: TDD/BDD multi-agent implementation`)
 - [ ] **Git agent:** added instructor as reviewer (`gh pr edit --add-reviewer momokrunic`)
 
 > ♻️ **Optional:** Repeat with more stories for extra practice.

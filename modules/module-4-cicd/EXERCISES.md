@@ -83,6 +83,7 @@
 
 - [ ] Feature branch created for CI/CD issue
 - [ ] Dockerfile and workflow committed with issue reference
+- [ ] PR title **must** include `Module 4` (e.g. `#5 [FEAT] Module 4: CI/CD pipeline with Docker`)
 - [ ] PR created closing the CI/CD issue
 
 ### Step 6: Review and Merge

@@ -74,3 +74,11 @@
 ### Step 2: License
 
 - [ ] `LICENSE` file at repository root (MIT recommended)
+
+---
+
+## Part 5: Create Pull Request
+
+- [ ] PR title **must** include `Module 6` (e.g. `#14 [FEAT] Module 6: Final project`)
+- [ ] PR body has `Closes #N` linking the project issue
+- [ ] Instructor added as reviewer (`gh pr edit --add-reviewer momokrunic`)

@@ -86,6 +86,7 @@
 
 ### Step 6: Create Pull Request
 
+- [ ] PR title **must** include `Module 1` (e.g. `#1 [FEAT] Module 1: Git workflow agent`)
 - [ ] PR created with issue reference in title
 - [ ] PR body has `Closes #1`
 - [ ] PR body has Changes and Testing sections
