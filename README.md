@@ -1,5 +1,20 @@
 # Software Development Processes Powered by AI Agents
 
+> ## 📋 Анкета — Евалуација курса
+>
+> Замолио бих вас да попуните анкету како би унапредили курс:
+> **[Попуни анкету](https://docs.google.com/forms/d/e/1FAIpQLSeoJ_qldzb8NaehBcyAq3R55ybLeUr8SdQAFJ36FWQPJ3Oi-Q/viewform?usp=header)**
+>
+> Ви сте били прва генерација (вероватно на ФТН, а и шире) која је активно
+> и планирано користила AI агенте у наставном процесу како би процес
+> савладавања новог градива учинила ефективнијим и ефикаснијим, али и како
+> би стекли неопходне вештине да будете конкурентнији на тржишту рада, зато
+> ми је веома значајна повратна информација да овај курс учинимо још бољим.
+>
+> Честитам на успешно савладаном градиву! 🎉
+>
+> — Момо
+
 3-week master's course where students build specialized Kiro CLI agents
 that automate each phase of the software development lifecycle, then use
 those agents as a team to build a real serverless application.

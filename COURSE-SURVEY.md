@@ -3,7 +3,7 @@
 **Анонимна анкета за евалуацију курса.**
 Молимо вас да искрено одговорите — одговори су потпуно анонимни и помажу нам да унапредимо курс.
 
-Google Forms линк: [TODO: убацити линк]
+Google Forms линк: [Попуни анкету](https://docs.google.com/forms/d/e/1FAIpQLSeoJ_qldzb8NaehBcyAq3R55ybLeUr8SdQAFJ36FWQPJ3Oi-Q/viewform?usp=header)
 
 ---
 
