@@ -1,1 +1,2 @@
 *.md filter=git-crypt diff=git-crypt
+*.pdf filter=git-crypt diff=git-crypt
