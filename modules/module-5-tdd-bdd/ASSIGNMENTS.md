@@ -14,6 +14,6 @@
 | 10 | @ktzjana | [sdp-powered-by-ai-agents-jana-petrovic](https://github.com/ktzjana/sdp-powered-by-ai-agents-jana-petrovic) | [#12](https://github.com/ktzjana/sdp-powered-by-ai-agents-jana-petrovic/pull/12) | 🟢 Merged | @momokrunic |
 | 11 | @misojca | [sdp-powered-by-ai-agents-luka-misojcic](https://github.com/misojca/sdp-powered-by-ai-agents-luka-misojcic) | [#12](https://github.com/misojca/sdp-powered-by-ai-agents-luka-misojcic/pull/12) | 🟢 Merged | @momokrunic |
 | 12 | @nbskvc | [sdp-powered-by-ai-agents-nikola-boskovic](https://github.com/nbskvc/sdp-powered-by-ai-agents-nikola-boskovic) | [#11](https://github.com/nbskvc/sdp-powered-by-ai-agents-nikola-boskovic/pull/11) | 🟢 Merged | @momokrunic |
-| 13 | @notstefan1 | [sdp-powered-by-ai-agents-stefan-mitic](https://github.com/notstefan1/sdp-powered-by-ai-agents-stefan-mitic) | [#11](https://github.com/notstefan1/sdp-powered-by-ai-agents-stefan-mitic/pull/11) | 🟢 Merged | @momokrunic |
+| 13 | @notstefan1 | [sdp-powered-by-ai-agents-stefan-mitic](https://github.com/notstefan1/sdp-powered-by-ai-agents-stefan-mitic) | [#15](https://github.com/notstefan1/sdp-powered-by-ai-agents-stefan-mitic/pull/15) | 🟢 Merged | @momokrunic |
 
 Legend: 🟢 Merged | ✅ Approved | 🟡 Open | 🔴 Changes Requested | ⬜ Not started
