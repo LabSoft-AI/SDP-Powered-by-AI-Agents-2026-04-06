@@ -3,7 +3,7 @@
 # pylint: disable=invalid-name,redefined-builtin
 
 project = "SDP Powered by AI Agents"
-copyright = "2026, Momcilo Krunic (LabSoft AI). Licensed under CC BY 4.0"  # noqa: A001
+copyright = '2026, <a href="mailto:momo@labsoft.ai">Momcilo Krunic</a> (<a href="https://labsoft.ai">LabSoft AI</a>). Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>'  # noqa: A001
 author = "Momcilo Krunic (LabSoft AI)"
 
 extensions = [
