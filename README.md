@@ -41,6 +41,8 @@ a Kiro CLI agent.
 See the [Intro slides](modules/intro/) for a deeper dive into these
 concepts.
 
+📚 **[Course Documentation](https://labsoft-ai.github.io/SDP-Powered-by-AI-Agents-2026-04-06/)**
+
 ## Course Structure
 
 The course has two parts:
