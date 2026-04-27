@@ -1,0 +1,148 @@
+/* ── SDP Hacker Terminal Theme ── */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg:#0a0e14; --bg-card:#111820; --green:#3fb950; --green-dim:#238636;
+  --green-bright:#7ee787; --cyan:#58a6ff; --amber:#d29922; --red:#f85149;
+  --text:#c9d1d9; --text-dim:#6e7681; --text-bright:#e6edf3;
+  --border:rgba(63,185,80,0.12); --border-bright:rgba(63,185,80,0.3);
+}
+
+* { box-sizing:border-box; }
+
+body {
+  background:var(--bg); color:var(--text);
+  font-family:'JetBrains Mono',monospace;
+  font-size:14px; line-height:1.7; margin:0; padding:0;
+}
+
+/* Scanlines */
+body::before {
+  content:''; position:fixed; inset:0; pointer-events:none; z-index:9999;
+  background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,0.06) 2px,rgba(0,0,0,0.06) 4px);
+}
+
+/* Grid bg */
+body::after {
+  content:''; position:fixed; inset:0; pointer-events:none; z-index:0;
+  background-image:
+    linear-gradient(rgba(63,185,80,0.03) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(63,185,80,0.03) 1px,transparent 1px);
+  background-size:48px 48px;
+}
+
+/* ── Layout ── */
+div.document { max-width:1100px; margin:0 auto; padding:40px; position:relative; z-index:2; }
+div.bodywrapper { margin:0; }
+div.body { padding:0; }
+
+/* ── Sidebar ── */
+div.sphinxsidebar {
+  position:fixed; top:0; left:0; bottom:0; width:260px;
+  background:var(--bg-card); border-right:1px solid var(--border);
+  padding:24px 16px; overflow-y:auto; z-index:50;
+  font-size:12px;
+}
+div.sphinxsidebar h3, div.sphinxsidebar h4 {
+  font-family:'Space Grotesk',sans-serif; color:var(--green);
+  font-size:11px; text-transform:uppercase; letter-spacing:0.15em;
+  margin:16px 0 8px; padding:0;
+}
+div.sphinxsidebar a { color:var(--text-dim); text-decoration:none; transition:color 0.2s; }
+div.sphinxsidebar a:hover { color:var(--green); }
+div.sphinxsidebar a.current { color:var(--green-bright); }
+div.sphinxsidebar ul { list-style:none; padding:0; margin:0; }
+div.sphinxsidebar li { padding:3px 0; }
+div.sphinxsidebar input[type="text"] {
+  background:var(--bg); border:1px solid var(--border); color:var(--text);
+  padding:6px 10px; width:100%; border-radius:4px; font-family:inherit; font-size:12px;
+}
+div.document { margin-left:280px; }
+
+/* ── Headings ── */
+h1, h2, h3, h4 {
+  font-family:'Space Grotesk',sans-serif; color:var(--text-bright);
+  margin-top:2em; margin-bottom:0.5em;
+}
+h1 { font-size:2.2rem; font-weight:700; border-bottom:1px solid var(--border); padding-bottom:12px; }
+h2 { font-size:1.5rem; font-weight:600; }
+h2::before { content:'## '; color:var(--green); opacity:0.5; }
+h3 { font-size:1.2rem; font-weight:600; }
+h3::before { content:'### '; color:var(--cyan); opacity:0.4; }
+
+/* ── Links ── */
+a { color:var(--cyan); text-decoration:none; }
+a:hover { color:var(--green-bright); text-decoration:underline; }
+
+/* ── Code ── */
+code, pre {
+  font-family:'JetBrains Mono',monospace;
+  background:var(--bg-card); border:1px solid var(--border); border-radius:6px;
+}
+code { padding:2px 6px; font-size:0.9em; color:var(--green-bright); }
+pre { padding:16px; overflow-x:auto; line-height:1.5; }
+div.highlight pre { background:var(--bg-card); border:1px solid var(--border); border-radius:6px; }
+
+/* ── Tables ── */
+table { border-collapse:collapse; width:100%; margin:1em 0; }
+th, td { border:1px solid var(--border); padding:10px 14px; text-align:left; }
+th { background:var(--bg-card); color:var(--green); font-size:11px; text-transform:uppercase; letter-spacing:0.1em; }
+tr:hover { background:rgba(63,185,80,0.04); }
+
+/* ── Admonitions ── */
+div.admonition {
+  background:var(--bg-card); border:1px solid var(--border); border-radius:8px;
+  padding:16px 20px; margin:1.5em 0; border-left:3px solid var(--green);
+}
+div.admonition.warning { border-left-color:var(--amber); }
+div.admonition.danger { border-left-color:var(--red); }
+p.admonition-title {
+  font-family:'Space Grotesk',sans-serif; font-weight:600;
+  color:var(--green); margin:0 0 8px; font-size:13px; text-transform:uppercase; letter-spacing:0.1em;
+}
+div.admonition.warning p.admonition-title { color:var(--amber); }
+div.admonition.danger p.admonition-title { color:var(--red); }
+
+/* ── Blockquotes ── */
+blockquote {
+  border-left:3px solid var(--green); margin:1.5em 0; padding:8px 20px;
+  color:var(--text-dim); font-style:italic;
+}
+
+/* ── Lists ── */
+ul, ol { padding-left:24px; }
+li { margin:4px 0; }
+li::marker { color:var(--green); }
+
+/* ── Toctree ── */
+div.toctree-wrapper ul { list-style:none; padding:0; }
+div.toctree-wrapper li {
+  background:var(--bg-card); border:1px solid var(--border); border-radius:8px;
+  margin:8px 0; transition:border-color 0.3s;
+}
+div.toctree-wrapper li:hover { border-color:var(--border-bright); }
+div.toctree-wrapper li a {
+  display:block; padding:14px 20px; color:var(--text-bright); font-weight:500;
+}
+div.toctree-wrapper li a::before { content:'→ '; color:var(--green); }
+
+/* ── Footer ── */
+div.footer {
+  border-top:1px solid var(--border); padding:20px 0; margin-top:60px;
+  font-size:11px; color:var(--text-dim); text-align:center;
+}
+
+/* ── Copy button ── */
+button.copybtn {
+  background:var(--bg-card)!important; border:1px solid var(--border)!important;
+  color:var(--green)!important; border-radius:4px!important;
+}
+
+/* ── Responsive ── */
+@media(max-width:900px) {
+  div.sphinxsidebar { display:none; }
+  div.document { margin-left:0; padding:20px; }
+}
+
+/* ── Survey embed ── */
+iframe.survey-report { width:100%; height:90vh; border:1px solid var(--border); border-radius:8px; }
