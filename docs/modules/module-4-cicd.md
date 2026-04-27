@@ -1,14 +1,9 @@
-# Module 4 — CI/CD
-
 ```{include} ../../modules/module-4-cicd/README.md
+:relative-images:
 ```
 
-## Exercises
+### Exercise Checklist
 
 ```{include} ../../modules/module-4-cicd/EXERCISES.md
-```
-
-## Assignments
-
-```{include} ../../modules/module-4-cicd/ASSIGNMENTS.md
+:relative-images:
 ```

@@ -1,10 +1,6 @@
 # Survey Results
 
-```{include} ../survey/COURSE-SURVEY.md
-```
-
-## Course Outcomes Report
-
 ```{raw} html
-<iframe class="survey-report" src="../_static/course-outcomes-report-labsoft-ai.html"></iframe>
+<meta http-equiv="refresh" content="0; url=course-outcomes-report.html">
+<p>Redirecting to <a href="course-outcomes-report.html">Course Outcomes Report</a>...</p>
 ```

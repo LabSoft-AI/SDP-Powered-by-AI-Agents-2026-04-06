@@ -1,14 +1,9 @@
-# Module 5 — TDD / BDD
-
 ```{include} ../../modules/module-5-tdd-bdd/README.md
+:relative-images:
 ```
 
-## Exercises
+### Exercise Checklist
 
 ```{include} ../../modules/module-5-tdd-bdd/EXERCISES.md
-```
-
-## Assignments
-
-```{include} ../../modules/module-5-tdd-bdd/ASSIGNMENTS.md
+:relative-images:
 ```
