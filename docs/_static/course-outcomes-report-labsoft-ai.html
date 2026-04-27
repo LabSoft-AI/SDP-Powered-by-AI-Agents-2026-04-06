@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>$ cat course-outcomes-report.log</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0a0e14;
+  --bg-soft: #0f1319;
+  --bg-card: #111820;
+  --green: #3fb950;
+  --green-dim: #238636;
+  --green-bright: #7ee787;
+  --cyan: #58a6ff;
+  --amber: #d29922;
+  --red: #f85149;
+  --text: #c9d1d9;
+  --text-dim: #6e7681;
+  --text-bright: #e6edf3;
+  --border: rgba(63,185,80,0.12);
+  --border-bright: rgba(63,185,80,0.3);
+  --glow: rgba(63,185,80,0.15);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  line-height: 1.7;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scanlines */
+body::before {
+  content:'';
+  position:fixed;inset:0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0,0,0,0.08) 2px,
+    rgba(0,0,0,0.08) 4px
+  );
+  pointer-events:none;
+  z-index:9999;
+}
+
+/* Subtle grid bg */
+body::after {
+  content:'';
+  position:fixed;inset:0;
+  background-image:
+    linear-gradient(rgba(63,185,80,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(63,185,80,0.03) 1px, transparent 1px);
+  background-size: 48px 48px;
+  pointer-events:none;
+  z-index:0;
+}
+
+main{position:relative;z-index:2}
+
+/* ── Blinking cursor ── */
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+.cursor::after {
+  content:'█';
+  color:var(--green);
+  animation: blink 1s step-end infinite;
+  margin-left:2px;
+}
+
+/* ── Typing effect for hero ── */
+@keyframes typewriter {
+  from{width:0} to{width:100%}
+}
+
+/* ── Glow pulse ── */
+@keyframes glow-pulse {
+  0%,100%{box-shadow:0 0 8px var(--glow)}
+  50%{box-shadow:0 0 24px var(--glow), 0 0 48px rgba(63,185,80,0.08)}
+}
+
+/* ── Prompt prefix ── */
+.prompt{color:var(--green)}
+.prompt-user{color:var(--cyan)}
+.prompt-path{color:var(--amber)}
+.comment{color:var(--text-dim);font-style:italic}
+
+/* ── Masthead / top bar ── */
+.masthead {
+  border-bottom:1px solid var(--border);
+  padding:14px 40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  position:sticky;top:0;
+  background:rgba(10,14,20,0.92);
+  backdrop-filter:blur(16px);
+  z-index:100;
+  font-size:12px;
+}
+.masthead-left{color:var(--green)}
+.masthead-right{color:var(--text-dim)}
+
+/* ── Hero ── */
+.hero {
+  padding:80px 40px 64px;
+  border-bottom:1px solid var(--border);
+}
+.hero-ascii {
+  color:var(--green);
+  font-size:10px;
+  line-height:1.2;
+  margin-bottom:32px;
+  opacity:0.7;
+  white-space:pre;
+  overflow-x:auto;
+}
+.hero-grid {
+  display:grid;
+  grid-template-columns:1fr 360px;
+  gap:64px;
+  max-width:1400px;
+}
+.hero-cmd {
+  margin-bottom:24px;
+  color:var(--text-dim);
+  font-size:13px;
+}
+.hero h1 {
+  font-family:'Space Grotesk',sans-serif;
+  font-weight:700;
+  font-size:clamp(2.4rem,5vw,4.8rem);
+  line-height:1.05;
+  color:var(--text-bright);
+  margin-bottom:16px;
+}
+.hero h1 em {
+  font-style:normal;
+  color:var(--green);
+}
+.hero-sub {
+  color:var(--text-dim);
+  font-size:13px;
+  max-width:600px;
+  margin-bottom:40px;
+  line-height:1.7;
+}
+.hero-meta {
+  display:flex;gap:40px;
+  padding-top:24px;
+  border-top:1px solid var(--border);
+}
+.hero-meta-item .lbl {
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:0.15em;
+  color:var(--text-dim);
+  margin-bottom:6px;
+}
+.hero-meta-item .val {
+  font-size:15px;
+  color:var(--green);
+  font-weight:500;
+}
+
+/* Hero score terminal */
+.hero-score {
+  background:var(--bg-card);
+  border:1px solid var(--border-bright);
+  border-radius:8px;
+  padding:24px;
+  align-self:start;
+  animation: glow-pulse 4s ease-in-out infinite;
+}
+.hero-score .title-bar {
+  display:flex;align-items:center;gap:8px;
+  margin-bottom:16px;
+  padding-bottom:12px;
+  border-bottom:1px solid var(--border);
+}
+.hero-score .dot{width:10px;height:10px;border-radius:50%}
+.hero-score .dot.r{background:var(--red)}
+.hero-score .dot.y{background:var(--amber)}
+.hero-score .dot.g{background:var(--green)}
+.hero-score .title-bar span:last-child{color:var(--text-dim);font-size:11px;margin-left:auto}
+.hero-score .big-num {
+  font-family:'Space Grotesk',sans-serif;
+  font-size:6rem;
+  font-weight:700;
+  line-height:0.9;
+  color:var(--green-bright);
+  text-shadow:0 0 40px rgba(63,185,80,0.3);
+}
+.hero-score .big-num .dim{color:var(--text-dim);font-size:0.3em;font-weight:400}
+.hero-score .stars {
+  margin-top:16px;
+  color:var(--amber);
+  font-size:18px;
+  letter-spacing:4px;
+}
+.hero-score .caption {
+  margin-top:12px;
+  font-size:11px;
+  color:var(--text-dim);
+  line-height:1.6;
+}
+
+/* ── Section ── */
+section.deck {
+  padding:80px 40px;
+  border-bottom:1px solid var(--border);
+}
+.section-head {
+  margin-bottom:56px;
+}
+.section-num {
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:0.2em;
+  color:var(--green);
+  margin-bottom:12px;
+}
+.section-num::before{content:'// ';color:var(--text-dim)}
+.section-title {
+  font-family:'Space Grotesk',sans-serif;
+  font-weight:600;
+  font-size:clamp(1.8rem,3.5vw,2.8rem);
+  line-height:1.15;
+  color:var(--text-bright);
+}
+.section-title em{font-style:normal;color:var(--green)}
+.section-kicker {
+  margin-top:16px;
+  color:var(--text-dim);
+  font-size:13px;
+  max-width:800px;
+  line-height:1.7;
+}
+
+/* ── KPI strip ── */
+.kpi-strip {
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:16px;
+}
+.kpi {
+  background:var(--bg-card);
+  border:1px solid var(--border);
+  border-radius:8px;
+  padding:28px 24px;
+  transition:border-color 0.3s;
+}
+.kpi:hover{border-color:var(--border-bright)}
+.kpi .lbl {
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:0.15em;
+  color:var(--text-dim);
+  margin-bottom:16px;
+}
+.kpi .num {
+  font-family:'Space Grotesk',sans-serif;
+  font-size:3.2rem;
+  font-weight:700;
+  line-height:1;
+  color:var(--green-bright);
+}
+.kpi .num .unit{color:var(--text-dim);font-size:0.35em;font-weight:400;margin-left:2px}
+.kpi .desc {
+  margin-top:12px;
+  font-size:12px;
+  color:var(--text-dim);
+  line-height:1.6;
+}
+.kpi .desc .hl{color:var(--green);font-weight:500}
+
+/* ── Bar list ── */
+.bar-list{display:grid;gap:24px;max-width:1000px}
+.bar-row .top {
+  display:flex;
+  justify-content:space-between;
+  align-items:baseline;
+  margin-bottom:8px;
+}
+.bar-row .name{font-size:14px;color:var(--text-bright)}
+.bar-row .name .sub{color:var(--text-dim);font-weight:400}
+.bar-row .count{font-size:12px;color:var(--text-dim);white-space:nowrap}
+.bar-row .count .val{color:var(--green);font-weight:600}
+.bar-track {
+  height:3px;
+  background:var(--border);
+  border-radius:2px;
+  overflow:visible;
+  position:relative;
+}
+.bar-fill {
+  position:absolute;top:-1px;left:0;
+  height:5px;
+  background:var(--green);
+  border-radius:2px;
+  width:0;
+  transition:width 1.2s cubic-bezier(.2,.7,.2,1);
+  box-shadow:0 0 12px rgba(63,185,80,0.3);
+}
+.bar-fill.steel{background:var(--cyan);box-shadow:0 0 12px rgba(88,166,255,0.2)}
+
+/* ── Scale grid ── */
+.scale-grid {
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:16px;
+}
+.scale-card {
+  background:var(--bg-card);
+  border:1px solid var(--border);
+  border-radius:8px;
+  padding:28px;
+  display:grid;
+  grid-template-columns:1fr 180px;
+  gap:24px;
+  align-items:start;
+  transition:border-color 0.3s;
+}
+.scale-card:hover{border-color:var(--border-bright)}
+.scale-card .h {
+  font-family:'Space Grotesk',sans-serif;
+  font-weight:600;
+  font-size:1.1rem;
+  color:var(--text-bright);
+  margin-bottom:6px;
+}
+.scale-card .sub{font-size:11px;color:var(--text-dim);margin-bottom:20px}
+.scale-stat .num {
+  font-family:'Space Grotesk',sans-serif;
+  font-size:2.8rem;
+  font-weight:700;
+  color:var(--green);
+  line-height:1;
+}
+.scale-stat .num .max{color:var(--text-dim);font-size:0.35em;font-weight:400;margin-left:2px}
+.scale-card-desc{font-size:12px;color:var(--text-dim);line-height:1.6;margin-top:12px}
+
+/* Distribution bars */
+.dist {
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:4px;
+  align-items:end;
+  height:120px;
+  padding-top:20px;
+}
+.dist-col {
+  display:flex;flex-direction:column;align-items:center;
+  gap:4px;height:100%;justify-content:flex-end;
+}
+.dist-bar {
+  width:100%;
+  background:var(--text-dim);
+  min-height:2px;height:0;
+  transition:height 1s cubic-bezier(.2,.7,.2,1);
+  position:relative;border-radius:2px 2px 0 0;
+}
+.dist-bar.lead{background:var(--green);box-shadow:0 0 12px rgba(63,185,80,0.3)}
+.dist-bar .val-on {
+  position:absolute;top:-18px;left:50%;transform:translateX(-50%);
+  font-size:11px;color:var(--text-bright);font-weight:500;
+}
+.dist-bar.zero {
+  background:transparent;
+  border:1px dashed var(--border);
+  border-bottom:none;
+  height:6px!important;min-height:6px;
+}
+.dist-bar.zero .val-on{color:var(--text-dim)}
+.dist-col .lbl{font-size:10px;color:var(--text-dim);margin-top:2px}
+
+/* ── Pull quote ── */
+.pullquote {
+  padding:64px 40px;
+  border-bottom:1px solid var(--border);
+  position:relative;
+}
+.pullquote::before {
+  content:'>';
+  position:absolute;
+  top:50%;left:40px;
+  transform:translateY(-50%);
+  font-size:6rem;
+  color:var(--green);
+  opacity:0.12;
+  line-height:1;
+}
+.pullquote q {
+  display:block;quotes:none;
+  font-family:'Space Grotesk',sans-serif;
+  font-weight:400;
+  font-size:clamp(1.2rem,2.2vw,1.8rem);
+  line-height:1.5;
+  color:var(--text-bright);
+  max-width:1000px;
+  margin:0 auto;
+  padding-left:48px;
+  border-left:3px solid var(--green);
+}
+.pullquote .attribution {
+  margin-top:20px;
+  padding-left:48px;
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:0.15em;
+  color:var(--text-dim);
+}
+.pullquote .attribution::before{content:'— ';color:var(--green)}
+
+/* ── Donut row ── */
+.donut-row {
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:16px;
+}
+.donut-card {
+  background:var(--bg-card);
+  border:1px solid var(--border);
+  border-radius:8px;
+  padding:28px;
+  display:grid;
+  grid-template-columns:200px 1fr;
+  gap:24px;
+  align-items:center;
+  transition:border-color 0.3s;
+}
+.donut-card:hover{border-color:var(--border-bright)}
+.donut-card .lbl {
+  grid-column:1/-1;
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:0.15em;
+  color:var(--text-dim);
+  margin-bottom:4px;
+}
+.donut-wrap{position:relative;width:200px;height:200px}
+.donut-wrap svg{width:100%;height:100%;display:block}
+.donut-center {
+  position:absolute;inset:0;
+  display:flex;flex-direction:column;
+  justify-content:center;align-items:center;
+}
+.donut-center .v {
+  font-family:'Space Grotesk',sans-serif;
+  font-size:3rem;font-weight:700;
+  color:var(--green-bright);line-height:1;
+}
+.donut-center .v::after{content:'%';color:var(--text-dim);font-size:0.4em;font-weight:400;margin-left:1px}
+.donut-center .c{font-size:10px;color:var(--text-dim);margin-top:6px;letter-spacing:0.1em;text-transform:uppercase}
+.donut-side h4 {
+  font-family:'Space Grotesk',sans-serif;
+  font-weight:600;font-size:1.1rem;
+  color:var(--text-bright);margin-bottom:8px;
+}
+.donut-side p{font-size:12px;color:var(--text-dim);line-height:1.6;max-width:280px}
+
+/* ── Voices ── */
+.voices{columns:2;column-gap:16px;max-width:1200px}
+.voice {
+  break-inside:avoid;
+  margin-bottom:16px;
+  background:var(--bg-card);
+  border:1px solid var(--border);
+  border-radius:8px;
+  padding:20px;
+  transition:border-color 0.3s;
+}
+.voice:hover{border-color:var(--border-bright)}
+.voice .body {
+  font-size:13px;
+  color:var(--text);
+  line-height:1.7;
+}
+.voice .body::before{content:'$ echo "';color:var(--green);font-size:11px}
+.voice .body::after{content:'"';color:var(--green);font-size:11px}
+.voice .meta {
+  margin-top:10px;
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:0.15em;
+  color:var(--text-dim);
+}
+.voice .meta::before{content:'# ';color:var(--green)}
+
+/* ── Pace bar ── */
+.pace {
+  display:flex;height:80px;
+  border:1px solid var(--border);
+  border-radius:8px;
+  overflow:hidden;
+  margin-bottom:20px;
+}
+.pace-seg {
+  display:flex;flex-direction:column;
+  justify-content:space-between;
+  padding:12px 16px;
+  border-right:1px solid var(--border);
+  transition:background 0.3s;
+}
+.pace-seg:last-child{border-right:none}
+.pace-seg .top{font-size:10px;text-transform:uppercase;letter-spacing:0.12em;color:var(--text-dim)}
+.pace-seg .bottom{font-family:'Space Grotesk',sans-serif;font-size:1.4rem;font-weight:600;color:var(--text)}
+.pace-seg.lead{background:rgba(63,185,80,0.08)}
+.pace-seg.lead .bottom{color:var(--green)}
+.pace-legend{font-size:12px;color:var(--text-dim);max-width:600px;line-height:1.7}
+.pace-legend em{color:var(--green);font-style:normal;font-weight:500}
+
+/* ── Closing ── */
+.closing {
+  padding:100px 40px 80px;
+  text-align:center;
+  border-bottom:1px solid var(--border);
+}
+.closing .lbl {
+  font-size:10px;text-transform:uppercase;
+  letter-spacing:0.2em;color:var(--text-dim);
+  margin-bottom:24px;
+}
+.closing h2 {
+  font-family:'Space Grotesk',sans-serif;
+  font-weight:600;
+  font-size:clamp(1.8rem,3.5vw,3rem);
+  line-height:1.2;
+  color:var(--text-bright);
+  max-width:1000px;
+  margin:0 auto;
+}
+.closing h2 em{font-style:normal;color:var(--green)}
+.closing .sig {
+  margin-top:48px;
+  font-size:12px;
+  color:var(--text-dim);
+}
+.closing .sig::before {
+  content:'';display:block;
+  width:40px;height:1px;
+  background:var(--green);
+  margin:0 auto 16px;
+}
+
+/* ── Footer ── */
+footer {
+  padding:24px 40px;
+  display:flex;
+  justify-content:space-between;
+  font-size:11px;
+  color:var(--text-dim);
+}
+
+/* ── Responsive ── */
+@media(max-width:1100px){
+  .hero-grid{grid-template-columns:1fr}
+  .hero-score{max-width:400px}
+  .kpi-strip{grid-template-columns:repeat(2,1fr)}
+  .scale-grid{grid-template-columns:1fr}
+  .scale-card{grid-template-columns:1fr}
+  .donut-row{grid-template-columns:1fr}
+  .donut-card{grid-template-columns:180px 1fr}
+  .voices{columns:1}
+}
+@media(max-width:720px){
+  .masthead{padding:12px 20px;flex-direction:column;gap:4px;align-items:flex-start}
+  .hero,section.deck,.pullquote,.closing{padding-left:20px;padding-right:20px}
+  .hero{padding-top:48px;padding-bottom:40px}
+  section.deck{padding-top:48px;padding-bottom:48px}
+  .kpi-strip{grid-template-columns:1fr}
+  .hero-score .big-num{font-size:4rem}
+  .hero-ascii{font-size:7px}
+  footer{flex-direction:column;gap:4px}
+}
+
+/* ── Reveal ── */
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}
+.reveal.show{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-left">$ cat course_outcomes_v1.log</div>
+  <div class="masthead-right">pid:2026 · cohort:01 · April 2026</div>
+</header>
+
+<main>
+
+<!-- ───── HERO ───── -->
+<section class="hero">
+<pre class="hero-ascii">
+ ██████╗ ██████╗ ██╗   ██╗██████╗ ███████╗███████╗
+██╔════╝██╔═══██╗██║   ██║██╔══██╗██╔════╝██╔════╝
+██║     ██║   ██║██║   ██║██████╔╝███████╗█████╗
+██║     ██║   ██║██║   ██║██╔══██╗╚════██║██╔══╝
+╚██████╗╚██████╔╝╚██████╔╝██║  ██║███████║███████╗
+ ╚═════╝ ╚═════╝  ╚═════╝ ╚═╝  ╚═╝╚══════╝╚══════╝
+ ██████╗ ██╗   ██╗████████╗ ██████╗ ██████╗ ███╗   ███╗███████╗███████╗
+██╔═══██╗██║   ██║╚══██╔══╝██╔════╝██╔═══██╗████╗ ████║██╔════╝██╔════╝
+██║   ██║██║   ██║   ██║   ██║     ██║   ██║██╔████╔██║█████╗  ███████╗
+██║   ██║██║   ██║   ██║   ██║     ██║   ██║██║╚██╔╝██║██╔══╝  ╚════██║
+╚██████╔╝╚██████╔╝   ██║   ╚██████╗╚██████╔╝██║ ╚═╝ ██║███████╗███████║
+ ╚═════╝  ╚═════╝    ╚═╝    ╚═════╝ ╚═════╝ ╚═╝     ╚═╝╚══════╝╚══════╝
+</pre>
+  <div class="hero-grid">
+    <div>
+      <div class="hero-cmd"><span class="prompt">$</span> <span class="prompt-user">labsoft-ai</span> report --cohort=01 --format=detailed</div>
+      <h1>Software Development<br>Processes <em>Powered<br>by AI Agents</em></h1>
+      <p class="hero-sub"><span class="comment">// An evaluation of an eleven-respondent cohort, conducted at the close of the inaugural delivery, April 2026.</span></p>
+
+      <div class="hero-meta">
+        <div class="hero-meta-item">
+          <div class="lbl">Respondents</div>
+          <div class="val">N = 11</div>
+        </div>
+        <div class="hero-meta-item">
+          <div class="lbl">Modules</div>
+          <div class="val">06</div>
+        </div>
+        <div class="hero-meta-item">
+          <div class="lbl">Method</div>
+          <div class="val">Anonymous</div>
+        </div>
+      </div>
+    </div>
+
+    <aside class="hero-score">
+      <div class="title-bar">
+        <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+        <span>overall_rating.sh</span>
+      </div>
+      <div class="big-num">4.73<span class="dim">/5</span></div>
+      <div class="stars">★ ★ ★ ★ ★</div>
+      <div class="caption"><span class="comment">// 8 of 11 respondents awarded the highest possible mark; the remaining 3 awarded four.</span></div>
+    </aside>
+  </div>
+</section>
+
+<!-- ───── KPI STRIP ───── -->
+<section class="deck" style="padding-top:0;padding-bottom:0;">
+  <div class="kpi-strip">
+    <div class="kpi">
+      <div class="lbl">Recommendation</div>
+      <div class="num">91<span class="unit">%</span></div>
+      <div class="desc">would recommend the course to a colleague <span class="hl">without reservation</span>.</div>
+    </div>
+    <div class="kpi">
+      <div class="lbl">Instructor Rating</div>
+      <div class="num">4.91<span class="unit">/5</span></div>
+      <div class="desc">ten of eleven respondents marked the maximum.</div>
+    </div>
+    <div class="kpi">
+      <div class="lbl">AI in Pedagogy</div>
+      <div class="num">4.82<span class="unit">/5</span></div>
+      <div class="desc">approval of agentic instruction as a teaching paradigm.</div>
+    </div>
+    <div class="kpi">
+      <div class="lbl">Feedback &lt;24h</div>
+      <div class="num">82<span class="unit">%</span></div>
+      <div class="desc">of respondents received instructor feedback inside one working day.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ───── SECTION I — MANDATE ───── -->
+<section class="deck">
+  <div class="section-head">
+    <div class="section-num">I — Mandate</div>
+    <h2 class="section-title">Modern practice, taught the way the <em>industry</em> actually works.</h2>
+    <p class="section-kicker"><span class="comment">// The course operationalises six engineering disciplines under a single, agent-driven workflow. Respondents were asked which of those disciplines they now feel they understand.</span></p>
+  </div>
+
+  <div class="bar-list">
+    <div class="bar-row">
+      <div class="top">
+        <div class="name">Test-Driven Development <span class="sub">— RED · GREEN · REFACTOR</span></div>
+        <div class="count"><span class="val">10</span> / 11 · 91%</div>
+      </div>
+      <div class="bar-track"><div class="bar-fill" data-w="91"></div></div>
+    </div>
+    <div class="bar-row">
+      <div class="top">
+        <div class="name">Git Workflow <span class="sub">— branching, commits, pull requests</span></div>
+        <div class="count"><span class="val">9</span> / 11 · 82%</div>
+      </div>
+      <div class="bar-track"><div class="bar-fill" data-w="82"></div></div>
+    </div>
+    <div class="bar-row">
+      <div class="top">
+        <div class="name">CI / CD <span class="sub">— GitHub Actions, Docker</span></div>
+        <div class="count"><span class="val">7</span> / 11 · 64%</div>
+      </div>
+      <div class="bar-track"><div class="bar-fill" data-w="64"></div></div>
+    </div>
+    <div class="bar-row">
+      <div class="top">
+        <div class="name">Multi-agent Workflow</div>
+        <div class="count"><span class="val">7</span> / 11 · 64%</div>
+      </div>
+      <div class="bar-track"><div class="bar-fill" data-w="64"></div></div>
+    </div>
+    <div class="bar-row">
+      <div class="top">
+        <div class="name">User Stories &amp; BDD</div>
+        <div class="count"><span class="val">6</span> / 11 · 55%</div>
+      </div>
+      <div class="bar-track"><div class="bar-fill" data-w="55"></div></div>
+    </div>
+    <div class="bar-row">
+      <div class="top">
+        <div class="name">Software Architecture <span class="sub">— arc42, C4 model</span></div>
+        <div class="count"><span class="val">3</span> / 11 · 27%</div>
+      </div>
+      <div class="bar-track"><div class="bar-fill" data-w="27"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ───── PULL QUOTE I ───── -->
+<section class="pullquote">
+  <q>The most current technologies, expertise and dedication of the professor — it was an honour and a pleasure to attend such a course.</q>
+  <div class="attribution">Cohort respondent · 25 April 2026</div>
+</section>
+
+<!-- ───── SECTION II — RECEPTION ───── -->
+<section class="deck">
+  <div class="section-head">
+    <div class="section-num">II — Reception</div>
+    <h2 class="section-title">A unanimous endorsement of <em>agentic</em> instruction.</h2>
+  </div>
+
+  <div class="scale-grid">
+    <div class="scale-card">
+      <div>
+        <div class="h">Introducing AI agents into the curriculum</div>
+        <div class="sub">Q4 — 1 (Poor idea) → 5 (Excellent idea)</div>
+        <div class="scale-stat"><div class="num">4.82<span class="max">/5</span></div></div>
+        <div class="scale-card-desc">Nine of eleven respondents rated the integration the maximum score.</div>
+      </div>
+      <div class="dist">
+        <div class="dist-col"><div class="dist-bar zero"><span class="val-on">0</span></div><div class="lbl">1</div></div>
+        <div class="dist-col"><div class="dist-bar zero"><span class="val-on">0</span></div><div class="lbl">2</div></div>
+        <div class="dist-col"><div class="dist-bar zero"><span class="val-on">0</span></div><div class="lbl">3</div></div>
+        <div class="dist-col"><div class="dist-bar" data-h="22"><span class="val-on">2</span></div><div class="lbl">4</div></div>
+        <div class="dist-col"><div class="dist-bar lead" data-h="100"><span class="val-on">9</span></div><div class="lbl">5</div></div>
+      </div>
+    </div>
+
+    <div class="scale-card">
+      <div>
+        <div class="h">Did Kiro CLI accelerate your learning?</div>
+        <div class="sub">Q5 — 1 (Not at all) → 5 (Significantly)</div>
+        <div class="scale-stat"><div class="num">4.64<span class="max">/5</span></div></div>
+        <div class="scale-card-desc">Eight reported significant acceleration; only one outlier at the median.</div>
+      </div>
+      <div class="dist">
+        <div class="dist-col"><div class="dist-bar zero"><span class="val-on">0</span></div><div class="lbl">1</div></div>
+        <div class="dist-col"><div class="dist-bar zero"><span class="val-on">0</span></div><div class="lbl">2</div></div>
+        <div class="dist-col"><div class="dist-bar" data-h="13"><span class="val-on">1</span></div><div class="lbl">3</div></div>
+        <div class="dist-col"><div class="dist-bar" data-h="25"><span class="val-on">2</span></div><div class="lbl">4</div></div>
+        <div class="dist-col"><div class="dist-bar lead" data-h="100"><span class="val-on">8</span></div><div class="lbl">5</div></div>
+      </div>
+    </div>
+
+    <div class="scale-card">
+      <div>
+        <div class="h">Utility of the automated AI reviewer</div>
+        <div class="sub">Q11 — 1 (Useless) → 5 (Highly useful)</div>
+        <div class="scale-stat"><div class="num">4.55<span class="max">/5</span></div></div>
+        <div class="scale-card-desc">Six awarded the maximum, validating the reviewer as core scaffolding.</div>
+      </div>
+      <div class="dist">
+        <div class="dist-col"><div class="dist-bar zero"><span class="val-on">0</span></div><div class="lbl">1</div></div>
+        <div class="dist-col"><div class="dist-bar zero"><span class="val-on">0</span></div><div class="lbl">2</div></div>
+        <div class="dist-col"><div class="dist-bar" data-h="17"><span class="val-on">1</span></div><div class="lbl">3</div></div>
+        <div class="dist-col"><div class="dist-bar" data-h="50"><span class="val-on">3</span></div><div class="lbl">4</div></div>
+        <div class="dist-col"><div class="dist-bar lead" data-h="100"><span class="val-on">6</span></div><div class="lbl">5</div></div>
+      </div>
+    </div>
+
+    <div class="scale-card">
+      <div>
+        <div class="h">Quality of course materials</div>
+        <div class="sub">Q13 — 1 (Poor) → 5 (Excellent)</div>
+        <div class="scale-stat"><div class="num">4.73<span class="max">/5</span></div></div>
+        <div class="scale-card-desc">Eight respondents awarded the maximum mark for README, slides and exercises.</div>
+      </div>
+      <div class="dist">
+        <div class="dist-col"><div class="dist-bar zero"><span class="val-on">0</span></div><div class="lbl">1</div></div>
+        <div class="dist-col"><div class="dist-bar zero"><span class="val-on">0</span></div><div class="lbl">2</div></div>
+        <div class="dist-col"><div class="dist-bar zero"><span class="val-on">0</span></div><div class="lbl">3</div></div>
+        <div class="dist-col"><div class="dist-bar" data-h="38"><span class="val-on">3</span></div><div class="lbl">4</div></div>
+        <div class="dist-col"><div class="dist-bar lead" data-h="100"><span class="val-on">8</span></div><div class="lbl">5</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───── SECTION III — VALUE OF THE AGENT ───── -->
+<section class="deck">
+  <div class="section-head">
+    <div class="section-num">III — The Value of the Agent</div>
+    <h2 class="section-title">What working <em>with</em> agents actually changed.</h2>
+  </div>
+
+  <div class="donut-row">
+    <div class="donut-card">
+      <div class="lbl">Most-cited benefit · 11 of 11</div>
+      <div class="donut-wrap">
+        <svg viewBox="0 0 200 200">
+          <circle cx="100" cy="100" r="84" fill="none" stroke="var(--border)" stroke-width="8"/>
+          <circle class="donut-arc" cx="100" cy="100" r="84" fill="none" stroke="var(--green)" stroke-width="8"
+            stroke-dasharray="0 527.8" data-target="527.8" transform="rotate(-90 100 100)"
+            filter="drop-shadow(0 0 6px rgba(63,185,80,0.4))"/>
+        </svg>
+        <div class="donut-center"><div class="v">100</div><div class="c">11 of 11</div></div>
+      </div>
+      <div class="donut-side">
+        <h4>Focus shifts from typing to understanding.</h4>
+        <p>Every single respondent named this as a core benefit of the agentic workflow.</p>
+      </div>
+    </div>
+
+    <div class="donut-card">
+      <div class="lbl">Faster Execution · 9 of 11</div>
+      <div class="donut-wrap">
+        <svg viewBox="0 0 200 200">
+          <circle cx="100" cy="100" r="84" fill="none" stroke="var(--border)" stroke-width="8"/>
+          <circle class="donut-arc" cx="100" cy="100" r="84" fill="none" stroke="var(--cyan)" stroke-width="8"
+            stroke-dasharray="0 527.8" data-target="431.7" transform="rotate(-90 100 100)"
+            filter="drop-shadow(0 0 6px rgba(88,166,255,0.4))"/>
+        </svg>
+        <div class="donut-center"><div class="v">82</div><div class="c">9 of 11</div></div>
+      </div>
+      <div class="donut-side">
+        <h4>Tasks complete substantially faster.</h4>
+        <p>The agent compresses cycle time from intent to working code.</p>
+      </div>
+    </div>
+
+    <div class="donut-card">
+      <div class="lbl">Process Insight · 4 of 11</div>
+      <div class="donut-wrap">
+        <svg viewBox="0 0 200 200">
+          <circle cx="100" cy="100" r="84" fill="none" stroke="var(--border)" stroke-width="8"/>
+          <circle class="donut-arc" cx="100" cy="100" r="84" fill="none" stroke="var(--green)" stroke-width="8"
+            stroke-dasharray="0 527.8" data-target="191.9" transform="rotate(-90 100 100)"
+            filter="drop-shadow(0 0 6px rgba(63,185,80,0.4))"/>
+        </svg>
+        <div class="donut-center"><div class="v">36</div><div class="c">4 of 11</div></div>
+      </div>
+      <div class="donut-side">
+        <h4>Context &amp; harness engineering, in practice.</h4>
+        <p>A meaningful minority cited deeper insight into agent configuration itself.</p>
+      </div>
+    </div>
+
+    <div class="donut-card">
+      <div class="lbl">Configuration Insight · 4 of 11</div>
+      <div class="donut-wrap">
+        <svg viewBox="0 0 200 200">
+          <circle cx="100" cy="100" r="84" fill="none" stroke="var(--border)" stroke-width="8"/>
+          <circle class="donut-arc" cx="100" cy="100" r="84" fill="none" stroke="var(--cyan)" stroke-width="8"
+            stroke-dasharray="0 527.8" data-target="191.9" transform="rotate(-90 100 100)"
+            filter="drop-shadow(0 0 6px rgba(88,166,255,0.4))"/>
+        </svg>
+        <div class="donut-center"><div class="v">36</div><div class="c">4 of 11</div></div>
+      </div>
+      <div class="donut-side">
+        <h4>Better grasp of process through agent configuration.</h4>
+        <p>Configuring agents — not just prompting them — is itself a teaching mechanism.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───── PULL QUOTE II ───── -->
+<section class="pullquote">
+  <q>An excellent topic — integration of AI, which is treated as a bogeyman in other courses but is, in industry, one of the principal aids. Compared to my current workplace, this was a faithful preview of the environment.</q>
+  <div class="attribution">Cohort respondent · 25 April 2026</div>
+</section>
+
+<!-- ───── SECTION IV — VOICES ───── -->
+<section class="deck">
+  <div class="section-head">
+    <div class="section-num">IV — Voices</div>
+    <h2 class="section-title">In the respondents' own <em>words</em>.</h2>
+    <p class="section-kicker"><span class="comment">// Open-text responses, presented verbatim. Translations from Serbian kept conservative.</span></p>
+  </div>
+
+  <div class="voices">
+    <div class="voice">
+      <div class="body">Use of AI agents, minimal hand-typing of code, and the fact that the subject is highly applicable.</div>
+      <div class="meta">On what they liked most</div>
+    </div>
+    <div class="voice">
+      <div class="body">The way the course was divided into modules, and the work with the agents.</div>
+      <div class="meta">On what they liked most</div>
+    </div>
+    <div class="voice">
+      <div class="body">Newest technologies, the professor's expertise and dedication — it was an honour to attend. Many thanks to the professor.</div>
+      <div class="meta">On what they liked most</div>
+    </div>
+    <div class="voice">
+      <div class="body">Working with AI tools that we will increasingly use, and the proper way of working with Git.</div>
+      <div class="meta">On what they liked most</div>
+    </div>
+    <div class="voice">
+      <div class="body">Excellent topic. Integration of AI, which is treated as a bogeyman elsewhere but is in industry one of the principal aids. Compared to my current workplace, this was a faithful preview of the environment.</div>
+      <div class="meta">On what they liked most</div>
+    </div>
+    <div class="voice">
+      <div class="body">The 'gamification' of the exercises, and the table on which we tracked our progress.</div>
+      <div class="meta">On what they liked most</div>
+    </div>
+    <div class="voice">
+      <div class="body">It should appear in earlier years of study, because there is no other course that introduces students to GitHub.</div>
+      <div class="meta">On suggested changes</div>
+    </div>
+    <div class="voice">
+      <div class="body">The only weakness, I believe, is the shortage of time, since most people are also working. Perhaps the course should be extended to four weeks.</div>
+      <div class="meta">On suggested changes</div>
+    </div>
+    <div class="voice">
+      <div class="body">I would not change a thing — a very good course.</div>
+      <div class="meta">On suggested changes</div>
+    </div>
+    <div class="voice">
+      <div class="body">Application of the entire learned process to a more complex task at the very end.</div>
+      <div class="meta">On suggested changes</div>
+    </div>
+  </div>
+</section>
+
+<!-- ───── CLOSING ───── -->
+<section class="closing">
+  <div class="lbl">// return 0;</div>
+  <h2>
+    Eleven cohort members. Six modules.<br>
+    One conclusion: a curriculum that <em>treats AI agents as colleagues</em>,<br>
+    not as novelties — and is graded accordingly.
+  </h2>
+  <div class="sig">
+    <span class="comment">// A report prepared from anonymous respondent data.</span><span class="cursor"></span>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div><span class="prompt">$</span> cat /var/log/course-outcomes-2026.log</div>
+  <div>Set in JetBrains Mono &amp; Space Grotesk</div>
+  <div>All figures derived from N = 11 anonymous respondents</div>
+</footer>
+
+<script>
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (!e.isIntersecting) return;
+    e.target.classList.add('show');
+    e.target.querySelectorAll('.bar-fill').forEach(b => {
+      const w = b.dataset.w;
+      if (w) requestAnimationFrame(() => b.style.width = w + '%');
+    });
+    e.target.querySelectorAll('.dist-bar').forEach(b => {
+      const h = b.dataset.h;
+      if (h !== undefined) requestAnimationFrame(() => b.style.height = h + '%');
+    });
+    e.target.querySelectorAll('.donut-arc').forEach(arc => {
+      const t = arc.dataset.target;
+      requestAnimationFrame(() => {
+        arc.style.transition = 'stroke-dasharray 1.4s cubic-bezier(.2,.7,.2,1)';
+        if (t) arc.setAttribute('stroke-dasharray', t + ' 527.8');
+      });
+    });
+    io.unobserve(e.target);
+  });
+}, { threshold: 0.15 });
+
+document.querySelectorAll('section, .kpi-strip, .bar-list, .scale-card, .donut-card, .voice, .pace, .hero-grid')
+  .forEach(el => { el.classList.add('reveal'); io.observe(el); });
+</script>
+
+</body>
+</html>
