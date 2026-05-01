@@ -45,3 +45,9 @@ those agents as a team to build a real serverless application.
    :caption: Resources
 
    tracker
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Grades
+
+   grades
