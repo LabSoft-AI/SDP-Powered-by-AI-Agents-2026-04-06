@@ -9,7 +9,6 @@ Location: 507 НТП | Time: 17:00
 | 🥇 | [@AnaZec](https://github.com/AnaZec/sdp-powered-by-ai-agents-ana-zec/pulls) ⚡⚡⚡⚡⚡ | 6 | 0 | 0 | 0 | 45 | 🔥 6 |
 | 🥈 | [@cetko4](https://github.com/cetko4/sdp-powered-by-ai-agents-aleksandar-cetkovic/pulls) ⚡ | 6 | 0 | 0 | 0 | 33 | 🔥 6 |
 | 🥉 | [@Ivanovic0245](https://github.com/Ivanovic0245/sdp-powered-by-ai-agents-aleksandar-ivanovic/pulls) | 6 | 0 | 0 | 0 | 30 | 🔥 6 |
-| 🥉 | [@antovic](https://github.com/antovic/sdp-powered-by-ai-agents-vuk-antovic/pulls) | 6 | 0 | 0 | 0 | 30 | 🔥 6 |
 | 🥉 | [@antres1](https://github.com/antres1/sdp-powered-by-ai-agents-ante-resetar/pulls) | 6 | 0 | 0 | 0 | 30 | 🔥 6 |
 | 🥉 | [@dikanovicmihailo](https://github.com/dikanovicmihailo/sdp-powered-by-ai-agents-mihailo-dikanovic/pulls) | 6 | 0 | 0 | 0 | 30 | 🔥 6 |
 | 🥉 | [@jglintic](https://github.com/jglintic/sdp-powered-by-ai-agents-jovan-glintic/pulls) | 6 | 0 | 0 | 0 | 30 | 🔥 6 |
@@ -48,7 +47,6 @@ Location: 507 НТП | Time: 17:00
 | 9 | @dikanovicmihailo | ❌ | ❌ | ✅ | |
 | 10 | @nbskvc | ❌ | ❌ | ✅ | |
 | 11 | @notstefan1 | ❌ | ❌ | ✅ | |
-| 12 | @antovic | ✅ | ✅ | ✅ | |
 | 13 | @Ivanovic0245 | ❌ | ❌ | ❌ | |
 | 14 | @VladanLazarevic | ❌ | ❌ | ❌ | |
 
@@ -70,7 +68,6 @@ Friday 10.4. — no class (Good Friday)
 | 11 | @nbskvc | ✅ | ✅ | ✅ |
 | 12 | @notstefan1 | ✅ | ❌ | ✅ |
 | 13 | @VladanLazarevic | ✅ | ❌ | ❌ |
-| 14 | @antovic | ✅ | ❌ | ❌ |
 
 ## Week 3
 
@@ -88,7 +85,6 @@ Project consultations (presence not mandatory)
 | 9 | @dikanovicmihailo | | | |
 | 10 | @nbskvc | | | |
 | 11 | @notstefan1 | | | |
-| 12 | @antovic | | | |
 | 13 | @Ivanovic0245 | | | |
 | 14 | @VladanLazarevic | | | |
 
@@ -102,7 +98,6 @@ Project consultations (presence not mandatory)
 | 2 | [@Ivanovic0245](https://github.com/Ivanovic0245/sdp-powered-by-ai-agents-aleksandar-ivanovic) | [#6](https://github.com/Ivanovic0245/sdp-powered-by-ai-agents-aleksandar-ivanovic/pull/6) 🟢 | [#7](https://github.com/Ivanovic0245/sdp-powered-by-ai-agents-aleksandar-ivanovic/pull/7) 🟢 | [#8](https://github.com/Ivanovic0245/sdp-powered-by-ai-agents-aleksandar-ivanovic/pull/8) 🟢 | [#9](https://github.com/Ivanovic0245/sdp-powered-by-ai-agents-aleksandar-ivanovic/pull/9) 🟢 | [#10](https://github.com/Ivanovic0245/sdp-powered-by-ai-agents-aleksandar-ivanovic/pull/10) 🟢 | [#17](https://github.com/Ivanovic0245/sdp-powered-by-ai-agents-aleksandar-ivanovic/pull/17) 🟢 |
 | 3 | [@VladanLazarevic](https://github.com/VladanLazarevic/sdp-powered-by-ai-agents-vladan-lazarevic) | [#7](https://github.com/VladanLazarevic/sdp-powered-by-ai-agents-vladan-lazarevic/pull/7) 🟢 | [#8](https://github.com/VladanLazarevic/sdp-powered-by-ai-agents-vladan-lazarevic/pull/8) 🟢 | [#9](https://github.com/VladanLazarevic/sdp-powered-by-ai-agents-vladan-lazarevic/pull/9) 🟢 | [#12](https://github.com/VladanLazarevic/sdp-powered-by-ai-agents-vladan-lazarevic/pull/12) 🟢 | [#13](https://github.com/VladanLazarevic/sdp-powered-by-ai-agents-vladan-lazarevic/pull/13) 🟢 | [#13](https://github.com/VladanLazarevic/sdp-powered-by-ai-agents-vladan-lazarevic/pull/13) 🟢 |
 | 4 | [@antonic00](https://github.com/antonic00/sdp-powered-by-ai-agents-name-surname) | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
-| 5 | [@antovic](https://github.com/antovic/sdp-powered-by-ai-agents-vuk-antovic) | [#8](https://github.com/antovic/sdp-powered-by-ai-agents-vuk-antovic/pull/8) 🟢 | [#9](https://github.com/antovic/sdp-powered-by-ai-agents-vuk-antovic/pull/9) 🟢 | [#10](https://github.com/antovic/sdp-powered-by-ai-agents-vuk-antovic/pull/10) 🟢 | [#12](https://github.com/antovic/sdp-powered-by-ai-agents-vuk-antovic/pull/12) 🟢 | [#13](https://github.com/antovic/sdp-powered-by-ai-agents-vuk-antovic/pull/13) 🟢 | [#19](https://github.com/antovic/sdp-powered-by-ai-agents-vuk-antovic/pull/19) 🟢 |
 | 6 | [@antres1](https://github.com/antres1/sdp-powered-by-ai-agents-ante-resetar) | [#7](https://github.com/antres1/sdp-powered-by-ai-agents-ante-resetar/pull/7) 🟢 | [#8](https://github.com/antres1/sdp-powered-by-ai-agents-ante-resetar/pull/8) 🟢 | [#9](https://github.com/antres1/sdp-powered-by-ai-agents-ante-resetar/pull/9) 🟢 | [#10](https://github.com/antres1/sdp-powered-by-ai-agents-ante-resetar/pull/10) 🟢 | [#13](https://github.com/antres1/sdp-powered-by-ai-agents-ante-resetar/pull/13) 🟢 | [#40](https://github.com/antres1/sdp-powered-by-ai-agents-ante-resetar/pull/40) 🟢 |
 | 7 | [@cetko4](https://github.com/cetko4/sdp-powered-by-ai-agents-aleksandar-cetkovic) | [#4](https://github.com/cetko4/sdp-powered-by-ai-agents-aleksandar-cetkovic/pull/4) 🟢 | [#10](https://github.com/cetko4/sdp-powered-by-ai-agents-aleksandar-cetkovic/pull/10) 🟢 | [#13](https://github.com/cetko4/sdp-powered-by-ai-agents-aleksandar-cetkovic/pull/13) 🟢 | [#15](https://github.com/cetko4/sdp-powered-by-ai-agents-aleksandar-cetkovic/pull/15) 🟢 | [#16](https://github.com/cetko4/sdp-powered-by-ai-agents-aleksandar-cetkovic/pull/16) 🟢 | [#33](https://github.com/cetko4/sdp-powered-by-ai-agents-aleksandar-cetkovic/pull/33) 🟢 |
 | 8 | [@dikanovicmihailo](https://github.com/dikanovicmihailo/sdp-powered-by-ai-agents-mihailo-dikanovic) | [#10](https://github.com/dikanovicmihailo/sdp-powered-by-ai-agents-mihailo-dikanovic/pull/10) 🟢 | [#12](https://github.com/dikanovicmihailo/sdp-powered-by-ai-agents-mihailo-dikanovic/pull/12) 🟢 | [#14](https://github.com/dikanovicmihailo/sdp-powered-by-ai-agents-mihailo-dikanovic/pull/14) 🟢 | [#15](https://github.com/dikanovicmihailo/sdp-powered-by-ai-agents-mihailo-dikanovic/pull/15) 🟢 | [#26](https://github.com/dikanovicmihailo/sdp-powered-by-ai-agents-mihailo-dikanovic/pull/26) 🟢 | [#38](https://github.com/dikanovicmihailo/sdp-powered-by-ai-agents-mihailo-dikanovic/pull/38) 🟢 |
